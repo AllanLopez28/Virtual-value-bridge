@@ -2,6 +2,7 @@ import HeroSection from "@/components/sections/HeroSection";
 import StatsBanner from "@/components/sections/StatsBanner";
 import AboutSection from "@/components/sections/AboutSection";
 import ServicesGrid from "@/components/sections/ServicesGrid";
+import CTASection from "@/components/sections/CTASection";
 import Comparison from "@/components/sections/Comparison";
 import TeamProfiles from "@/components/sections/TeamProfiles";
 import Testimonials from "@/components/sections/Testimonials";
@@ -15,6 +16,7 @@ export default function Home() {
       <StatsBanner />
       <AboutSection />
       <ServicesGrid />
+      <CTASection />
       <Comparison />
       <TeamProfiles />
       <Testimonials />

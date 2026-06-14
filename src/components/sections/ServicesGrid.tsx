@@ -91,20 +91,14 @@ export default function ServicesGrid() {
           })}
         </div>
 
-        {/* Footer Links & Guarantee */}
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+        {/* Footer Links */}
+        <div className="flex justify-start">
           <Link 
             href="#services" 
             className="inline-flex items-center gap-2 text-sm font-bold text-accent hover:text-white transition-colors"
           >
             See all services in detail <ArrowRight className="w-4 h-4" />
           </Link>
-          
-          {/* Guarantee Banner requested in text prompt */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm font-medium text-slate-300">
-            <ShieldCheck className="w-4 h-4 text-accent" />
-            <span>Not the right fit? We replace your specialist - free.</span>
-          </div>
         </div>
 
       </div>

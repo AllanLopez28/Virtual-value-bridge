@@ -12,6 +12,8 @@ export const metadata: Metadata = {
   description: "High impact operations. Smartly staffed. We deploy specialized nearshore talent from El Salvador to handle your admin work, property management tickets, and compliance.",
 };
 
+import Navbar from "@/components/layout/Navbar";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -20,6 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} antialiased font-sans`}>
+        <Navbar />
         {children}
       </body>
     </html>
