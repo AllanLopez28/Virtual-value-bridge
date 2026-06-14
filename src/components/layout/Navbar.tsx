@@ -14,7 +14,6 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
           <div className="relative w-40 h-12">
-            {/* If VVB-logo.jpeg is the exact name, we use it */}
             <Image 
               src="/VVB-logo.jpeg" 
               alt="Virtual Value Bridge" 
@@ -31,14 +30,14 @@ export default function Navbar() {
             <Link href="/" className="text-sm font-semibold text-secondary hover:text-primary transition-colors">
               Home
             </Link>
-            <Link href="#property-management" className="text-sm font-semibold text-slate-500 hover:text-primary transition-colors">
-              Property Management
-            </Link>
-            <Link href="#pricing" className="text-sm font-semibold text-slate-500 hover:text-primary transition-colors">
-              Pricing
+            <Link href="#services" className="text-sm font-semibold text-slate-500 hover:text-primary transition-colors">
+              Services
             </Link>
             <Link href="#compare" className="text-sm font-semibold text-slate-500 hover:text-primary transition-colors">
               Compare
+            </Link>
+            <Link href="#team" className="text-sm font-semibold text-slate-500 hover:text-primary transition-colors">
+              Team
             </Link>
             <Link href="#calculator" className="text-sm font-semibold text-slate-500 hover:text-primary transition-colors">
               Calculator
@@ -49,7 +48,7 @@ export default function Navbar() {
           </div>
           <div className="flex items-center gap-4">
             <Link
-              href="#book-call"
+              href="#contact"
               className="hidden md:inline-flex items-center justify-center rounded-full bg-accent px-6 py-2.5 text-sm font-bold text-secondary hover:bg-accent/90 hover:scale-105 hover:shadow-lg active:scale-95 transition-all duration-300"
             >
               Book a call
@@ -72,14 +71,14 @@ export default function Navbar() {
           <Link href="/" onClick={() => setIsOpen(false)} className="text-sm font-semibold text-secondary">
             Home
           </Link>
-          <Link href="#property-management" onClick={() => setIsOpen(false)} className="text-sm font-semibold text-slate-600">
-            Property Management
-          </Link>
-          <Link href="#pricing" onClick={() => setIsOpen(false)} className="text-sm font-semibold text-slate-600">
-            Pricing
+          <Link href="#services" onClick={() => setIsOpen(false)} className="text-sm font-semibold text-slate-600">
+            Services
           </Link>
           <Link href="#compare" onClick={() => setIsOpen(false)} className="text-sm font-semibold text-slate-600">
             Compare
+          </Link>
+          <Link href="#team" onClick={() => setIsOpen(false)} className="text-sm font-semibold text-slate-600">
+            Team
           </Link>
           <Link href="#calculator" onClick={() => setIsOpen(false)} className="text-sm font-semibold text-slate-600">
             Calculator
@@ -89,7 +88,7 @@ export default function Navbar() {
           </Link>
           <div className="pt-2 border-t border-slate-100">
             <Link
-              href="#book-call"
+              href="#contact"
               onClick={() => setIsOpen(false)}
               className="inline-flex w-full items-center justify-center rounded-full bg-accent px-6 py-3 text-sm font-bold text-secondary hover:bg-accent/90 hover:scale-105 active:scale-95 transition-all duration-300 mt-2 shadow-sm"
             >

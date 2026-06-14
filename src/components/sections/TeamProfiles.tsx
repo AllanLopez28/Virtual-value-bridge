@@ -4,7 +4,7 @@ import { Star, ArrowRight } from "lucide-react";
 
 export default function TeamProfiles() {
   return (
-    <section className="w-full relative flex flex-col items-center bg-slate-50">
+    <section id="team" className="w-full relative flex flex-col items-center bg-slate-50">
       
       {/* Block 1: Header (Blue Background) */}
       <div className="w-full bg-primary pt-24 pb-32 px-4 flex flex-col items-center text-center">
