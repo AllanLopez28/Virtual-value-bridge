@@ -15,6 +15,7 @@ export default function ServicesGrid() {
       title: "Administrative Support",
       description: "Calendars, inboxes, scheduling, and document prep.",
       icon: Calendar,
+      link: "/services/administrative-support",
     },
     {
       title: "Customer Service & Support",
