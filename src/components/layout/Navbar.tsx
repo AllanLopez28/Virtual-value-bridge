@@ -30,6 +30,9 @@ export default function Navbar() {
             <Link href="/" className="text-sm font-semibold text-secondary hover:text-primary transition-colors">
               Home
             </Link>
+            <Link href="/how-it-works" className="text-sm font-semibold text-slate-500 hover:text-primary transition-colors">
+              How It Works
+            </Link>
             <Link href="#services" className="text-sm font-semibold text-slate-500 hover:text-primary transition-colors">
               Services
             </Link>
@@ -70,6 +73,9 @@ export default function Navbar() {
         <div className="md:hidden absolute top-20 left-0 w-full bg-white border-b border-slate-200 shadow-lg py-4 px-4 flex flex-col gap-4">
           <Link href="/" onClick={() => setIsOpen(false)} className="text-sm font-semibold text-secondary">
             Home
+          </Link>
+          <Link href="/how-it-works" onClick={() => setIsOpen(false)} className="text-sm font-semibold text-slate-600">
+            How It Works
           </Link>
           <Link href="#services" onClick={() => setIsOpen(false)} className="text-sm font-semibold text-slate-600">
             Services

@@ -1,5 +1,6 @@
 import HeroSection from "@/components/sections/HeroSection";
-import StatsBanner from "@/components/sections/StatsBanner";
+import TeamHighlights from "@/components/sections/TeamHighlights";
+import WhyChooseUsSection from "@/components/sections/WhyChooseUsSection";
 import AboutSection from "@/components/sections/AboutSection";
 import ServicesGrid from "@/components/sections/ServicesGrid";
 import CTASection from "@/components/sections/CTASection";
@@ -13,7 +14,8 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
       <HeroSection />
-      <StatsBanner />
+      <TeamHighlights />
+      <WhyChooseUsSection />
       <AboutSection />
       <ServicesGrid />
       <CTASection />
