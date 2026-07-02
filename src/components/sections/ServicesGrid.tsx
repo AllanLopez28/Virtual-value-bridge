@@ -6,6 +6,12 @@ import Link from "next/link";
 export default function ServicesGrid() {
   const services = [
     {
+      title: "Property Management Support",
+      description: "Tenant comms, leasing, maintenance, owner reports.",
+      icon: Home,
+      link: "/services/property-management",
+    },
+    {
       title: "Administrative Support",
       description: "Calendars, inboxes, scheduling, and document prep.",
       icon: Calendar,
@@ -40,15 +46,10 @@ export default function ServicesGrid() {
       description: "Task tracking, vendor coordination, documentation.",
       icon: ClipboardList,
     },
-    {
-      title: "Property Management Support",
-      description: "Tenant comms, leasing, maintenance, owner reports.",
-      icon: Home,
-    },
   ];
 
   return (
-    <section className="w-full py-20 md:py-32 bg-secondary text-white">
+    <section id="services" className="w-full py-20 md:py-32 bg-secondary text-white">
       <div className="container mx-auto px-4 md:px-6 max-w-7xl">
         
         {/* Header Section */}
@@ -76,16 +77,24 @@ export default function ServicesGrid() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-12">
           {services.map((service, index) => {
             const Icon = service.icon;
-            return (
-              <div 
-                key={index} 
-                className="flex flex-col bg-[#1e2a4a] border border-[#2a3b63] rounded-2xl p-8 hover:-translate-y-1 hover:shadow-xl hover:border-accent/30 transition-all duration-300 cursor-default group"
-              >
+            
+            const content = (
+              <div className={`flex flex-col bg-[#1e2a4a] border border-[#2a3b63] rounded-2xl p-8 hover:-translate-y-1 hover:shadow-xl hover:border-accent/30 transition-all duration-300 group h-full ${service.link ? 'cursor-pointer' : 'cursor-default'}`}>
                 <div className="mb-6">
                   <Icon className="w-6 h-6 text-accent group-hover:scale-110 transition-transform duration-300" strokeWidth={2} />
                 </div>
                 <h3 className="text-lg font-bold text-white mb-3 leading-tight">{service.title}</h3>
                 <p className="text-sm text-slate-300 leading-relaxed">{service.description}</p>
+              </div>
+            );
+
+            return service.link ? (
+              <Link key={index} href={service.link} className="block outline-none">
+                {content}
+              </Link>
+            ) : (
+              <div key={index}>
+                {content}
               </div>
             );
           })}

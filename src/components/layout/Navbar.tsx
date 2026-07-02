@@ -33,25 +33,25 @@ export default function Navbar() {
             <Link href="/how-it-works" className="text-sm font-semibold text-slate-500 hover:text-primary transition-colors">
               How It Works
             </Link>
-            <Link href="#services" className="text-sm font-semibold text-slate-500 hover:text-primary transition-colors">
+            <Link href="/#services" className="text-sm font-semibold text-slate-500 hover:text-primary transition-colors">
               Services
             </Link>
-            <Link href="#compare" className="text-sm font-semibold text-slate-500 hover:text-primary transition-colors">
+            <Link href="/#compare" className="text-sm font-semibold text-slate-500 hover:text-primary transition-colors">
               Compare
             </Link>
-            <Link href="#team" className="text-sm font-semibold text-slate-500 hover:text-primary transition-colors">
+            <Link href="/#team" className="text-sm font-semibold text-slate-500 hover:text-primary transition-colors">
               Team
             </Link>
-            <Link href="#calculator" className="text-sm font-semibold text-slate-500 hover:text-primary transition-colors">
+            <Link href="/#calculator" className="text-sm font-semibold text-slate-500 hover:text-primary transition-colors">
               Calculator
             </Link>
-            <Link href="#contact" className="text-sm font-semibold text-slate-500 hover:text-primary transition-colors">
+            <Link href="/#contact" className="text-sm font-semibold text-slate-500 hover:text-primary transition-colors">
               Contact
             </Link>
           </div>
           <div className="flex items-center gap-4">
             <Link
-              href="#contact"
+              href="/#contact"
               className="hidden md:inline-flex items-center justify-center rounded-full bg-accent px-6 py-2.5 text-sm font-bold text-secondary hover:bg-accent/90 hover:scale-105 hover:shadow-lg active:scale-95 transition-all duration-300"
             >
               Book a call
@@ -77,24 +77,24 @@ export default function Navbar() {
           <Link href="/how-it-works" onClick={() => setIsOpen(false)} className="text-sm font-semibold text-slate-600">
             How It Works
           </Link>
-          <Link href="#services" onClick={() => setIsOpen(false)} className="text-sm font-semibold text-slate-600">
+          <Link href="/#services" onClick={() => setIsOpen(false)} className="text-sm font-semibold text-slate-600">
             Services
           </Link>
-          <Link href="#compare" onClick={() => setIsOpen(false)} className="text-sm font-semibold text-slate-600">
+          <Link href="/#compare" onClick={() => setIsOpen(false)} className="text-sm font-semibold text-slate-600">
             Compare
           </Link>
-          <Link href="#team" onClick={() => setIsOpen(false)} className="text-sm font-semibold text-slate-600">
+          <Link href="/#team" onClick={() => setIsOpen(false)} className="text-sm font-semibold text-slate-600">
             Team
           </Link>
-          <Link href="#calculator" onClick={() => setIsOpen(false)} className="text-sm font-semibold text-slate-600">
+          <Link href="/#calculator" onClick={() => setIsOpen(false)} className="text-sm font-semibold text-slate-600">
             Calculator
           </Link>
-          <Link href="#contact" onClick={() => setIsOpen(false)} className="text-sm font-semibold text-slate-600">
+          <Link href="/#contact" onClick={() => setIsOpen(false)} className="text-sm font-semibold text-slate-600">
             Contact
           </Link>
           <div className="pt-2 border-t border-slate-100">
             <Link
-              href="#contact"
+              href="/#contact"
               onClick={() => setIsOpen(false)}
               className="inline-flex w-full items-center justify-center rounded-full bg-accent px-6 py-3 text-sm font-bold text-secondary hover:bg-accent/90 hover:scale-105 active:scale-95 transition-all duration-300 mt-2 shadow-sm"
             >
