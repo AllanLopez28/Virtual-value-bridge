@@ -6,13 +6,13 @@ import { Sparkles, ArrowRight, Calculator, CheckCircle2 } from "lucide-react";
 
 export default function HeroSection() {
   return (
-    <section className="relative w-full bg-[#2563eb] overflow-hidden min-h-[600px] flex flex-col lg:flex-row items-center">
+    <section className="relative w-full overflow-hidden min-h-[600px] flex flex-col lg:flex-row items-center">
       
-      {/* Desktop Image Background (Absolute on the right) */}
-      <div className="hidden lg:block absolute inset-y-0 right-0 w-[55%] z-0">
+      {/* Full Background Image */}
+      <div className="absolute inset-0 w-full h-full z-0">
         <Image
-          src="/mujer.png"
-          alt="Nearshore professional"
+          src="/Banner.png"
+          alt="Nearshore professional background"
           fill
           priority
           className="object-cover object-left"
@@ -76,17 +76,6 @@ export default function HeroSection() {
                 <span>Free replacement</span>
               </div>
             </div>
-          </div>
-
-          {/* Right Column (Empty on desktop, holds image on mobile) */}
-          <div className="lg:hidden relative w-full h-[400px] mt-8 z-0">
-            <Image
-              src="/mujer.png"
-              alt="Nearshore professional"
-              fill
-              priority
-              className="object-cover object-top"
-            />
           </div>
 
         </div>
