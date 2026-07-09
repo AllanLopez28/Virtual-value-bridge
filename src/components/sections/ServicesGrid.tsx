@@ -21,6 +21,7 @@ export default function ServicesGrid() {
       title: "Customer Service & Support",
       description: "Calls, chat, tickets, and white-glove follow-ups.",
       icon: Headphones,
+      link: "/services/customer-service",
     },
     {
       title: "Bookkeeping & Accounting",
