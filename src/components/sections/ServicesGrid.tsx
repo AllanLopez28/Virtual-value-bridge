@@ -32,6 +32,7 @@ export default function ServicesGrid() {
       title: "Marketing Support",
       description: "Social, email, content, design assist, and CRM.",
       icon: Megaphone,
+      link: "/services/marketing-support",
     },
     {
       title: "Sales & Lead Generation",

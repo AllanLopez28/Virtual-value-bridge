@@ -2,41 +2,43 @@ import Image from "next/image";
 import Link from "next/link";
 import { 
   CheckCircle, 
-  Headphones, 
-  Ticket, 
-  MessageSquare, 
+  Mail, 
   Share2, 
-  MessageCircle, 
-  Cloud, 
-  PhoneCall, 
-  Hash, 
-  LayoutGrid, 
-  Grid 
+  CalendarDays, 
+  Image as ImageIcon, 
+  LayoutTemplate, 
+  BarChart, 
+  Users,
+  Clock,
+  Target,
+  PenTool
 } from "lucide-react";
 
-export default function CustomerServicePage() {
+export default function MarketingSupportPage() {
   const responsibilities = [
-    "Answering customer calls, emails, live chat, and text messages",
-    "Creating, updating, and closing support tickets in your help desk",
-    "Following up until every open issue is resolved",
-    "Escalating complex cases to your team using your own process",
-    "Order status, scheduling, and service request coordination",
-    "Responding to reviews, comments, and direct messages",
-    "Keeping customer records and notes accurate in your CRM",
-    "Reporting on response times, ticket volume, and recurring issues"
+    "Content calendar planning, caption drafting, and post scheduling",
+    "Publishing and monitoring posts across Facebook, Instagram, and LinkedIn",
+    "Replying to comments, direct messages, and reviews",
+    "Email campaign builds, list cleanup, segmentation, and send coordination",
+    "Blog uploads, formatting, image placement, and basic website updates",
+    "Graphic and short-video edits in Canva using your brand templates",
+    "Repurposing existing content into posts, carousels, and newsletters",
+    "Keyword research and on-page SEO updates",
+    "CRM hygiene, lead source tagging, and follow-up task creation",
+    "Weekly reporting on reach, engagement, open rates, and leads"
   ];
 
   const tools = [
-    { name: "Zendesk", icon: Headphones },
-    { name: "Freshdesk", icon: Ticket },
-    { name: "Intercom", icon: MessageSquare },
+    { name: "Canva", icon: ImageIcon },
+    { name: "Meta Business Suite", icon: Users },
+    { name: "Mailchimp", icon: Mail },
     { name: "HubSpot", icon: Share2 },
-    { name: "Gorgias", icon: MessageCircle },
-    { name: "Salesforce", icon: Cloud },
-    { name: "RingCentral", icon: PhoneCall },
-    { name: "Slack", icon: Hash },
-    { name: "Google Workspace", icon: LayoutGrid },
-    { name: "Microsoft Office", icon: Grid }
+    { name: "Hootsuite", icon: CalendarDays },
+    { name: "Later", icon: Clock },
+    { name: "WordPress", icon: LayoutTemplate },
+    { name: "Google Analytics", icon: BarChart },
+    { name: "Google Ads", icon: Target },
+    { name: "Adobe Express", icon: PenTool }
   ];
 
   return (
@@ -51,10 +53,10 @@ export default function CustomerServicePage() {
             <div className="flex flex-col max-w-2xl">
               <h1 className="text-5xl md:text-6xl font-extrabold text-secondary tracking-tight mb-2 leading-[1.1]">
                 Meet Your <br />
-                <span className="text-primary italic">Customer Service Specialist</span>
+                <span className="text-primary italic">Marketing Support Specialist</span>
               </h1>
               <p className="text-lg md:text-xl text-slate-600 font-medium leading-relaxed mb-10 mt-6 max-w-lg">
-                Stop letting calls, emails, and chats pile up. Get a dedicated customer service specialist who answers your customers, resolves issues, and keeps every request moving — so nothing gets dropped.
+                Your marketing plan only works if someone executes it every week. Get a dedicated marketing support specialist who builds your posts, sends your campaigns, updates your site, and reports on what worked.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 mb-6">
@@ -80,8 +82,8 @@ export default function CustomerServicePage() {
             <div className="flex justify-center lg:justify-end relative">
               <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-full shadow-xl overflow-hidden border-[12px] border-white bg-slate-200">
                 <Image 
-                  src="/valeria.png" 
-                  alt="Customer Service Specialist Valeria" 
+                  src="/ana.png" 
+                  alt="Marketing Support Specialist Andrea" 
                   fill 
                   className="object-cover" 
                   priority
@@ -108,7 +110,7 @@ export default function CustomerServicePage() {
                 DAY-TO-DAY RESPONSIBILITIES
               </span>
               <h2 className="text-3xl md:text-4xl font-extrabold text-secondary mb-10 tracking-tight leading-tight">
-                What Your Customer Service<br />Specialist Handles
+                What Your Marketing Support<br />Specialist Handles
               </h2>
               
               <ul className="flex flex-col gap-6">
@@ -137,21 +139,21 @@ export default function CustomerServicePage() {
                   <div className="flex items-center gap-4">
                     <div className="relative w-14 h-14 rounded-full overflow-hidden bg-slate-200 shrink-0">
                       <Image 
-                        src="/valeria.png" 
-                        alt="Valeria" 
+                        src="/ana.png" 
+                        alt="Andrea" 
                         fill 
                         className="object-cover" 
                       />
                     </div>
                     <div className="flex flex-col">
-                      <span className="text-base font-extrabold text-secondary">Valeria</span>
+                      <span className="text-base font-extrabold text-secondary">Andrea</span>
                       <span className="text-[11px] font-semibold text-slate-500 max-w-[170px] leading-snug mt-0.5">
-                        Customer Service, Ticketing, Client Communication
+                        Marketing Support, Social Media, Email Campaigns
                       </span>
                     </div>
                   </div>
                   <div className="bg-primary/10 text-primary text-xs font-bold px-3 py-1.5 rounded-full shrink-0">
-                    5+ yrs
+                    4+ yrs
                   </div>
                 </div>
               </div>
