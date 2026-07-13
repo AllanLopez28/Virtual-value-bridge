@@ -71,7 +71,7 @@ export default function Comparison() {
                 Factor
               </div>
               <div className="flex flex-col items-center justify-center text-center">
-                <span className="font-extrabold text-lg md:text-xl">VVBridge</span>
+                <span className="font-extrabold text-lg md:text-xl">Virtual value bridge</span>
                 <span className="text-accent text-[10px] md:text-xs font-bold uppercase tracking-wider mt-1">
                   Nearshore · El Salvador
                 </span>

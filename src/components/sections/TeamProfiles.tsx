@@ -115,7 +115,7 @@ export default function TeamProfiles() {
               <h4 className="text-xl font-extrabold text-white mb-1">Carlos Martínez</h4>
               <span className="text-accent font-bold text-xs mb-4">Senior Operations Manager</span>
               <p className="text-sm text-slate-300 leading-relaxed">
-                Carlos oversees daily operations and SOP design for VVBridge. With a background in BPO leadership, he built our quality framework guaranteeing same-day responses across every U.S. time zone.
+                Carlos oversees daily operations and SOP design for Virtual value bridge. With a background in BPO leadership, he built our quality framework guaranteeing same-day responses across every U.S. time zone.
               </p>
             </div>
           </div>

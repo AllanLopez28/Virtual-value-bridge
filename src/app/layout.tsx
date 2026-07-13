@@ -8,7 +8,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "VVBridge | Nearshore Property Management Specialists",
+  title: "Virtual value bridge | Nearshore Property Management Specialists",
   description: "High impact operations. Smartly staffed. We deploy specialized nearshore talent from El Salvador to handle your admin work, property management tickets, and compliance.",
 };
 

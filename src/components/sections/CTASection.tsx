@@ -40,7 +40,7 @@ export default function CTASection() {
           </h2>
           
           <p className="text-lg md:text-xl text-slate-300 mb-12 font-medium">
-            See exactly how much you&apos;d save with a dedicated VVBridge specialist.
+            See exactly how much you&apos;d save with a dedicated Virtual value bridge specialist.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">

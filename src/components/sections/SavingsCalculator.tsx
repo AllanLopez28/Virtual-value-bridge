@@ -42,7 +42,7 @@ export default function SavingsCalculator() {
             in<br className="hidden md:block" /> seconds.
           </h2>
           <p className="text-white/90 text-base md:text-lg font-medium leading-relaxed max-w-2xl mx-auto">
-            Estimate what you'd save by replacing a local hire with a dedicated VVBridge specialist — fully loaded with benefits and overhead.
+            Estimate what you'd save by replacing a local hire with a dedicated Virtual value bridge specialist — fully loaded with benefits and overhead.
           </p>
         </div>
       </div>
@@ -141,7 +141,7 @@ export default function SavingsCalculator() {
                   <span className="text-white font-bold">${localMonthlyCost.toLocaleString()}/mo</span>
                 </div>
                 <div className="flex justify-between items-center text-sm">
-                  <span className="text-slate-300 font-medium">VVBridge specialist</span>
+                  <span className="text-slate-300 font-medium">Virtual value bridge specialist</span>
                   <span className="text-accent font-bold">${vvbridgeMonthlyCost.toLocaleString()}/mo</span>
                 </div>
               </div>

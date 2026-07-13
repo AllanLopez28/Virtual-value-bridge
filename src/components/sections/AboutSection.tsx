@@ -13,7 +13,7 @@ export default function AboutSection() {
             <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-xl group cursor-default">
               <Image
                 src="/meeting.png"
-                alt="VVBridge team meeting in San Salvador"
+                alt="Virtual value bridge team meeting in San Salvador"
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                 // Fallback to a placeholder if /meeting.png is missing or misnamed
@@ -46,7 +46,7 @@ export default function AboutSection() {
 
           {/* Right Column - Content */}
           <div className="flex flex-col items-start">
-            <span className="text-sm font-bold text-secondary mb-4 tracking-wide">About VVBridge</span>
+            <span className="text-sm font-bold text-secondary mb-4 tracking-wide">About Virtual value bridge</span>
             
             <h2 className="text-4xl md:text-5xl font-extrabold text-secondary tracking-tight leading-[1.1] mb-6">
               A boutique team,<br />
@@ -59,7 +59,7 @@ export default function AboutSection() {
             </h2>
             
             <p className="text-lg text-slate-600 mb-8 leading-relaxed max-w-lg">
-              We started VVBridge to do what big BPOs can&apos;t: stay small enough to care. 
+              We started Virtual value bridge to do what big BPOs can&apos;t: stay small enough to care. 
               Every specialist is hand-picked, trained on your stack, and supported by 
               founders who answer your messages — not a ticket queue.
             </p>

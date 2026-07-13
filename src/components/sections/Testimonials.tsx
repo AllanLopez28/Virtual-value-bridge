@@ -5,7 +5,7 @@ import { Star, Quote, ChevronLeft, ChevronRight, ArrowRight } from "lucide-react
 export default function Testimonials() {
   const secondaryTestimonials = [
     {
-      quote: "Our VVBridge specialist runs the entire tenant inbox and AP queue. We added 400 doors without a single new local hire.",
+      quote: "Our Virtual value bridge specialist runs the entire tenant inbox and AP queue. We added 400 doors without a single new local hire.",
       achievement: "+400 doors, 0 new admin hires",
       name: "Mark Thompson",
       title: "COO, Cedar PM (TX)",
@@ -103,7 +103,7 @@ export default function Testimonials() {
             <Quote className="w-12 h-12 text-accent mb-6 rotate-180 opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300" strokeWidth={1.5} />
             
             <p className="text-xl md:text-2xl lg:text-3xl text-white font-bold leading-snug mb-12">
-              "In six months we went from drowning in tenant tickets and late owner reports to clearing them daily. Our VVBridge pod runs AP, the tenant inbox, and maintenance dispatch — and our local team finally took a real weekend off."
+              "In six months we went from drowning in tenant tickets and late owner reports to clearing them daily. Our Virtual value bridge pod runs AP, the tenant inbox, and maintenance dispatch — and our local team finally took a real weekend off."
             </p>
 
             {/* Metrics Grid 2x2 */}
@@ -220,7 +220,7 @@ export default function Testimonials() {
             Want results like <span className="inline-block bg-accent text-secondary px-3 py-1 rounded-md -rotate-2 hover:rotate-0 transition-transform duration-300 shadow-md">these?</span>
           </h2>
           <p className="text-slate-300 text-sm md:text-base font-medium mb-6 hover:text-white transition-colors cursor-default">
-            Book a free 20-minute call. We'll tell you straight up whether VVBridge can help.
+            Book a free 20-minute call. We'll tell you straight up whether Virtual value bridge can help.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
             <Link
