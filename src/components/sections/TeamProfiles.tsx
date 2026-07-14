@@ -74,7 +74,7 @@ export default function TeamProfiles() {
                 src="/sofia.png" 
                 alt="Sofía Hernández" 
                 fill 
-                className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500" 
+                className="object-cover transition-all duration-500" 
               />
               <div className="absolute top-4 left-4 bg-accent text-secondary text-[10px] font-bold px-3 py-1 rounded-full shadow-sm">
                 5+ years experience
