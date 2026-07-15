@@ -5,34 +5,35 @@ import { Star, Quote, ChevronLeft, ChevronRight, ArrowRight } from "lucide-react
 export default function Testimonials() {
   const secondaryTestimonials = [
     {
-      quote: "Our Virtual value bridge specialist runs the entire tenant inbox and AP queue. We added 400 doors without a single new local hire.",
-      achievement: "+400 doors, 0 new admin hires",
-      name: "Mark Thompson",
-      title: "COO, Cedar PM (TX)",
-      initial: "M",
+      quote: "Running a screen printing and embroidery business means staying on top of countless moving parts. Having our entire back office managed by their team has made a tremendous difference. They keep our orders and scheduling organized, handle invoicing and collections, and take care of our monthly accounting, so everything runs smoothly behind the scenes. It's given us more time to focus on our customers and growing our business. They've become a trusted extension of our team, and we couldn't imagine operating without their support.",
+      achievement: "Focus on customers & growth",
+      name: "Sam R.",
+      title: "Owner, SR Deco",
+      initial: "S",
+      color: "bg-orange-500",
     },
     {
-      quote: "Felt like hiring locally — but for a third of the cost. The CST coverage matters more than I expected.",
-      achievement: "Cut admin time by 40%",
-      name: "Renee Carter",
-      title: "Owner, Skyline Realty (FL)",
-      initial: "R",
+      quote: "As the accountant, having their team handle our bookkeeping has made a huge difference. Everything is coded correctly, our financial documents are organized and easy to find, and bank reconciliations are always completed on time. The consistency and attention to detail make month-end close much smoother and give me confidence that our books are accurate. It's dependable support that truly makes my job easier.",
+      achievement: "Accurate & on-time books",
+      name: "Luis M.",
+      title: "Owner, L&M Accounting",
+      initial: "L",
       color: "bg-emerald-500",
     },
     {
-      quote: "Trained in AppFolio from day one. Reconciliations that used to take us two weeks now wrap in three days.",
-      achievement: "Close cycle: 14d -> 3d",
-      name: "Daniel Reyes",
-      title: "Ops Director, Skyview PM (CA)",
-      initial: "D",
+      quote: "Adding a dedicated team member for tenant communication has been a game changer for our property management business. Maintenance requests, lease renewals, and rent follow-ups are handled consistently, with detailed logs and updates kept on every interaction. This organization has helped us operate more efficiently and take on more properties. The team at Virtual Value Bridge has become a valuable extension of our team.",
+      achievement: "Efficient operations & growth",
+      name: "Mendy K.",
+      title: "Maintenance Coordinator, Stone Edge NY",
+      initial: "M",
       color: "bg-blue-800",
     },
     {
-      quote: "Our owners noticed the difference. Reports are on time, and maintenance dispatch runs like a machine.",
-      achievement: "100% on-time reports",
-      name: "Sarah Jenkins",
-      title: "Founder, Apex Properties",
-      initial: "S",
+      quote: "Bringing on support for our administrative and project needs has made a big difference in how we operate. Moving takeoffs and estimates out of the daily workload of our project team has been one of the best decisions we’ve made. It allows our team to stay focused on active projects, while estimates are completed faster and details stay organized. The team at Virtual Value Bridge integrated seamlessly and has become a reliable extension of our business.",
+      achievement: "Faster estimates",
+      name: "Moses G.",
+      title: "Project Manager, Artistic Tile & Installation",
+      initial: "M",
       color: "bg-purple-600",
     },
   ];
@@ -67,35 +68,10 @@ export default function Testimonials() {
 
       {/* Block 2: Featured Case Study (Overlapping) */}
       <div className="w-full container mx-auto px-4 md:px-6 max-w-6xl relative z-20 -mt-32 mb-20 group">
-        <div className="w-full bg-secondary rounded-[2rem] shadow-2xl overflow-hidden flex flex-col lg:flex-row hover:shadow-[0_20px_50px_rgba(11,19,43,0.3)] transition-shadow duration-500">
+        <div className="w-full bg-secondary rounded-[2rem] shadow-2xl overflow-hidden flex flex-col hover:shadow-[0_20px_50px_rgba(11,19,43,0.3)] transition-shadow duration-500">
           
-          {/* Left Half: Photograph */}
-          <div className="w-full lg:w-5/12 relative min-h-[400px] lg:min-h-full overflow-hidden">
-            <Image 
-              src="/mark.png" 
-              alt="Mark Thompson" 
-              fill 
-              className="object-cover group-hover:scale-105 transition-transform duration-700" 
-            />
-            {/* Small icon badge top left */}
-            <div className="absolute top-6 left-6 bg-white/90 backdrop-blur-sm rounded-full px-4 py-1.5 flex items-center gap-2 shadow-lg hover:bg-white transition-colors cursor-default">
-              <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
-              <span className="text-[10px] font-bold text-secondary uppercase tracking-wider">Live Pod</span>
-            </div>
-            {/* Dark gradient and text bottom left */}
-            <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/95 via-black/50 to-transparent p-8 pt-24 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
-              <h4 className="text-xl font-extrabold text-white mb-1">Mark Thompson</h4>
-              <p className="text-xs text-white/80 font-semibold mb-3">COO, Cedar PM — 2,100 units (TX)</p>
-              <div className="flex text-accent">
-                {[1, 2, 3, 4, 5].map((i) => (
-                  <Star key={i} className="w-4 h-4 fill-current" />
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Right Half: Quote & Metrics */}
-          <div className="w-full lg:w-7/12 p-8 md:p-12 lg:p-16 flex flex-col justify-center">
+          {/* Full Width: Quote & Metrics */}
+          <div className="w-full p-8 md:p-12 lg:p-16 flex flex-col justify-center">
             <span className="inline-flex self-start items-center rounded-full bg-white/5 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-slate-300 mb-8 border border-white/10 shadow-inner">
               • FEATURED CASE STUDY
             </span>
@@ -106,8 +82,8 @@ export default function Testimonials() {
               "In six months we went from drowning in tenant tickets and late owner reports to clearing them daily. Our Virtual value bridge pod runs AP, the tenant inbox, and maintenance dispatch — and our local team finally took a real weekend off."
             </p>
 
-            {/* Metrics Grid 2x2 */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {/* Metrics Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
               
               <div className="bg-white/5 border border-white/10 rounded-2xl p-5 flex flex-col justify-between hover:bg-white/10 hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(132,204,22,0.15)] transition-all duration-300 cursor-default">
                 <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-4">TENANT RESPONSE</span>

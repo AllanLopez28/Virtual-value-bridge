@@ -5,7 +5,7 @@ import { Star, ArrowRight } from "lucide-react";
 export default function TeamProfiles() {
   return (
     <section id="team" className="w-full relative flex flex-col items-center bg-slate-50">
-      
+
       {/* Block 1: Header (Blue Background) */}
       <div className="w-full bg-primary pt-24 pb-32 px-4 flex flex-col items-center text-center">
         <span className="inline-flex items-center rounded-full bg-transparent px-4 py-1.5 text-[10px] md:text-xs font-bold uppercase tracking-widest text-white mb-6 border border-white/30">
@@ -51,7 +51,7 @@ export default function TeamProfiles() {
 
       {/* Block 3 & 4: Profiles Title and Grid */}
       <div className="w-full container mx-auto px-4 md:px-6 max-w-6xl pt-16 md:pt-24 pb-20">
-        
+
         {/* Title */}
         <div className="flex flex-col md:flex-row items-start md:items-end justify-between mb-12 gap-4">
           <h3 className="text-3xl md:text-4xl font-extrabold text-secondary tracking-tight">
@@ -64,17 +64,17 @@ export default function TeamProfiles() {
 
         {/* Profiles Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-          
+
           {/* Sofía - Left, Large, White */}
           <div className="lg:col-span-8 bg-white rounded-3xl shadow-sm border border-slate-200 overflow-hidden flex flex-col md:flex-row group hover:shadow-md transition-shadow">
             <div className="relative w-full md:w-2/5 aspect-square md:aspect-auto">
               {/* Note: Fallback styling applied in case images are missing */}
               <div className="absolute inset-0 bg-slate-200"></div>
-              <Image 
-                src="/sofia.png" 
-                alt="Sofía Hernández" 
-                fill 
-                className="object-cover transition-all duration-500" 
+              <Image
+                src="/sofia.png"
+                alt="Sofía Hernández"
+                fill
+                className="object-cover transition-all duration-500"
               />
               <div className="absolute top-4 left-4 bg-accent text-secondary text-[10px] font-bold px-3 py-1 rounded-full shadow-sm">
                 5+ years experience
@@ -103,11 +103,11 @@ export default function TeamProfiles() {
           <div className="lg:col-span-4 bg-secondary rounded-3xl shadow-sm overflow-hidden flex flex-col group hover:-translate-y-1 transition-transform duration-300">
             <div className="p-6 pb-0">
               <div className="relative w-full aspect-square rounded-2xl overflow-hidden bg-slate-800">
-                <Image 
-                  src="/carlos.png" 
-                  alt="Carlos Martínez" 
-                  fill 
-                  className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500" 
+                <Image
+                  src="/carlos.png"
+                  alt="Carlos Martínez"
+                  fill
+                  className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
                 />
               </div>
             </div>
@@ -123,11 +123,11 @@ export default function TeamProfiles() {
           {/* Ana - Bottom, Full Width, Green */}
           <div className="lg:col-span-12 bg-accent rounded-3xl shadow-sm overflow-hidden p-8 md:p-12 flex flex-col md:flex-row items-center gap-8 group hover:shadow-md transition-shadow">
             <div className="relative w-32 h-32 md:w-40 md:h-40 flex-shrink-0 rounded-full overflow-hidden border-4 border-white/20 bg-emerald-400">
-              <Image 
-                src="/ana.png" 
-                alt="Ana Rodríguez" 
-                fill 
-                className="object-cover" 
+              <Image
+                src="/ana.png"
+                alt="Ana Rodríguez"
+                fill
+                className="object-cover"
               />
             </div>
             <div className="flex-grow flex flex-col">
@@ -157,10 +157,10 @@ export default function TeamProfiles() {
         <div className="bg-primary rounded-[2.5rem] p-12 md:p-20 flex flex-col items-center text-center shadow-2xl relative overflow-hidden">
           {/* Subtle background decoration */}
           <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-             <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-white/5 rounded-full blur-3xl"></div>
-             <div className="absolute top-12 -right-12 w-48 h-48 bg-white/5 rounded-full blur-2xl"></div>
+            <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-white/5 rounded-full blur-3xl"></div>
+            <div className="absolute top-12 -right-12 w-48 h-48 bg-white/5 rounded-full blur-2xl"></div>
           </div>
-          
+
           <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-6 tracking-tight relative z-10">
             Ready to meet your future specialist?
           </h2>
