@@ -31,11 +31,12 @@ export default function HeroSection() {
             </div>
 
             {/* Headlines */}
-            <h1 className="text-5xl md:text-6xl font-extrabold text-white tracking-tight leading-tight mb-6">
-              The Nearshore Team That <br className="hidden sm:block" />
-              <span className="inline-block bg-[#84cc16] text-[#0B132B] px-3 py-1 mt-2 rounded-md">
-                Powers Your Business.
+            <h1 className="text-5xl md:text-6xl font-extrabold text-white tracking-tight leading-tight mb-6 flex flex-wrap items-center gap-x-3 gap-y-1">
+              <span>The Virtual Team That</span>
+              <span className="inline-block bg-[#84cc16] text-[#0B132B] px-3 py-1 rounded-md">
+                Powers Your
               </span>
+              <span>Business.</span>
             </h1>
 
             <p className="text-lg md:text-xl text-white/90 mb-10 max-w-xl leading-relaxed">
