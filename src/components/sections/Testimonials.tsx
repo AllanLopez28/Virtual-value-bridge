@@ -28,14 +28,6 @@ export default function Testimonials() {
       initial: "M",
       color: "bg-blue-800",
     },
-    {
-      quote: "Bringing on support for our administrative and project needs has made a big difference in how we operate. Moving takeoffs and estimates out of the daily workload of our project team has been one of the best decisions we’ve made. It allows our team to stay focused on active projects, while estimates are completed faster and details stay organized. The team at Virtual Value Bridge integrated seamlessly and has become a reliable extension of our business.",
-      achievement: "Faster estimates",
-      name: "Moses G.",
-      title: "Project Manager, Artistic Tile & Installation",
-      initial: "M",
-      color: "bg-purple-600",
-    },
   ];
 
   return (
@@ -78,9 +70,13 @@ export default function Testimonials() {
             
             <Quote className="w-12 h-12 text-accent mb-6 rotate-180 opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300" strokeWidth={1.5} />
             
-            <p className="text-xl md:text-2xl lg:text-3xl text-white font-bold leading-snug mb-12">
-              "In six months we went from drowning in tenant tickets and late owner reports to clearing them daily. Our Virtual value bridge pod runs AP, the tenant inbox, and maintenance dispatch — and our local team finally took a real weekend off."
+            <p className="text-xl md:text-2xl lg:text-3xl text-white font-bold leading-snug mb-8">
+              "Bringing on support for our administrative and project needs has made a big difference in how we operate. Moving takeoffs and estimates out of the daily workload of our project team has been one of the best decisions we’ve made. It allows our team to stay focused on active projects, while estimates are completed faster and details stay organized. The team at Virtual Value Bridge integrated seamlessly and has become a reliable extension of our business."
             </p>
+            <div className="flex flex-col mb-12">
+              <span className="text-lg font-extrabold text-white">Moses G.</span>
+              <span className="text-sm font-semibold text-accent">Project Manager, Artistic Tile & Installation</span>
+            </div>
 
             {/* Metrics Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
