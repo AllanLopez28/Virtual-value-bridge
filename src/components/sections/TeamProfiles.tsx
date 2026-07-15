@@ -107,7 +107,7 @@ export default function TeamProfiles() {
                   src="/carlos.png"
                   alt="Carlos Martínez"
                   fill
-                  className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                  className="object-cover transition-all duration-500"
                 />
               </div>
             </div>
