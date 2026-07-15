@@ -42,7 +42,7 @@ export default function Comparison() {
   ];
 
   return (
-    <section className="w-full relative flex flex-col items-center">
+    <section id="compare" className="w-full relative flex flex-col items-center">
       {/* Dark Top Half */}
       <div className="w-full bg-secondary pt-24 pb-40 px-4 text-center flex flex-col items-center">
         <span className="inline-flex items-center rounded-full bg-white/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-slate-300 mb-8 border border-white/10">

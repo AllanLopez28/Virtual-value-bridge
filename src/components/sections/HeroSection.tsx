@@ -32,15 +32,14 @@ export default function HeroSection() {
 
             {/* Headlines */}
             <h1 className="text-5xl md:text-6xl font-extrabold text-white tracking-tight leading-tight mb-6">
-              High impact <br className="hidden sm:block" /> operations. <br className="hidden sm:block" />
+              The Nearshore Team That <br className="hidden sm:block" />
               <span className="inline-block bg-[#84cc16] text-[#0B132B] px-3 py-1 mt-2 rounded-md">
-                Smartly staffed.
+                Powers Your Business.
               </span>
             </h1>
 
             <p className="text-lg md:text-xl text-white/90 mb-10 max-w-xl leading-relaxed">
-              We deploy specialized nearshore talent to handle your admin work, 
-              property management tickets, and compliance — flawlessly.
+              From customer support to back-office and administrative operations, we help US businesses build dedicated teams — fully aligned with your processes, working in your time zone, delivering quality work at a lower cost.
             </p>
 
             {/* Buttons */}
