@@ -128,21 +128,21 @@ export default function SavingsCalculator() {
                 ESTIMATED MONTHLY SAVINGS
               </span>
               <div className="text-6xl md:text-7xl font-extrabold text-accent mb-2 tracking-tight">
-                ${monthlySavings.toLocaleString()}
+                ${monthlySavings.toLocaleString("en-US")}
               </div>
               <div className="text-sm font-bold text-white/80 mb-10">
-                ≈ ${annualSavings.toLocaleString()} per year
+                ≈ ${annualSavings.toLocaleString("en-US")} per year
               </div>
 
               {/* Breakdown Table */}
               <div className="space-y-4 mb-10 border-t border-white/10 pt-6">
                 <div className="flex justify-between items-center text-sm">
                   <span className="text-slate-300 font-medium">Local hire (loaded)</span>
-                  <span className="text-white font-bold">${localMonthlyCost.toLocaleString()}/mo</span>
+                  <span className="text-white font-bold">${localMonthlyCost.toLocaleString("en-US")}/mo</span>
                 </div>
                 <div className="flex justify-between items-center text-sm">
                   <span className="text-slate-300 font-medium">Virtual value bridge specialist</span>
-                  <span className="text-accent font-bold">${vvbridgeMonthlyCost.toLocaleString()}/mo</span>
+                  <span className="text-accent font-bold">${vvbridgeMonthlyCost.toLocaleString("en-US")}/mo</span>
                 </div>
               </div>
             </div>
