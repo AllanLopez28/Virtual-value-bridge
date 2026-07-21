@@ -117,18 +117,7 @@ export default function ContactForm() {
                   </div>
                   <span className="text-sm font-semibold text-slate-700">info@vvbridge.net</span>
                 </div>
-                <div className="flex items-center gap-4 group/item cursor-default">
-                  <div className="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-primary group-hover/item:bg-primary group-hover/item:text-white transition-colors">
-                    <Phone className="w-5 h-5" strokeWidth={1.5} />
-                  </div>
-                  <span className="text-sm font-semibold text-slate-700">U.S. line available on request</span>
-                </div>
-                <div className="flex items-center gap-4 group/item cursor-default">
-                  <div className="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-primary group-hover/item:bg-primary group-hover/item:text-white transition-colors">
-                    <MapPin className="w-5 h-5" strokeWidth={1.5} />
-                  </div>
-                  <span className="text-sm font-semibold text-slate-700">San Salvador, El Salvador</span>
-                </div>
+
               </div>
             </div>
 
