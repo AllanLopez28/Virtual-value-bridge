@@ -7,7 +7,7 @@ import { Sparkles, ArrowRight, Calculator, CheckCircle2 } from "lucide-react";
 export default function HeroSection() {
   return (
     <section className="relative w-full overflow-hidden min-h-[600px] flex flex-col lg:flex-row items-center">
-      
+
       {/* Full Background Image */}
       <div className="absolute inset-0 w-full h-full z-0">
         <Image
@@ -21,14 +21,11 @@ export default function HeroSection() {
 
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          
+
           {/* Left Column (Text Content) */}
           <div className="max-w-2xl relative z-10">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 text-white text-sm font-medium mb-8 backdrop-blur-sm border border-white/10 hover:bg-white/20 transition-colors cursor-default">
-              <Sparkles className="w-4 h-4 text-[#84cc16]" />
-              <span>Nearshore from El Salvador</span>
-            </div>
+
 
             {/* Headlines */}
             <h1 className="text-5xl md:text-6xl font-extrabold text-white tracking-tight leading-tight mb-6 flex flex-wrap items-center gap-x-3 gap-y-1">

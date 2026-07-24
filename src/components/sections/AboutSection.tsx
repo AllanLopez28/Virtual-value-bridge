@@ -7,7 +7,7 @@ export default function AboutSection() {
     <section className="w-full pt-8 pb-16 md:pt-12 md:pb-20 bg-slate-50">
       <div className="container mx-auto px-4 md:px-6 max-w-7xl">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          
+
           {/* Left Column - Visuals */}
           <div className="flex flex-col gap-6">
             <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-xl group cursor-default">
@@ -16,10 +16,10 @@ export default function AboutSection() {
                 alt="Virtual value bridge team meeting in San Salvador"
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
-                // Fallback to a placeholder if /meeting.png is missing or misnamed
-                // But the user assured us it's in the public folder.
+              // Fallback to a placeholder if /meeting.png is missing or misnamed
+              // But the user assured us it's in the public folder.
               />
-              
+
               {/* Floating Location Badge */}
               <div className="absolute bottom-4 left-4 bg-white/95 backdrop-blur-sm rounded-full px-4 py-2 flex items-center gap-2 shadow-lg hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
                 <MapPin className="w-4 h-4 text-primary" />
@@ -47,7 +47,7 @@ export default function AboutSection() {
           {/* Right Column - Content */}
           <div className="flex flex-col items-start">
             <span className="text-sm font-bold text-secondary mb-4 tracking-wide">About Virtual value bridge</span>
-            
+
             <h2 className="text-4xl md:text-5xl font-extrabold text-secondary tracking-tight leading-[1.1] mb-6">
               A boutique team,<br />
               <span className="relative inline-block z-10">
@@ -57,13 +57,17 @@ export default function AboutSection() {
               from day<br />
               one.
             </h2>
-            
+
             <p className="text-lg text-slate-600 mb-8 leading-relaxed max-w-lg">
-              We started Virtual value bridge to do what big BPOs can&apos;t: stay small enough to care. 
-              Every specialist is hand-picked, trained on your stack, and supported by 
-              founders who answer your messages — not a ticket queue.
+              We started Virtual value bridge to do what big BPO´s struggle with: stay as a boutique environment type of operation. <br />
+              Every specialist is hand-picked, trained on your stack, and supported by
+              founders who answer your messages.
+
+              <br />
+
+
             </p>
-            
+
             <ul className="flex flex-col gap-4 mb-10">
               <li className="flex items-start gap-3">
                 <div className="mt-1">
@@ -84,8 +88,8 @@ export default function AboutSection() {
                 <span className="text-slate-700 font-medium">Direct line to founders — always</span>
               </li>
             </ul>
-            
-            <Link 
+
+            <Link
               href="#team"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-secondary px-8 py-4 text-sm font-bold text-white hover:bg-secondary/90 hover:-translate-y-1 hover:shadow-xl active:scale-95 transition-all duration-300 shadow-lg"
             >
@@ -93,7 +97,7 @@ export default function AboutSection() {
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
-          
+
         </div>
       </div>
     </section>

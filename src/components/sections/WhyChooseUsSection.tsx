@@ -4,7 +4,7 @@ export default function WhyChooseUsSection() {
   return (
     <section className="bg-white py-20 w-full">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Header Block */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-16">
           {/* Left Block */}
@@ -19,7 +19,7 @@ export default function WhyChooseUsSection() {
               A specialist that <span className="bg-[#84cc16] rounded-md px-2 py-0.5 text-gray-900 inline-block mt-1">fits right in</span>.
             </h2>
           </div>
-          
+
           {/* Right Block */}
           <div className="lg:max-w-md lg:justify-self-end">
             <p className="text-lg text-gray-500">
@@ -30,7 +30,7 @@ export default function WhyChooseUsSection() {
 
         {/* Grid Block */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
-          
+
           {/* Card 1 */}
           <div className="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm flex flex-col">
             <div className="bg-[#0B132B] w-12 h-12 rounded-xl flex items-center justify-center mb-6 shrink-0">
@@ -82,7 +82,7 @@ export default function WhyChooseUsSection() {
             </div>
             <h3 className="text-lg font-bold text-gray-900 mb-3">Results-Driven</h3>
             <p className="text-sm text-gray-500 leading-relaxed">
-              Focused on clear goals, not just hours logged.
+              We don´t do busy work - we hit targets
             </p>
           </div>
 

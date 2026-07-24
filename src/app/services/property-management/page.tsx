@@ -29,7 +29,7 @@ export default function PropertyManagementPage() {
       <section className="w-full bg-slate-50 py-16 md:py-20 lg:py-24">
         <div className="container mx-auto px-4 md:px-6 max-w-7xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            
+
             {/* Left Column (Text Content) */}
             <div className="flex flex-col">
               {/* Breadcrumbs */}
@@ -47,20 +47,20 @@ export default function PropertyManagementPage() {
 
               {/* Paragraph */}
               <p className="text-lg text-slate-700 max-w-xl leading-relaxed mb-8">
-                Stop juggling tenant calls, maintenance tickets, and owner reports on your own. 
+                Stop juggling tenant calls, maintenance tickets, and owner reports on your own.
                 Get a dedicated property management specialist who learns your properties, runs your systems, and reports directly to you.
               </p>
 
               {/* Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 mb-3">
                 <Link
-                  href="#get-matched"
+                  href="/#contact"
                   className="inline-flex items-center justify-center rounded-full bg-blue-600 px-8 py-3.5 text-sm font-bold text-white hover:bg-blue-700 transition-colors shadow-sm"
                 >
                   Get Matched &rarr;
                 </Link>
                 <Link
-                  href="#how-it-works"
+                  href="/how-it-works"
                   className="inline-flex items-center justify-center rounded-full bg-white border border-slate-300 px-8 py-3.5 text-sm font-bold text-slate-900 hover:bg-slate-50 transition-colors shadow-sm"
                 >
                   See How It Works
@@ -100,7 +100,7 @@ export default function PropertyManagementPage() {
       <section className="w-full bg-white py-16 md:py-20 lg:py-24">
         <div className="container mx-auto px-4 md:px-6 max-w-7xl">
           <div className="grid grid-cols-1 lg:grid-cols-[60%_40%] gap-16">
-            
+
             {/* Left Column (Responsibilities) */}
             <div>
               <p className="text-xs font-bold text-blue-600 uppercase tracking-widest mb-4">
@@ -109,7 +109,7 @@ export default function PropertyManagementPage() {
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8 tracking-tight">
                 What Your Property Management Specialist Handles
               </h2>
-              
+
               <ul className="space-y-5">
                 {responsibilities.map((item, idx) => (
                   <li key={idx} className="flex items-start gap-4">
@@ -122,7 +122,7 @@ export default function PropertyManagementPage() {
 
             {/* Right Column (Profile & Tools) */}
             <div className="flex flex-col">
-              
+
               {/* Meet Your Specialist */}
               <div className="mb-12">
                 <p className="text-xs font-bold text-blue-600 uppercase tracking-widest mb-4">
@@ -138,7 +138,7 @@ export default function PropertyManagementPage() {
                       className="object-cover object-top"
                     />
                   </div>
-                  
+
                   {/* Info */}
                   <div className="flex-1 min-w-0">
                     <h3 className="text-base font-bold text-slate-900 truncate">Sofía</h3>
@@ -146,7 +146,7 @@ export default function PropertyManagementPage() {
                       Property Management, AppFolio, Buildium
                     </p>
                   </div>
-                  
+
                   {/* Experience Badge */}
                   <div className="bg-blue-50 text-blue-600 text-xs font-bold px-3 py-1.5 rounded-full whitespace-nowrap shrink-0">
                     5+ yrs
@@ -161,8 +161,8 @@ export default function PropertyManagementPage() {
                 </p>
                 <div className="grid grid-cols-2 gap-3">
                   {tools.map((tool, idx) => (
-                    <div 
-                      key={idx} 
+                    <div
+                      key={idx}
                       className="flex items-center gap-3 p-3 border border-gray-200 rounded-lg bg-white shadow-sm hover:border-blue-200 transition-colors"
                     >
                       <Menu className="w-4 h-4 text-blue-500 shrink-0" />
