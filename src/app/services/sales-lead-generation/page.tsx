@@ -2,25 +2,31 @@ import Image from "next/image";
 import Link from "next/link";
 import { CheckCircle2, Menu } from "lucide-react";
 
-export default function AdministrativeSupportPage() {
+export default function SalesLeadGenerationPage() {
   const responsibilities = [
-    "Calendar management and scheduling coordination",
-    "Inbox management and email triage",
-    "Meeting prep, agendas, and follow-up notes",
-    "Document creation, formatting, and organization",
-    "Travel arrangements and itinerary planning",
-    "Data entry and file management across your systems",
+    "Building targeted prospect lists from your ideal customer profile (ICP)",
+    "Contact research, data enrichment, and email verification before outreach",
+    "Multi-channel outreach across cold email, LinkedIn, and phone sequences",
+    "Writing and A/B testing subject lines, messaging, and follow-up cadences",
+    "Qualifying leads against your criteria so only real fits reach your reps",
+    "Booking and confirming discovery calls straight into your team's calendar",
+    "Same-business-day response to new inbound leads so none go cold",
+    "Reminder sequences that keep no-show rates down on booked meetings",
+    "CRM hygiene: activity logging, lead-source tagging, and pipeline updates",
+    "Weekly reporting on outreach volume, reply rates, meetings booked, and pipeline",
   ];
 
   const tools = [
-    "Google Workspace",
-    "Microsoft Office",
+    "HubSpot",
+    "Salesforce",
+    "Apollo.io",
+    "LinkedIn Sales Navigator",
+    "ZoomInfo",
+    "Instantly",
+    "Lemlist",
+    "Outreach",
     "Calendly",
-    "Notion",
-    "Asana",
-    "DocuSign",
-    "Slack",
-    "Zoom"
+    "Clay"
   ];
 
   return (
@@ -36,29 +42,25 @@ export default function AdministrativeSupportPage() {
               <div className="text-sm font-medium mb-6">
                 <Link href="/" className="text-slate-400 hover:text-slate-600 transition-colors">Home</Link>
                 <span className="mx-2 text-slate-400">&gt;</span>
-                <span className="text-slate-900">Administrative Support</span>
+                <span className="text-slate-900">Sales & Lead Generation</span>
               </div>
 
               {/* Title */}
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight mb-6 tracking-tight">
                 Meet Your <br className="hidden sm:block" />
-                <span className="text-blue-600 italic">Administrative Support Specialist</span>
+                <span className="text-blue-600 italic">Sales & Lead<br />Generation<br />Specialist</span>
               </h1>
 
               {/* Paragraph */}
               <p className="text-lg text-slate-700 max-w-xl leading-relaxed mb-8">
-                Stop drowning in email, calendar conflicts, and paperwork.
-                Get a dedicated administrative support specialist who manages your calendars, inboxes, and document prep — so you can focus on running your business.
+                Pipeline doesn't fill itself — it takes steady outreach every single day. Get a dedicated sales development specialist who builds your prospect lists, runs your outreach, qualifies leads, and books discovery calls straight into your team's calendar.
               </p>
 
               {/* Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 mb-3">
                 <Link
                   href="/#contact"
-                  className="inline-flex items-center ju
-                  
-                  
-                  stify-center rounded-full bg-blue-600 px-8 py-3.5 text-sm font-bold text-white hover:bg-blue-700 transition-colors shadow-sm"
+                  className="inline-flex items-center justify-center rounded-full bg-blue-600 px-8 py-3.5 text-sm font-bold text-white hover:bg-blue-700 transition-colors shadow-sm"
                 >
                   Get Matched &rarr;
                 </Link>
@@ -81,8 +83,8 @@ export default function AdministrativeSupportPage() {
               <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-full bg-white shadow-xl flex items-center justify-center p-2">
                 <div className="relative w-full h-full rounded-full overflow-hidden bg-blue-50/50">
                   <Image
-                    src="/diego.png"
-                    alt="Administrative Support Specialist"
+                    src="/mateo.png"
+                    alt="Sales & Lead Generation Specialist"
                     fill
                     className="object-cover"
                     priority
@@ -110,7 +112,7 @@ export default function AdministrativeSupportPage() {
                 DAY-TO-DAY RESPONSIBILITIES
               </p>
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8 tracking-tight">
-                What Your Administrative Support Specialist Handles
+                What Your Sales Development Specialist Handles
               </h2>
 
               <ul className="space-y-5">
@@ -135,8 +137,8 @@ export default function AdministrativeSupportPage() {
                   {/* Avatar */}
                   <div className="relative w-14 h-14 rounded-full overflow-hidden shrink-0 bg-blue-50">
                     <Image
-                      src="/diego.png"
-                      alt="Diego"
+                      src="/mateo.png"
+                      alt="Mateo"
                       fill
                       className="object-cover object-top"
                     />
@@ -144,9 +146,9 @@ export default function AdministrativeSupportPage() {
 
                   {/* Info */}
                   <div className="flex-1 min-w-0">
-                    <h3 className="text-base font-bold text-slate-900 truncate">Diego</h3>
+                    <h3 className="text-base font-bold text-slate-900 truncate">Mateo</h3>
                     <p className="text-sm text-slate-500 truncate">
-                      Administrative Support, Calendars, Inbox Management
+                      Sales Development, Multi-Channel Outreach & Appointment Setting
                     </p>
                   </div>
 

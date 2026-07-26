@@ -28,7 +28,7 @@ export default function CTASection() {
       {/* Main CTA */}
       <div className="w-full bg-[#0B132B] text-white py-24 md:py-32">
         <div className="container mx-auto px-4 md:px-6 max-w-4xl flex flex-col items-center text-center">
-          
+
           <h2 className="text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.2] mb-8 flex flex-wrap justify-center items-center gap-x-4 gap-y-2">
             Ready to free up
             <span className="inline-block bg-accent text-secondary px-6 py-1 md:py-2 rounded-3xl -rotate-2 hover:rotate-0 transition-transform duration-300">
@@ -38,14 +38,14 @@ export default function CTASection() {
               team?
             </span>
           </h2>
-          
+
           <p className="text-lg md:text-xl text-slate-300 mb-12 font-medium">
             See exactly how much you&apos;d save with a dedicated Virtual value bridge specialist.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
             <Link
-              href="#calculator"
+              href="/calculator"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-accent px-8 py-4 text-sm font-bold text-secondary hover:bg-accent/90 hover:scale-105 hover:shadow-[0_0_20px_rgba(132,204,22,0.4)] active:scale-95 transition-all duration-300"
             >
               Calculate your savings
@@ -58,7 +58,7 @@ export default function CTASection() {
               Book a free call
             </Link>
           </div>
-          
+
         </div>
       </div>
     </section>

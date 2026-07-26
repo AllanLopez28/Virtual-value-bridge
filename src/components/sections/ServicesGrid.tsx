@@ -27,6 +27,7 @@ export default function ServicesGrid() {
       title: "Bookkeeping & Accounting",
       description: "AP/AR, invoicing, reconciliations, and reporting.",
       icon: Calculator,
+      link: "/services/bookkeeping-accounting",
     },
     {
       title: "Marketing Support",
@@ -38,6 +39,7 @@ export default function ServicesGrid() {
       title: "Sales & Lead Generation",
       description: "Prospecting, outreach, CRM, and appointment setting.",
       icon: Target,
+      link: "/services/sales-lead-generation",
     },
     {
       title: "Data Entry & Back-Office",
