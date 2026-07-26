@@ -50,7 +50,7 @@ export default function HeroSection() {
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
-                href="#calculator"
+                href="/calculator"
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-transparent border border-white/30 px-8 py-3.5 text-sm font-medium text-white hover:bg-white/10 hover:scale-105 active:scale-95 transition-all duration-300 backdrop-blur-sm"
               >
                 <Calculator className="w-4 h-4" />

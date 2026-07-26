@@ -36,13 +36,13 @@ export default function Navbar() {
             <Link href="/#services" className="text-sm font-semibold text-slate-500 hover:text-primary transition-colors">
               Services
             </Link>
-            <Link href="/#compare" className="text-sm font-semibold text-slate-500 hover:text-primary transition-colors">
+            <Link href="/comparison" className="text-sm font-semibold text-slate-500 hover:text-primary transition-colors">
               Compare
             </Link>
-            <Link href="/#team" className="text-sm font-semibold text-slate-500 hover:text-primary transition-colors">
+            <Link href="/team" className="text-sm font-semibold text-slate-500 hover:text-primary transition-colors">
               Team
             </Link>
-            <Link href="/#calculator" className="text-sm font-semibold text-slate-500 hover:text-primary transition-colors">
+            <Link href="/calculator" className="text-sm font-semibold text-slate-500 hover:text-primary transition-colors">
               Calculator
             </Link>
             <Link href="/#contact" className="text-sm font-semibold text-slate-500 hover:text-primary transition-colors">
@@ -80,13 +80,13 @@ export default function Navbar() {
           <Link href="/#services" onClick={() => setIsOpen(false)} className="text-sm font-semibold text-slate-600">
             Services
           </Link>
-          <Link href="/#compare" onClick={() => setIsOpen(false)} className="text-sm font-semibold text-slate-600">
+          <Link href="/comparison" onClick={() => setIsOpen(false)} className="text-sm font-semibold text-slate-600">
             Compare
           </Link>
-          <Link href="/#team" onClick={() => setIsOpen(false)} className="text-sm font-semibold text-slate-600">
+          <Link href="/team" onClick={() => setIsOpen(false)} className="text-sm font-semibold text-slate-600">
             Team
           </Link>
-          <Link href="/#calculator" onClick={() => setIsOpen(false)} className="text-sm font-semibold text-slate-600">
+          <Link href="/calculator" onClick={() => setIsOpen(false)} className="text-sm font-semibold text-slate-600">
             Calculator
           </Link>
           <Link href="/#contact" onClick={() => setIsOpen(false)} className="text-sm font-semibold text-slate-600">
