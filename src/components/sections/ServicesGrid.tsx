@@ -3,7 +3,11 @@
 import { Calendar, Headphones, Calculator, Megaphone, Target, Database, ClipboardList, Home, ShieldCheck, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
-export default function ServicesGrid() {
+interface ServicesGridProps {
+  hideHeader?: boolean;
+}
+
+export default function ServicesGrid({ hideHeader = false }: ServicesGridProps) {
   const services = [
     {
       title: "Property Management Support",
@@ -60,24 +64,29 @@ export default function ServicesGrid() {
       <div className="container mx-auto px-4 md:px-6 max-w-7xl">
 
         {/* Header Section */}
-        <div className="max-w-3xl mb-16">
-          <div className="flex items-center gap-2 mb-6">
+        <div className={`max-w-3xl ${hideHeader ? 'mb-8' : 'mb-16'}`}>
+          <div className={`flex items-center gap-2 ${hideHeader ? 'mb-0' : 'mb-6'}`}>
             <span className="w-1.5 h-1.5 rounded-full bg-accent"></span>
             <span className="text-xs font-bold uppercase tracking-widest text-slate-300">What we do</span>
           </div>
 
-          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight leading-[1.1] mb-6 text-white">
-            <span className="inline-block bg-accent text-[#0B132B] px-2 mt-2 md:mt-0">
-              + Eight
-            </span>{" "}
-            ways we unblock your team.
-          </h2>
+          {!hideHeader && (
+            <>
+              <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight leading-[1.1] mb-6 text-white">
+                <span className="inline-block bg-accent text-[#0B132B] px-2 mt-2 md:mt-0">
+                  + Eight
+                </span>{" "}
+                ways we unblock your team.
+              </h2>
 
-          <p className="text-lg text-slate-300 max-w-2xl leading-relaxed">
-            One dedicated specialist or a small back-office squad  trained on your stack and
-            embedded in your day-to-day.
-          </p>
+              <p className="text-lg text-slate-300 max-w-2xl leading-relaxed">
+                One dedicated specialist or a small back-office squad  trained on your stack and
+                embedded in your day-to-day.
+              </p>
+            </>
+          )}
         </div>
+
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-12">

@@ -33,7 +33,7 @@ export default function Navbar() {
             <Link href="/how-it-works" className="text-sm font-semibold text-slate-500 hover:text-primary transition-colors">
               How It Works
             </Link>
-            <Link href="/#services" className="text-sm font-semibold text-slate-500 hover:text-primary transition-colors">
+            <Link href="/services" className="text-sm font-semibold text-slate-500 hover:text-primary transition-colors">
               Services
             </Link>
             <Link href="/comparison" className="text-sm font-semibold text-slate-500 hover:text-primary transition-colors">
@@ -77,7 +77,7 @@ export default function Navbar() {
           <Link href="/how-it-works" onClick={() => setIsOpen(false)} className="text-sm font-semibold text-slate-600">
             How It Works
           </Link>
-          <Link href="/#services" onClick={() => setIsOpen(false)} className="text-sm font-semibold text-slate-600">
+          <Link href="/services" onClick={() => setIsOpen(false)} className="text-sm font-semibold text-slate-600">
             Services
           </Link>
           <Link href="/comparison" onClick={() => setIsOpen(false)} className="text-sm font-semibold text-slate-600">
