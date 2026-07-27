@@ -45,35 +45,36 @@ export default function ServicesGrid() {
       title: "Data Entry & Back-Office",
       description: "Processing, research, reporting, order ops.",
       icon: Database,
+      link: "/services/data-entry-back-office",
     },
     {
       title: "Project Coordination",
       description: "Task tracking, vendor coordination, documentation.",
       icon: ClipboardList,
+      link: "/services/project-coordination",
     },
   ];
 
   return (
     <section id="services" className="w-full py-20 md:py-32 bg-secondary text-white">
       <div className="container mx-auto px-4 md:px-6 max-w-7xl">
-        
+
         {/* Header Section */}
         <div className="max-w-3xl mb-16">
           <div className="flex items-center gap-2 mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-accent"></span>
             <span className="text-xs font-bold uppercase tracking-widest text-slate-300">What we do</span>
           </div>
-          
-          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight leading-[1.1] mb-6">
-            Eight ways we{" "}
-            <span className="inline-block bg-accent text-secondary px-2 mt-2 md:mt-0">
-              unblock
+
+          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight leading-[1.1] mb-6 text-white">
+            <span className="inline-block bg-accent text-[#0B132B] px-2 mt-2 md:mt-0">
+              + Eight
             </span>{" "}
-            your team.
+            ways we unblock your team.
           </h2>
-          
+
           <p className="text-lg text-slate-300 max-w-2xl leading-relaxed">
-            One dedicated specialist — or a small back-office squad — trained on your stack and 
+            One dedicated specialist — or a small back-office squad — trained on your stack and
             embedded in your day-to-day.
           </p>
         </div>
@@ -82,7 +83,7 @@ export default function ServicesGrid() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-12">
           {services.map((service, index) => {
             const Icon = service.icon;
-            
+
             const content = (
               <div className={`flex flex-col bg-[#1e2a4a] border border-[#2a3b63] rounded-2xl p-8 hover:-translate-y-1 hover:shadow-xl hover:border-accent/30 transition-all duration-300 group h-full ${service.link ? 'cursor-pointer' : 'cursor-default'}`}>
                 <div className="mb-6">
@@ -106,14 +107,7 @@ export default function ServicesGrid() {
         </div>
 
         {/* Footer Links */}
-        <div className="flex justify-start">
-          <Link 
-            href="#services" 
-            className="inline-flex items-center gap-2 text-sm font-bold text-accent hover:text-white transition-colors"
-          >
-            See all services in detail <ArrowRight className="w-4 h-4" />
-          </Link>
-        </div>
+
 
       </div>
     </section>

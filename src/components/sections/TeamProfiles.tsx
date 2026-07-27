@@ -71,57 +71,60 @@ export default function TeamProfiles() {
               {/* Note: Fallback styling applied in case images are missing */}
               <div className="absolute inset-0 bg-slate-200"></div>
               <Image
-                src="/sofia.png"
-                alt="Sofía Hernández"
+                src="/dora.png"
+                alt="Dora Elizabeth Belloso"
                 fill
                 className="object-cover transition-all duration-500"
               />
               <div className="absolute top-4 left-4 bg-accent text-secondary text-[10px] font-bold px-3 py-1 rounded-full shadow-sm">
-                5+ years experience
+                ~3 yrs experience
               </div>
             </div>
             <div className="w-full md:w-3/5 p-8 md:p-10 flex flex-col justify-center">
-              <h4 className="text-2xl font-extrabold text-secondary mb-1">Sofía Hernández</h4>
-              <span className="text-primary font-bold text-sm mb-6">Lead Property Specialist</span>
+              <h4 className="text-2xl font-extrabold text-secondary mb-1">Dora Elizabeth Belloso</h4>
+              <span className="text-primary font-bold text-sm mb-6">Auditor</span>
               <p className="text-sm text-slate-600 mb-8 leading-relaxed font-medium">
-                Bilingual operations specialist with over five years managing multifamily portfolios across Texas and Florida. Expert in AppFolio, Buildium, and tenant ledger reconciliation.
+                Dora Elizabeth Belloso is an Auditor at Virtual Value Bridge, where she's spent close to three years working across every area of her account with a detail-oriented eye.
               </p>
               <div className="flex flex-wrap gap-2 mb-8">
-                <span className="bg-slate-100 text-slate-600 text-[10px] font-bold px-3 py-1.5 rounded-md tracking-wider">APPFOLIO</span>
-                <span className="bg-slate-100 text-slate-600 text-[10px] font-bold px-3 py-1.5 rounded-md tracking-wider">TENANT RELATIONS</span>
-                <span className="bg-slate-100 text-slate-600 text-[10px] font-bold px-3 py-1.5 rounded-md tracking-wider">COMPLIANCE</span>
+                <span className="bg-slate-100 text-slate-600 text-[10px] font-bold px-3 py-1.5 rounded-md tracking-wider">AUDITING</span>
+                <span className="bg-slate-100 text-slate-600 text-[10px] font-bold px-3 py-1.5 rounded-md tracking-wider">QA</span>
+                <span className="bg-slate-100 text-slate-600 text-[10px] font-bold px-3 py-1.5 rounded-md tracking-wider">CX</span>
               </div>
               <div>
-                <Link href="#contact" className="inline-flex items-center justify-center gap-2 rounded-lg bg-secondary px-6 py-2.5 text-sm font-bold text-white hover:bg-secondary/90 transition-colors shadow-sm">
+                <Link href="/team/dora-belloso" className="inline-flex items-center justify-center gap-2 rounded-lg bg-secondary px-6 py-2.5 text-sm font-bold text-white hover:bg-secondary/90 transition-colors shadow-sm">
                   View full profile <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
             </div>
           </div>
 
-          {/* Carlos - Right, Vertical, Dark */}
-          <div className="lg:col-span-4 bg-secondary rounded-3xl shadow-sm overflow-hidden flex flex-col group hover:-translate-y-1 transition-transform duration-300">
+          {/* Bryan - Right, Vertical, Dark */}
+          <Link href="/team/bryan-rivas" className="lg:col-span-4 bg-secondary rounded-3xl shadow-sm overflow-hidden flex flex-col group hover:-translate-y-1 transition-transform duration-300">
             <div className="p-6 pb-0">
               <div className="relative w-full aspect-square rounded-2xl overflow-hidden bg-slate-800">
                 <Image
                   src="/carlos.png"
-                  alt="Carlos Martínez"
+                  alt="Bryan Alexander Rivas"
                   fill
                   className="object-cover transition-all duration-500"
                 />
               </div>
             </div>
             <div className="p-6 flex flex-col flex-grow">
-              <h4 className="text-xl font-extrabold text-white mb-1">Carlos Martínez</h4>
-              <span className="text-accent font-bold text-xs mb-4">Senior Operations Manager</span>
+              <h4 className="text-xl font-extrabold text-white mb-1 group-hover:text-accent transition-colors">Bryan Alexander Rivas</h4>
+              <span className="text-accent font-bold text-xs mb-4">Back-Office Operations Lead</span>
               <p className="text-sm text-slate-300 leading-relaxed">
-                Carlos oversees daily operations and SOP design for Virtual value bridge. With a background in BPO leadership, he built our quality framework guaranteeing same-day responses across every U.S. time zone.
+                Bryan has spent nearly three years with Virtual Value Bridge, growing into department lead. He takes ownership of daily operations — keeping things running smoothly and mentoring newer specialists.
               </p>
+              <div className="mt-auto pt-6 flex items-center text-accent text-sm font-bold gap-2">
+                View full profile <ArrowRight className="w-4 h-4" />
+              </div>
             </div>
-          </div>
+          </Link>
 
           {/* Ana - Bottom, Full Width, Green */}
-          <div className="lg:col-span-12 bg-accent rounded-3xl shadow-sm overflow-hidden p-8 md:p-12 flex flex-col md:flex-row items-center gap-8 group hover:shadow-md transition-shadow">
+          <Link href="/team/ana-rodriguez" className="lg:col-span-12 bg-accent rounded-3xl shadow-sm overflow-hidden p-8 md:p-12 flex flex-col md:flex-row items-center gap-8 group hover:shadow-md transition-shadow">
             <div className="relative w-32 h-32 md:w-40 md:h-40 flex-shrink-0 rounded-full overflow-hidden border-4 border-white/20 bg-emerald-400">
               <Image
                 src="/ana.png"
@@ -132,22 +135,22 @@ export default function TeamProfiles() {
             </div>
             <div className="flex-grow flex flex-col">
               <h4 className="text-2xl font-extrabold text-secondary mb-1">Ana Rodríguez</h4>
-              <span className="text-secondary/80 font-bold text-[10px] tracking-widest uppercase mb-4">CLIENT SUCCESS LEAD • 6+ YEARS</span>
+              <span className="text-secondary/80 font-bold text-[10px] tracking-widest uppercase mb-4">NEW PHYSICIAN TRAINER</span>
               <p className="text-sm text-secondary/90 leading-relaxed font-medium mb-6 max-w-3xl">
-                Ana is the direct line between founders and clients. She trained at top single-family operators and coordinates support, compliance reviews, and monthly performance reports.
+                Ana is a dedicated medical professional who ensures the highest standards of patient care. She mentors incoming professionals, helping them build skills, confidence, and deliver quality service.
               </p>
               <div className="flex flex-wrap items-center gap-4 text-xs font-extrabold text-secondary tracking-wider">
-                <span className="flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-secondary"></span> YARDI</span>
-                <span className="flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-secondary"></span> ONBOARDING</span>
-                <span className="flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-secondary"></span> REPORTING</span>
+                <span className="flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-secondary"></span> TRAINING</span>
+                <span className="flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-secondary"></span> CLINICAL</span>
+                <span className="flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-secondary"></span> QA</span>
               </div>
             </div>
             <div className="flex-shrink-0 mt-6 md:mt-0">
-              <Link href="#contact" className="w-14 h-14 rounded-full bg-secondary flex items-center justify-center text-white hover:scale-110 transition-transform shadow-lg">
+              <div className="w-14 h-14 rounded-full bg-secondary flex items-center justify-center text-white group-hover:scale-110 transition-transform shadow-lg">
                 <ArrowRight className="w-6 h-6" />
-              </Link>
+              </div>
             </div>
-          </div>
+          </Link>
 
         </div>
       </div>
@@ -169,7 +172,7 @@ export default function TeamProfiles() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 relative z-10">
             <Link
-              href="#contact"
+              href="/#contact"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-accent px-8 py-3.5 text-sm font-bold text-secondary hover:bg-accent/90 hover:scale-105 active:scale-95 transition-all duration-300 shadow-lg"
             >
               Talk to a founder
