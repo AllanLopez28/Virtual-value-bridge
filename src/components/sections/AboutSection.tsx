@@ -90,7 +90,7 @@ export default function AboutSection() {
             </ul>
 
             <Link
-              href="#team"
+              href="/team"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-secondary px-8 py-4 text-sm font-bold text-white hover:bg-secondary/90 hover:-translate-y-1 hover:shadow-xl active:scale-95 transition-all duration-300 shadow-lg"
             >
               Meet the team

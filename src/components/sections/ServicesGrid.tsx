@@ -74,7 +74,7 @@ export default function ServicesGrid() {
           </h2>
 
           <p className="text-lg text-slate-300 max-w-2xl leading-relaxed">
-            One dedicated specialist — or a small back-office squad — trained on your stack and
+            One dedicated specialist or a small back-office squad  trained on your stack and
             embedded in your day-to-day.
           </p>
         </div>

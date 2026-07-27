@@ -37,13 +37,13 @@ export default function HeroSection() {
             </h1>
 
             <p className="text-lg md:text-xl text-white/90 mb-10 max-w-xl leading-relaxed">
-              From customer support to back-office and administrative operations, we help US businesses build dedicated teams — fully aligned with your processes, working in your time zone, delivering quality work at a lower cost.
+              From customer support to back-office and administrative operations, we help US businesses build dedicated teams, fully aligned with your processes, working in your time zone, delivering quality work at a lower cost.
             </p>
 
             {/* Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
               <Link
-                href="#book-call"
+                href="/#contact"
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-[#84cc16] px-8 py-3.5 text-sm font-bold text-[#0B132B] hover:bg-[#84cc16]/90 hover:scale-105 hover:shadow-[0_0_20px_rgba(132,204,22,0.4)] active:scale-95 transition-all duration-300"
               >
                 Book a free call
