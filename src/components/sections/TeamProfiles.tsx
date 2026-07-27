@@ -81,7 +81,7 @@ export default function TeamProfiles() {
               </div>
             </div>
             <div className="w-full md:w-3/5 p-8 md:p-10 flex flex-col justify-center">
-              <h4 className="text-2xl font-extrabold text-secondary mb-1">Dora Elizabeth Belloso</h4>
+              <h4 className="text-2xl font-extrabold text-secondary mb-1">Dora Belloso</h4>
               <span className="text-primary font-bold text-sm mb-6">Auditor</span>
               <p className="text-sm text-slate-600 mb-8 leading-relaxed font-medium">
                 Dora Elizabeth Belloso is an Auditor at Virtual Value Bridge, where she's spent close to three years working across every area of her account with a detail-oriented eye.
@@ -112,7 +112,7 @@ export default function TeamProfiles() {
               </div>
             </div>
             <div className="p-6 flex flex-col flex-grow">
-              <h4 className="text-xl font-extrabold text-white mb-1 group-hover:text-accent transition-colors">Bryan Alexander Rivas</h4>
+              <h4 className="text-xl font-extrabold text-white mb-1 group-hover:text-accent transition-colors">Bryan Rivas</h4>
               <span className="text-accent font-bold text-xs mb-4">Back-Office Operations Lead</span>
               <p className="text-sm text-slate-300 leading-relaxed">
                 Bryan has spent nearly three years with Virtual Value Bridge, growing into department lead. He takes ownership of daily operations — keeping things running smoothly and mentoring newer specialists.
