@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { getCalApi } from "@calcom/embed-react";
 
 import Link from "next/link";
 import { Calendar, ArrowRight, Mail, Phone, MapPin, CheckCircle } from "lucide-react";
@@ -8,6 +9,17 @@ import { Calendar, ArrowRight, Mail, Phone, MapPin, CheckCircle } from "lucide-r
 export default function ContactForm() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    (async function () {
+      const cal = await getCalApi();
+      cal("ui", {
+        styles: { branding: { brandColor: "#000000" } },
+        hideEventTypeDetails: false,
+        layout: "month_view"
+      });
+    })();
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -143,13 +155,14 @@ export default function ContactForm() {
               </p>
 
               <div className="mb-8">
-                <Link
-                  href="#calendar"
+                <button
+                  data-cal-link="allan-lopez-escalante-348kcf/30min"
+                  data-cal-config='{"layout":"month_view"}'
                   className="inline-flex items-center justify-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-bold text-secondary hover:bg-accent/90 hover:scale-105 active:scale-95 transition-all shadow-md"
                 >
                   Open calendar
                   <ArrowRight className="w-4 h-4" />
-                </Link>
+                </button>
               </div>
 
               <div className="mt-auto">
