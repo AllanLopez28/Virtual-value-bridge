@@ -166,7 +166,7 @@ export default function ContactForm() {
               </div>
 
               <div className="mt-auto">
-                <span className="text-[10px] text-white/40 font-medium">Calendar embed placeholder</span>
+                <span className="text-[10px] text-white/40 font-medium"></span>
               </div>
             </div>
 
