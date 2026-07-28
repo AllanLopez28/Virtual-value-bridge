@@ -14,7 +14,7 @@ export default function Home() {
       <TeamHighlights />
       <WhyChooseUsSection />
       <AboutSection />
-      <ServicesGrid hideHeader={true} />
+      {/* <ServicesGrid hideHeader={true} /> */}
       <CTASection />
       <Testimonials />
       <ContactForm />
