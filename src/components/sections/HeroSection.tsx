@@ -29,7 +29,7 @@ export default function HeroSection() {
 
             {/* Headlines */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.2] mb-4">
-              <span className="block mb-2 whitespace-nowrap">The Virtual Team That</span>
+              <span className="block mb-2 whitespace-nowrap">A Virtual Team That</span>
               <span className="inline-block bg-[#84cc16] text-[#0B132B] px-3 py-1 rounded-md mr-3 mb-2">
                 Powers Your
               </span>
