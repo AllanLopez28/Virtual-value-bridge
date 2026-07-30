@@ -8,8 +8,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Virtual value bridge | Nearshore Property Management Specialists",
-  description: "High impact operations. Smartly staffed. We deploy specialized nearshore talent from El Salvador to handle your admin work, property management tickets, and compliance.",
+  title: "Virtual Value Bridge | BPO Outsourcing",
+  description: "A specialist that fits right in. Every Virtual Value Bridge specialist is matched, trained, and set up to work the way your business already does.",
   icons: {
     icon: '/icon-03.svg',
   },
@@ -25,6 +25,22 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} antialiased font-sans`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "SiteNavigationElement",
+              "name": ["Virtual Assistant", "Property Manager", "Bookkeeping", "Customer Service"],
+              "url": [
+                "https://www.virtualvaluebridge.com/services/virtual-assistant",
+                "https://www.virtualvaluebridge.com/services/property-management",
+                "https://www.virtualvaluebridge.com/services/bookkeeping-accounting",
+                "https://www.virtualvaluebridge.com/services/customer-service"
+              ]
+            })
+          }}
+        />
         <Navbar />
         {children}
       </body>
