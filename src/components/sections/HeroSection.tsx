@@ -23,18 +23,22 @@ export default function HeroSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
           {/* Left Column (Text Content) */}
-          <div className="max-w-2xl relative z-10">
+          <div className="max-w-3xl relative z-10">
             {/* Badge */}
 
 
             {/* Headlines */}
-            <h1 className="text-5xl md:text-6xl font-extrabold text-white tracking-tight leading-tight mb-6 flex flex-wrap items-center gap-x-3 gap-y-1">
-              <span>The Virtual Team That</span>
-              <span className="inline-block bg-[#84cc16] text-[#0B132B] px-3 py-1 rounded-md">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.2] mb-4">
+              <span className="block mb-2 whitespace-nowrap">The Virtual Team That</span>
+              <span className="inline-block bg-[#84cc16] text-[#0B132B] px-3 py-1 rounded-md mr-3 mb-2">
                 Powers Your
               </span>
-              <span>Business.</span>
+              <span className="inline-block">Business.</span>
             </h1>
+
+            <p className="text-sm md:text-base text-[#84cc16] font-bold tracking-widest uppercase mb-6">
+              Where Virtual Meets Value
+            </p>
 
             <p className="text-lg md:text-xl text-white/90 mb-10 max-w-xl leading-relaxed">
               From customer support to back-office and administrative operations, we help US businesses build dedicated teams, fully aligned with your processes, working in your time zone, delivering quality work at a lower cost.
