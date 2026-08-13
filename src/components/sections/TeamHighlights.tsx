@@ -23,7 +23,7 @@ export default function TeamHighlights() {
   ];
 
   return (
-    <section className="relative z-20 -mt-16 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative z-20 -mt-6 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {highlights.map((person, index) => (
           <div

@@ -36,19 +36,16 @@ export default function HeroSection() {
               <span className="inline-block">Business.</span>
             </h1>
 
-            <p className="text-sm md:text-base text-[#84cc16] font-bold tracking-widest uppercase mb-6">
-              Where Virtual Meets Value
-            </p>
-
             <p className="text-lg md:text-xl text-white/90 mb-10 max-w-xl leading-relaxed">
               From customer support to back-office and administrative operations, we help US businesses build dedicated teams, fully aligned with your processes, working in your time zone, delivering quality work at a lower cost.
             </p>
+
 
             {/* Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
               <Link
                 href="/#contact"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-[#84cc16] px-8 py-3.5 text-sm font-bold text-[#0B132B] hover:bg-[#84cc16]/90 hover:scale-105 hover:shadow-[0_0_20px_rgba(132,204,22,0.4)] active:scale-95 transition-all duration-300"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-[#84cc16] px-8 py-3.5 text-sm font-bold text-[#0B132B] border-0 outline-none hover:bg-[#84cc16]/90 hover:scale-105 hover:shadow-[0_0_20px_rgba(132,204,22,0.4)] active:scale-95 transition-all duration-300"
               >
                 Book a free call
                 <ArrowRight className="w-4 h-4" />
@@ -79,6 +76,17 @@ export default function HeroSection() {
             </div>
           </div>
 
+        </div>
+      </div>
+
+      {/* Bottom Ribbon */}
+      <div className="absolute bottom-10 w-full bg-sky-500/90 backdrop-blur-sm py-3 z-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-sm md:text-base font-bold tracking-widest uppercase flex flex-col sm:flex-row justify-center items-center gap-1 sm:gap-2">
+            <span className="text-white">Virtual Value Bridge</span>
+            <span className="hidden sm:inline text-white/60">|</span>
+            <span className="text-white drop-shadow-sm">Where Virtual Meets Value</span>
+          </p>
         </div>
       </div>
     </section>
