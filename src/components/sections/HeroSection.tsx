@@ -40,6 +40,11 @@ export default function HeroSection() {
               From customer support to back-office and administrative operations, we help US businesses build dedicated teams, fully aligned with your processes, working in your time zone, delivering quality work at a lower cost.
             </p>
 
+            <p className="text-sm md:text-base font-bold tracking-widest uppercase flex flex-col sm:flex-row items-start sm:items-center gap-1 sm:gap-2 mb-8">
+              <span className="text-white">Virtual Value Bridge</span>
+              <span className="hidden sm:inline text-white/60">|</span>
+              <span className="text-[#84cc16]">Where Virtual Meets Value</span>
+            </p>
 
             {/* Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
@@ -79,16 +84,7 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Bottom Ribbon */}
-      <div className="absolute bottom-10 w-full bg-sky-500/90 backdrop-blur-sm py-3 z-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-sm md:text-base font-bold tracking-widest uppercase flex flex-col sm:flex-row justify-center items-center gap-1 sm:gap-2">
-            <span className="text-white">Virtual Value Bridge</span>
-            <span className="hidden sm:inline text-white/60">|</span>
-            <span className="text-white drop-shadow-sm">Where Virtual Meets Value</span>
-          </p>
-        </div>
-      </div>
+
     </section>
   );
 }
