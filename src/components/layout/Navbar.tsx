@@ -89,9 +89,9 @@ export default function Navbar() {
           <Link href="/team" onClick={() => setIsOpen(false)} className="text-sm font-semibold text-slate-600">
             Team
           </Link>
-          {/* <Link href="/careers" onClick={() => setIsOpen(false)} className="text-sm font-semibold text-slate-600">
+          <Link href="/careers" onClick={() => setIsOpen(false)} className="text-sm font-semibold text-slate-600">
             Careers
-          </Link> */}
+          </Link>
           <Link href="/calculator" onClick={() => setIsOpen(false)} className="text-sm font-semibold text-slate-600">
             Calculator
           </Link>
