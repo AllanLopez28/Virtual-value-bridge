@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import { Search, MapPin, Briefcase, Clock, TrendingUp, MessageSquare } from "lucide-react";
 
@@ -140,9 +141,9 @@ export default function CareersPage() {
                     </div>
                   </div>
                   <div className="mt-auto">
-                    <button className="w-full bg-[#1e40af] text-white font-bold py-3.5 rounded-lg text-sm uppercase tracking-widest hover:bg-[#0B132B]/90 active:scale-95 transition-all">
+                    <Link href={`/careers/${job.title.toLowerCase().replace(/\s+/g, '-')}`} className="w-full bg-[#1e40af] text-white font-bold py-3.5 rounded-lg text-sm uppercase tracking-widest hover:bg-[#0B132B]/90 active:scale-95 transition-all flex items-center justify-center">
                       VIEW DETAILS &rarr;
-                    </button>
+                    </Link>
                   </div>
                 </div>
               ))}

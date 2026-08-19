@@ -14,10 +14,10 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
           <div className="relative w-40 h-12">
-            <Image 
-              src="/Logo-vv.png" 
-              alt="Virtual Value Bridge" 
-              fill 
+            <Image
+              src="/Logo-vv.png"
+              alt="Virtual Value Bridge"
+              fill
               className="object-contain"
               priority
             />
@@ -63,7 +63,7 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Menu Button */}
-        <button 
+        <button
           className="md:hidden text-secondary p-2"
           onClick={() => setIsOpen(!isOpen)}
         >
