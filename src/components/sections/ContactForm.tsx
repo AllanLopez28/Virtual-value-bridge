@@ -156,8 +156,8 @@ export default function ContactForm() {
 
               <div className="mb-8">
                 <button
-                  data-cal-link="allan-lopez-escalante-348kcf/30min"
-                  data-cal-config='{"layout":"month_view"}'
+                  //data-cal-link="REPLACE WITH CALCOM LINK HERE"
+                  //data-cal-config='{"layout":"month_view"}'
                   className="inline-flex items-center justify-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-bold text-secondary hover:bg-accent/90 hover:scale-105 active:scale-95 transition-all shadow-md"
                 >
                   Open calendar
