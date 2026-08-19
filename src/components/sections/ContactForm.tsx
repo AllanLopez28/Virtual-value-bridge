@@ -182,12 +182,12 @@ export default function ContactForm() {
                   </div>
                   <span className="text-sm font-semibold text-slate-700">info@vvbridge.net</span>
                 </div>
-                <div className="flex items-center gap-4 group/item cursor-default">
+                <a href="tel:+17186506786" className="flex items-center gap-4 group/item cursor-pointer">
                   <div className="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-primary group-hover/item:bg-primary group-hover/item:text-white transition-colors">
                     <Phone className="w-5 h-5" strokeWidth={1.5} />
                   </div>
-                  <span className="text-sm font-semibold text-slate-700">+1 (718) 650-6786</span>
-                </div>
+                  <span className="text-sm font-semibold text-slate-700 group-hover/item:text-primary transition-colors">+1 (718) 650-6786</span>
+                </a>
 
               </div>
             </div>

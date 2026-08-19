@@ -1,6 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { CheckCircle2, Menu } from "lucide-react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Hire a Property Manager | VVBridge",
+  description: "Hire a dedicated Property Manager to handle tenant comms, leasing, maintenance, and owner reports.",
+};
+
 
 export default function PropertyManagementPage() {
   const responsibilities = [

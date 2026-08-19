@@ -19,7 +19,7 @@ export default function ServicesGrid({ hideHeader = false }: ServicesGridProps) 
       title: "Administrative Support",
       description: "Calendars, inboxes, scheduling, and document prep.",
       icon: Calendar,
-      link: "/services/administrative-support",
+      link: "/services/virtual-assistant",
     },
     {
       title: "Customer Service & Support",

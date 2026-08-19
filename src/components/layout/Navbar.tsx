@@ -14,10 +14,10 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
           <div className="relative w-40 h-12">
-            <Image 
-              src="/Logo-vv.png" 
-              alt="Virtual Value Bridge" 
-              fill 
+            <Image
+              src="/Logo-vv.png"
+              alt="Virtual Value Bridge"
+              fill
               className="object-contain"
               priority
             />
@@ -42,6 +42,9 @@ export default function Navbar() {
             <Link href="/team" className="text-sm font-semibold text-slate-500 hover:text-primary transition-colors">
               Team
             </Link>
+            {/* <Link href="/careers" className="text-sm font-semibold text-slate-500 hover:text-primary transition-colors">
+              Careers
+            </Link> */}
             <Link href="/calculator" className="text-sm font-semibold text-slate-500 hover:text-primary transition-colors">
               Calculator
             </Link>
@@ -60,7 +63,7 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Menu Button */}
-        <button 
+        <button
           className="md:hidden text-secondary p-2"
           onClick={() => setIsOpen(!isOpen)}
         >
@@ -86,6 +89,9 @@ export default function Navbar() {
           <Link href="/team" onClick={() => setIsOpen(false)} className="text-sm font-semibold text-slate-600">
             Team
           </Link>
+          {/* <Link href="/careers" onClick={() => setIsOpen(false)} className="text-sm font-semibold text-slate-600">
+            Careers
+          </Link> */}
           <Link href="/calculator" onClick={() => setIsOpen(false)} className="text-sm font-semibold text-slate-600">
             Calculator
           </Link>

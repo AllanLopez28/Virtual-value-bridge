@@ -1,6 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { CheckCircle2, Menu } from "lucide-react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Hire a Virtual Assistant | VVBridge",
+  description: "Hire a dedicated Virtual Assistant to handle your administrative tasks, inboxes, scheduling, and document prep.",
+};
+
 
 export default function AdministrativeSupportPage() {
   const responsibilities = [
