@@ -42,9 +42,9 @@ export default function Navbar() {
             <Link href="/team" className="text-sm font-semibold text-slate-500 hover:text-primary transition-colors">
               Team
             </Link>
-            {/* <Link href="/careers" className="text-sm font-semibold text-slate-500 hover:text-primary transition-colors">
+            <Link href="/careers" className="text-sm font-semibold text-slate-500 hover:text-primary transition-colors">
               Careers
-            </Link> */}
+            </Link>
             <Link href="/calculator" className="text-sm font-semibold text-slate-500 hover:text-primary transition-colors">
               Calculator
             </Link>
