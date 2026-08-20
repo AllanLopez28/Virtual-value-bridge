@@ -1,7 +1,13 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2, Clock, Mail, Check } from "lucide-react";
+import JobApplicationModal from "@/components/forms/JobApplicationModal";
 
 export default function AccountingSpecialistPage() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <main className="min-h-screen bg-slate-50 w-full flex flex-col items-center">
       {/* Section 1: Header */}
@@ -15,7 +21,10 @@ export default function AccountingSpecialistPage() {
         <p className="text-lg text-slate-500 max-w-2xl leading-relaxed mb-10">
           Are you meticulous with numbers, experienced in US accounting standards, and looking to grow in a high-performance environment? This opportunity is for you!
         </p>
-        <button className="bg-[#84cc16] text-[#0B132B] font-bold px-8 py-3.5 rounded-full flex items-center justify-center gap-2 hover:bg-[#84cc16]/90 transition-all hover:scale-105 active:scale-95 shadow-sm">
+        <button
+          onClick={() => setIsModalOpen(true)}
+          className="bg-[#84cc16] text-[#0B132B] font-bold px-8 py-3.5 rounded-full flex items-center justify-center gap-2 hover:bg-[#84cc16]/90 transition-all hover:scale-105 active:scale-95 shadow-sm cursor-pointer"
+        >
           Apply Now <ArrowRight className="w-4 h-4" />
         </button>
       </section>
@@ -135,6 +144,13 @@ export default function AccountingSpecialistPage() {
           </div>
         </div>
       </section>
+
+      {/* Modal Form */}
+      <JobApplicationModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        jobTitle="Accounting Specialist"
+      />
     </main>
   );
 }
