@@ -43,14 +43,33 @@ export default function JobApplicationModal({
 
   if (!isOpen) return null;
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Simulate submission delay
-    setTimeout(() => {
-      setIsSubmitting(false);
+
+    try {
+      const formData = new FormData(e.currentTarget);
+      
+      // Add additional state that is not automatically captured by the form
+      formData.append("englishLevel", englishLevel.toString());
+      formData.append("jobTitle", jobTitle);
+
+      const response = await fetch('/api/apply', {
+        method: 'POST',
+        body: formData,
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to submit application');
+      }
+
       setIsSubmitted(true);
-    }, 800);
+    } catch (error) {
+      console.error('Submission error:', error);
+      alert('There was an error submitting your application. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
