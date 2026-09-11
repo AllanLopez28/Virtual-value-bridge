@@ -39,7 +39,7 @@ export default function BilingualVirtualAssistantPage() {
             </div>
             <div>
               <p className="text-xs text-slate-500 font-semibold mb-1">Location</p>
-              <p className="text-sm md:text-base font-bold text-[#0B132B]">San Salvador, El Salvador (Remote)</p>
+              <p className="text-sm md:text-base font-bold text-[#0B132B]">San Salvador, El Salvador (Hybrid)</p>
             </div>
             <div>
               <p className="text-xs text-slate-500 font-semibold mb-1">Employment Type</p>
@@ -67,7 +67,7 @@ export default function BilingualVirtualAssistantPage() {
                   "You are fully bilingual (English/Spanish) with exceptional written and verbal communication skills.",
                   "You are highly proficient in tools like Google Workspace, Microsoft Office, Slack, and Zoom.",
                   "You excel at multitasking, prioritizing daily workloads, and managing time efficiently without micro-management.",
-                  "You are highly proactive, detail-oriented, and capable of working independently in a fully remote environment.",
+                  "You are highly proactive, detail-oriented, and capable of working independently in a hybrid environment.",
                 ].map((item, idx) => (
                   <li key={idx} className="flex gap-4">
                     <CheckCircle2 className="w-6 h-6 text-sky-600 shrink-0 mt-0.5" />
@@ -108,14 +108,7 @@ export default function BilingualVirtualAssistantPage() {
                 </div>
               </div>
 
-              {/* Benefits Card */}
-              <div>
-                <h3 className="font-bold text-[#0B132B] mb-3">Benefits</h3>
-                <div className="flex items-start gap-3 text-slate-600 text-sm">
-                  <Check className="w-5 h-5 text-green-500 shrink-0 mt-0.5" />
-                  <span className="leading-relaxed">All legal benefits, US Holidays off, and continuous training.</span>
-                </div>
-              </div>
+
             </div>
 
             {/* Contact Card */}
@@ -126,15 +119,14 @@ export default function BilingualVirtualAssistantPage() {
                   <span className="text-white font-extrabold text-sm tracking-widest">VVB</span>
                 </div>
                 <div>
-                  <h3 className="font-bold text-[#0B132B] text-sm">Talent Acquisition Team</h3>
-                  <p className="text-xs text-slate-500 mb-2">Human Resources</p>
+                  <h3 className="font-bold text-[#0B132B] text-sm mb-2">Virtual Value Bridge</h3>
                   <div className="flex gap-2">
                     <button className="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 hover:bg-slate-100 hover:text-[#0B132B] transition-colors border border-slate-100">
                       <Mail className="w-4 h-4" />
                     </button>
-                    <button className="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 hover:bg-slate-100 hover:text-[#0B132B] transition-colors border border-slate-100">
+                    <a href="https://www.linkedin.com/company/virtual-value-bridge/" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 hover:bg-slate-100 hover:text-[#0B132B] transition-colors border border-slate-100">
                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
-                    </button>
+                    </a>
                   </div>
                 </div>
               </div>
