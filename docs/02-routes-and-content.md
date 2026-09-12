@@ -6,7 +6,7 @@
 
 ## Route map
 
-| URL | Route file | Where the copy actually lives |
+| URL | Route file | Where the copy actually live|
 | --- | --- | --- |
 | `/` | `src/app/page.tsx` | Composes 7 section components — see the homepage table below |
 | `/how-it-works` | `src/app/how-it-works/page.tsx` | `src/components/sections/HowItWorksSection.tsx` |
