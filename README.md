@@ -6,7 +6,7 @@ Package name: `vvbridge-web` · Version `0.1.0` · Private
 
 ---
 
-# Part 1 — 
+# Part 1
 
 ## What the website is for
 
@@ -109,7 +109,7 @@ Public contact details shown on the site: `info@vvbridge.net` · +1 (718) 650-67
 
 ---
 
-# Part 2 
+# Part 2
 
 ## Quick start
 
