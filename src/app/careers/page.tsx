@@ -11,40 +11,44 @@ interface Job {
   location: string;
   workModel: string;
   hours: string;
+  slug?: string;
 }
 
 const mockJobs: Job[] = [
-  {
-    id: "1",
-    title: "Supply Chain Analyst",
-    department: "Operations",
-    location: "San Salvador, El Salvador",
-    workModel: "Remote / Hybrid",
-    hours: "Full-time - US Hours",
-  },
+  // {
+  //id: "1",
+  //title: "Supply Chain Analyst",
+  //department: "Operations",
+  //location: "San Salvador, El Salvador",
+  //workModel: "Remote / Hybrid",
+  //hours: "Full-time - US Hours",
+  // },
   {
     id: "2",
-    title: "Procurement Coordinator",
+    title: "Property Management Specialist",
     department: "Operations",
     location: "San Salvador, El Salvador",
-    workModel: "Remote",
+    workModel: "Hybrid",
     hours: "Full-time - US Hours",
+    slug: "property-management",
   },
   {
     id: "3",
     title: "Bilingual Virtual Assistant",
     department: "Support",
     location: "San Salvador, El Salvador",
-    workModel: "Remote",
+    workModel: "Hybrid",
     hours: "Full-time - US Hours",
+    slug: "bilingual-virtual-assistant",
   },
   {
     id: "4",
     title: "Accounting Specialist",
     department: "Finance",
     location: "San Salvador, El Salvador",
-    workModel: "On-site",
+    workModel: "hybrid",
     hours: "Full-time - US Hours",
+    slug: "accounting-specialist",
   },
   {
     id: "5",
@@ -53,6 +57,7 @@ const mockJobs: Job[] = [
     location: "San Salvador, El Salvador",
     workModel: "Hybrid",
     hours: "Full-time - US Hours",
+    slug: "administrative-assistant",
   },
 ];
 
@@ -141,7 +146,7 @@ export default function CareersPage() {
                     </div>
                   </div>
                   <div className="mt-auto">
-                    <Link href={`/careers/${job.title.toLowerCase().replace(/\s+/g, '-')}`} className="w-full bg-[#1e40af] text-white font-bold py-3.5 rounded-lg text-sm uppercase tracking-widest hover:bg-[#0B132B]/90 active:scale-95 transition-all flex items-center justify-center">
+                    <Link href={job.slug ? `/careers/${job.slug}` : `/careers/${job.title.toLowerCase().replace(/\s+/g, '-')}`} className="w-full bg-[#1e40af] text-white font-bold py-3.5 rounded-lg text-sm uppercase tracking-widest hover:bg-[#0B132B]/90 active:scale-95 transition-all flex items-center justify-center">
                       VIEW DETAILS &rarr;
                     </Link>
                   </div>

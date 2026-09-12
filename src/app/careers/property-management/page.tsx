@@ -5,7 +5,7 @@ import Link from "next/link";
 import { ArrowRight, CheckCircle2, Clock, Mail, Check } from "lucide-react";
 import JobApplicationModal from "@/components/forms/JobApplicationModal";
 
-export default function AccountingSpecialistPage() {
+export default function PropertyManagementPage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
@@ -13,13 +13,13 @@ export default function AccountingSpecialistPage() {
       {/* Section 1: Header */}
       <section className="w-full bg-gradient-to-b from-sky-50 to-white pt-24 pb-32 px-4 md:px-6 flex flex-col items-center text-center">
         <p className="text-xs font-bold text-slate-500 tracking-widest uppercase mb-6">
-          FINANCE &bull; SAN SALVADOR, EL SALVADOR &bull; FULL-TIME
+          OPERATIONS &bull; SAN SALVADOR, EL SALVADOR &bull; FULL-TIME
         </p>
         <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold text-[#0B132B] mb-6 max-w-4xl tracking-tight">
-          Accounting Specialist
+          Property Management Specialist
         </h1>
         <p className="text-lg text-slate-500 max-w-2xl leading-relaxed mb-10">
-          Are you meticulous with numbers, experienced in US accounting standards, and looking to grow in a high-performance environment? This opportunity is for you!
+          Are you passionate about real estate, excellent at tenant communication, and looking to manage US portfolios in a hybrid environment? This opportunity is for you!
         </p>
         <button
           onClick={() => setIsModalOpen(true)}
@@ -35,11 +35,11 @@ export default function AccountingSpecialistPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-left">
             <div>
               <p className="text-xs text-slate-500 font-semibold mb-1">Area</p>
-              <p className="text-sm md:text-base font-bold text-[#0B132B]">Finance</p>
+              <p className="text-sm md:text-base font-bold text-[#0B132B]">Operations</p>
             </div>
             <div>
               <p className="text-xs text-slate-500 font-semibold mb-1">Location</p>
-              <p className="text-sm md:text-base font-bold text-[#0B132B]">San Salvador, El Salvador (hybrid)</p>
+              <p className="text-sm md:text-base font-bold text-[#0B132B]">San Salvador, El Salvador (Hybrid)</p>
             </div>
             <div>
               <p className="text-xs text-slate-500 font-semibold mb-1">Employment Type</p>
@@ -56,19 +56,18 @@ export default function AccountingSpecialistPage() {
       {/* Section 3: Bottom Layout */}
       <section className="w-full max-w-6xl mx-auto px-4 md:px-6 pb-24">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_350px] gap-12">
-
+          
           {/* Left Column (Job Description) */}
           <div className="flex flex-col gap-10">
             <div>
               <h2 className="text-2xl font-bold text-[#0B132B] mb-6">This opportunity is for you if:</h2>
               <ul className="flex flex-col gap-4">
                 {[
-                  "You have a degree in Accounting, Finance, or a related field.",
-                  "You have at least 3 years of experience managing full-cycle accounting processes.",
-                  "You are fully bilingual (English/Spanish) with excellent written and verbal communication.",
-                  "You master accounting software like QuickBooks Online, Xero, or NetSuite, alongside Advanced Excel.",
-                  "You have experience handling US-based clients, understanding AP/AR, bank reconciliations, and basic US GAAP principles.",
-                  "You are highly organized, detail-oriented, and capable of working independently in an on-site environment.",
+                  "You have experience in property management, real estate operations, or a highly related administrative role.",
+                  "You are fully bilingual (English/Spanish) with exceptional written and verbal communication skills.",
+                  "You have experience using property management software such as AppFolio, Buildium, or Yardi.",
+                  "You excel at tenant relations, vendor coordination, and handling maintenance requests efficiently.",
+                  "You are highly organized, detail-oriented, and capable of working independently in a hybrid environment.",
                 ].map((item, idx) => (
                   <li key={idx} className="flex gap-4">
                     <CheckCircle2 className="w-6 h-6 text-sky-600 shrink-0 mt-0.5" />
@@ -82,10 +81,10 @@ export default function AccountingSpecialistPage() {
               <h2 className="text-2xl font-bold text-[#0B132B] mb-6">Key Responsibilities:</h2>
               <ul className="flex flex-col gap-4">
                 {[
-                  "Manage daily transaction recording, bank and credit card reconciliations, and expense categorization.",
-                  "Process Accounts Payable (AP) and Accounts Receivable (AR), ensuring timely payments and collections follow-up.",
-                  "Assist in month-end and year-end closing processes, including adjusting entries and ledger reconciliations.",
-                  "Prepare accurate financial reports (P&L, Balance Sheet) for US clients on a fixed monthly schedule.",
+                  "Act as the primary point of contact for tenant inquiries, maintenance requests, and lease updates.",
+                  "Coordinate with vendors and maintenance teams to ensure property issues are resolved promptly.",
+                  "Assist in lease administration, rent collection tracking, and tenant ledger reconciliation.",
+                  "Manage daily communications and reporting for US-based property owners and stakeholders.",
                 ].map((item, idx) => (
                   <li key={idx} className="flex gap-4">
                     <ArrowRight className="w-5 h-5 text-sky-600 shrink-0 mt-1" />
@@ -98,7 +97,7 @@ export default function AccountingSpecialistPage() {
 
           {/* Right Column (Sidebar) */}
           <div className="flex flex-col gap-8">
-
+            
             <div className="flex flex-col gap-6 p-2">
               {/* Working Hours Card */}
               <div>
@@ -126,7 +125,7 @@ export default function AccountingSpecialistPage() {
                       <Mail className="w-4 h-4" />
                     </button>
                     <a href="https://www.linkedin.com/company/virtual-value-bridge/" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 hover:bg-slate-100 hover:text-[#0B132B] transition-colors border border-slate-100">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /><rect width="4" height="12" x="2" y="9" /><circle cx="4" cy="4" r="2" /></svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
                     </a>
                   </div>
                 </div>
@@ -141,7 +140,7 @@ export default function AccountingSpecialistPage() {
       <JobApplicationModal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
-        jobTitle="Accounting Specialist"
+        jobTitle="Property Management Specialist"
       />
     </main>
   );
