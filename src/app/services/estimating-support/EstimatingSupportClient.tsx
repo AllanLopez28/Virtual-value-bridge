@@ -12,8 +12,8 @@ export default function EstimatingSupportClient() {
   const [isCtaVisible, setIsCtaVisible] = useState(false);
   const testimonialRef = useRef<HTMLElement>(null);
   const scopeRef = useRef<HTMLElement>(null);
-  const roiRef = useRef<HTMLElement>(null);
-  const ctaRef = useRef<HTMLElement>(null);
+  const roiRef = useRef<HTMLDivElement>(null);
+  const ctaRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
