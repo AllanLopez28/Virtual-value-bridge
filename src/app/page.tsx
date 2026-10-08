@@ -1,5 +1,6 @@
 import HeroSection from "@/components/sections/HeroSection";
 import TeamHighlights from "@/components/sections/TeamHighlights";
+import SpecializedTracks from "@/components/sections/SpecializedTracks";
 import WhyChooseUsSection from "@/components/sections/WhyChooseUsSection";
 import AboutSection from "@/components/sections/AboutSection";
 import ServicesGrid from "@/components/sections/ServicesGrid";
@@ -12,6 +13,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-between">
       <HeroSection />
       <TeamHighlights />
+      <SpecializedTracks />
       <WhyChooseUsSection />
       <AboutSection />
       {/* <ServicesGrid hideHeader={true} /> */}
