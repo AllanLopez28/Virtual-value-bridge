@@ -41,16 +41,16 @@ export default function EstimatingSupportClient() {
       {/* Hero Section */}
       <section className="bg-[#1d4ed8] bg-[linear-gradient(to_right,#ffffff15_1px,transparent_1px),linear-gradient(to_bottom,#ffffff15_1px,transparent_1px)] bg-[size:4rem_4rem] pb-28 pt-12 sm:pt-16 lg:pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          
+
           {/* Columna Izquierda */}
           <div className="lg:col-span-7">
             {/* Avatar */}
             <div className="relative inline-block mb-6">
               <div className="w-36 h-36 rounded-full bg-slate-100 border-4 border-white/80 overflow-hidden flex flex-col items-center justify-center shadow-lg relative">
-                <Image 
-                  src="/construct.png" 
-                  alt="Construction Estimator" 
-                  fill 
+                <Image
+                  src="/construct.png"
+                  alt="Construction Estimator"
+                  fill
                   className="object-cover"
                 />
               </div>
@@ -87,7 +87,7 @@ export default function EstimatingSupportClient() {
             <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-2xl border border-slate-100 max-w-md mx-auto lg:ml-auto w-full">
               <h2 className="text-xl font-extrabold text-[#0B132B] mb-1">Schedule a 20-Min Intro Call</h2>
               <p className="text-xs text-slate-500 mb-6">Tell us about your bid volume. A founder will follow up.</p>
-              
+
               <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
                 <div>
                   <label className="text-xs font-bold text-slate-700 block mb-1">First Name</label>
@@ -110,7 +110,7 @@ export default function EstimatingSupportClient() {
                     <option value="25+">25+ bids/month</option>
                   </select>
                 </div>
-                
+
                 <button type="submit" className="w-full bg-[#84cc16] hover:bg-lime-500 text-[#0B132B] font-extrabold text-sm py-3.5 rounded-full transition-colors flex items-center justify-center gap-2 mt-2 shadow-sm">
                   Schedule a 20-Min Intro Call <ArrowRight className="w-4 h-4" strokeWidth={3} />
                 </button>
@@ -127,7 +127,7 @@ export default function EstimatingSupportClient() {
       {/* Tarjetas Flotantes */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-16 relative z-20">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          
+
           <div className="bg-white rounded-2xl p-6 shadow-lg border border-slate-100 flex items-start gap-4">
             <div className="w-12 h-12 rounded-full bg-lime-100/80 text-lime-700 flex items-center justify-center flex-shrink-0">
               <Clock className="w-6 h-6" />
@@ -185,10 +185,9 @@ export default function EstimatingSupportClient() {
       </section>
 
       <section ref={testimonialRef} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-24 relative z-20">
-        <div 
-          className={`bg-[#070C1A] rounded-3xl shadow-2xl p-8 sm:p-12 lg:p-14 transition-all duration-700 ease-out transform ${
-            isTestimonialVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
-          }`}
+        <div
+          className={`bg-[#070C1A] rounded-3xl shadow-2xl p-8 sm:p-12 lg:p-14 transition-all duration-700 ease-out transform ${isTestimonialVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
+            }`}
         >
           <div className="flex flex-col sm:flex-row items-start gap-6 sm:gap-8">
             <span className="text-[#84cc16] text-6xl font-serif leading-none select-none flex-shrink-0">"</span>
@@ -219,8 +218,8 @@ export default function EstimatingSupportClient() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
             {/* Columna Izquierda - Imagen */}
             <div className="lg:col-span-5 relative w-full min-h-[420px] lg:h-full rounded-2xl overflow-hidden border-2 border-dashed border-[#84cc16]/60 bg-[#0B132B] shadow-md">
-              <Image 
-                src="/const-ej1.jpg" 
+              <Image
+                src="/const-ej1.png"
                 alt="Construction Estimator Scope"
                 fill
                 className="object-cover object-center"
@@ -229,7 +228,7 @@ export default function EstimatingSupportClient() {
 
             {/* Columna Derecha - Tarjetas */}
             <div className="lg:col-span-7 flex flex-col justify-between space-y-4">
-              
+
               <div className={`bg-white border border-slate-200/80 rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-slate-300 transition-all duration-500 flex items-start gap-4 transform ${isScopeVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
                 <div className="w-11 h-11 rounded-xl bg-[#0B132B] text-white flex items-center justify-center flex-shrink-0 mt-0.5">
                   <Ruler className="w-5 h-5" />
@@ -288,11 +287,39 @@ export default function EstimatingSupportClient() {
             </h2>
           </div>
 
-          <div 
+          <div
             ref={roiRef}
             className={`transition-all duration-700 ease-out transform ${isRoiVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"}`}
           >
-            <div className="w-full overflow-x-auto rounded-2xl border border-slate-200/80 shadow-sm bg-white mb-8">
+            {/* Vista Móvil (Tarjetas Apiladas) */}
+            <div className="md:hidden flex flex-col gap-4 mb-8">
+              {[
+                { factor: "Annual Salary & Overhead", us: "$75,000 – $95,000+ USD / year", vvb: "Up to 60% Savings" },
+                { factor: "Time Zone & Availability", us: "Standard local hours", vvb: "100% CST (Same Business Hours)" },
+                { factor: "Language & Communication", us: "Native English", vvb: "100% Fluent English & Spanish" },
+                { factor: "Onboarding & Risk", us: "Weeks of hiring + payroll tax", vvb: "Hand-picked, pre-vetted + Free Replacement" }
+              ].map((item, idx) => (
+                <div key={idx} className="bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden flex flex-col">
+                  <div className="bg-slate-50/70 py-3 px-5 border-b border-slate-200/80">
+                    <h4 className="text-sm font-extrabold text-[#0B132B]">{item.factor}</h4>
+                  </div>
+                  <div className="flex flex-col">
+                    <div className="p-5">
+                      <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block mb-1">U.S. In-House Estimator</span>
+                      <span className="text-sm font-medium text-slate-600">{item.us}</span>
+                    </div>
+                    <div className="bg-[#f4fce8] p-5 border-t border-[#84cc16]/30 relative">
+                      <div className="absolute top-0 left-0 w-1.5 h-full bg-[#84cc16]"></div>
+                      <span className="text-[11px] font-extrabold text-[#65a30d] uppercase tracking-wider block mb-1">Virtual Value Bridge</span>
+                      <span className={`font-extrabold text-[#0B132B] ${idx === 0 ? 'text-xl' : 'text-base'}`}>{item.vvb}</span>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Vista Escritorio (Tabla) */}
+            <div className="hidden md:block w-full overflow-x-auto rounded-2xl border border-slate-200/80 shadow-sm bg-white mb-8">
               <table className="w-full text-left border-collapse min-w-[640px]">
                 <thead>
                   <tr className="border-b border-slate-200/80">
@@ -348,7 +375,7 @@ export default function EstimatingSupportClient() {
               No long-term contracts. No reason to overthink it.
             </span>
           </div>
-          <button 
+          <button
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             className="bg-[#0B132B] hover:bg-slate-800 text-white text-xs sm:text-sm font-bold px-7 py-3.5 rounded-full transition-colors flex-shrink-0 shadow-sm cursor-pointer"
           >
@@ -358,11 +385,10 @@ export default function EstimatingSupportClient() {
       </section>
 
       <section className="w-full bg-[#070C1A] py-20 sm:py-28 text-center">
-        <div 
+        <div
           ref={ctaRef}
-          className={`max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center transition-all duration-700 ease-out transform ${
-            isCtaVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
-          }`}
+          className={`max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center transition-all duration-700 ease-out transform ${isCtaVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
+            }`}
         >
           <span className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight block mb-2">
             Stop Turning Down Bids Due to
@@ -373,7 +399,7 @@ export default function EstimatingSupportClient() {
           <p className="text-slate-300 text-sm sm:text-base leading-relaxed max-w-xl mt-6 mb-10 font-normal">
             Every Virtual Value Bridge specialist is hand-picked and onboarded directly into your SOPs. No seat-fillers, no long-term commitments, and direct access to our founders whenever you need it.
           </p>
-          <button 
+          <button
             onClick={() => window.open('https://calendly.com/allan-escalante3/30min', '_blank')}
             className="bg-[#84cc16] hover:bg-lime-500 text-[#0B132B] font-extrabold text-xs sm:text-sm px-8 py-4 rounded-full transition-all duration-200 inline-flex items-center gap-2.5 shadow-lg hover:scale-[1.02] cursor-pointer"
           >

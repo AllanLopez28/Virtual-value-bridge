@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { Check, ArrowRight } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
@@ -55,8 +56,9 @@ export default function SpecializedTracks() {
             className={`transition-all duration-700 ease-out transform ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
           >
-            <div
-              className="group block h-full bg-white rounded-3xl border border-slate-100 shadow-sm p-6 sm:p-8 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:border-blue-100 cursor-default"
+            <Link
+              href="/services/estimating-support"
+              className="group block h-full bg-white rounded-3xl border border-slate-100 shadow-sm p-6 sm:p-8 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:border-blue-100"
             >
               <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 h-full">
                 {/* Columna Izquierda */}
@@ -100,7 +102,7 @@ export default function SpecializedTracks() {
                   </div>
                 </div>
               </div>
-            </div>
+            </Link>
           </div>
 
           {/* Tarjeta 2 - Property Management */}
