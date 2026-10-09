@@ -46,12 +46,12 @@ export default function EstimatingSupportClient() {
           <div className="lg:col-span-7">
             {/* Avatar */}
             <div className="relative inline-block mb-6">
-              <div className="w-36 h-36 rounded-full bg-slate-100 border-4 border-white/80 overflow-hidden flex flex-col items-center justify-center shadow-lg relative">
+              <div className="w-36 h-36 rounded-full bg-white border-4 border-white/80 overflow-hidden shadow-lg relative">
                 <Image
-                  src="/construct.png"
+                  src="/constructpng.png"
                   alt="Construction Estimator"
                   fill
-                  className="object-cover"
+                  className="object-contain scale-[1.15] translate-y-1"
                 />
               </div>
               <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-[#84cc16] text-[#0B132B] text-xs font-extrabold px-3 py-1 rounded-full shadow-sm whitespace-nowrap">
