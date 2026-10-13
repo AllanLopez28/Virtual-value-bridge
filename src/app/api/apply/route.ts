@@ -30,18 +30,43 @@ export async function POST(request: Request) {
     // Extract locations (could be multiple if checkbox)
     const locations = formData.getAll('location');
 
-    // Step A: Storage (Vercel Blob)
-    if (!process.env.BLOB_READ_WRITE_TOKEN) {
-      console.error("Missing BLOB_READ_WRITE_TOKEN");
+    // Step A: Storage (Vercel Blob) - graceful fallback if token is not configured
+    let resumeUrl = '';
+    if (process.env.BLOB_READ_WRITE_TOKEN) {
+      try {
+        const blob = await put(file.name, file, {
+          access: 'public',
+          token: process.env.BLOB_READ_WRITE_TOKEN,
+          addRandomSuffix: true,
+        });
+        resumeUrl = blob.url;
+      } catch (blobErr) {
+        console.warn('Vercel Blob upload failed, fallback to email attachment:', blobErr);
+      }
+    } else {
+      console.warn('BLOB_READ_WRITE_TOKEN not provided; resume will be sent directly as an email attachment.');
     }
-    const blob = await put(file.name, file, {
-      access: 'public',
-      token: process.env.BLOB_READ_WRITE_TOKEN,
-      addRandomSuffix: true,
-    });
-    const resumeUrl = blob.url;
 
-    // TODO (Escalabilidad): Insertar datos del candidato y 'resumeUrl' en Supabase (PostgreSQL) aquí.
+    // Step B: Prepare attachments for Resend
+    const attachments: Array<{ filename: string; content: Buffer }> = [];
+    if (file && typeof file.arrayBuffer === 'function') {
+      const fileBytes = await file.arrayBuffer();
+      attachments.push({
+        filename: file.name,
+        content: Buffer.from(fileBytes),
+      });
+    }
+
+    const additionalFiles = formData.getAll('additionalFiles') as File[];
+    for (const addFile of additionalFiles) {
+      if (addFile && addFile.size > 0 && typeof addFile.arrayBuffer === 'function') {
+        const addBytes = await addFile.arrayBuffer();
+        attachments.push({
+          filename: addFile.name,
+          content: Buffer.from(addBytes),
+        });
+      }
+    }
 
     // Step C: Email Notification (Resend)
     const emailHtml = `
@@ -185,7 +210,8 @@ export async function POST(request: Request) {
             </table>
 
             <div class="resume-section">
-              <a href="${resumeUrl}" class="btn-primary">View Resume Document</a>
+              ${resumeUrl ? `<a href="${resumeUrl}" class="btn-primary" style="margin-bottom: 12px; display: inline-block;">View Resume Document</a><br />` : ''}
+              <p style="color: #64748b; font-size: 13px; margin: 4px 0;">📎 Resume document attached: <strong>${file.name}</strong></p>
             </div>
           </div>
         </div>
@@ -193,16 +219,20 @@ export async function POST(request: Request) {
       </html>
     `;
 
-    const { data, error } = await resend.emails.send({
-      from: 'onboarding@resend.dev',
-      to: 'allan.escalante3@gmail.com', // Cambiar a un arreglo con Tanya cuando el dominio esté verificado
+    const toEmail = process.env.CAREERS_TO_EMAIL || process.env.INTRO_CALL_TO_EMAIL || 'tescalante@vvbridge.net';
+    const fromEmail = process.env.RESEND_FROM_EMAIL || 'VVBridge Careers <onboarding@resend.dev>';
+
+    const { error } = await resend.emails.send({
+      from: fromEmail,
+      to: toEmail,
       subject: `New Job Application: ${firstName} ${lastName} - ${jobTitle || 'Specialist'}`,
-      html: emailHtml
+      html: emailHtml,
+      attachments: attachments.length > 0 ? attachments : undefined,
     });
 
     if (error) {
       console.error('Resend API Error:', error);
-      return NextResponse.json({ error: 'Failed to send email' }, { status: 500 });
+      return NextResponse.json({ error: error.message || 'Failed to send email' }, { status: 500 });
     }
 
     return NextResponse.json({ success: true });

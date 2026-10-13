@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Clock, MonitorCheck, RefreshCw, ArrowRight, Ruler, FileSpreadsheet, Scale, ClipboardList, Calendar } from "lucide-react";
+import { Clock, MonitorCheck, RefreshCw, ArrowRight, Ruler, FileSpreadsheet, Scale, ClipboardList, Calendar, Loader2 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 export default function EstimatingSupportClient() {
@@ -14,6 +14,36 @@ export default function EstimatingSupportClient() {
   const scopeRef = useRef<HTMLElement>(null);
   const roiRef = useRef<HTMLDivElement>(null);
   const ctaRef = useRef<HTMLDivElement>(null);
+  const [formData, setFormData] = useState({
+    firstName: '',
+    email: '',
+    phone: '',
+    volume: '',
+  });
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus('loading');
+
+    try {
+      const res = await fetch('/api/intro-call', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      if (res.ok) {
+        setStatus('success');
+        setFormData({ firstName: '', email: '', phone: '', volume: '' });
+      } else {
+        setStatus('error');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setStatus('error');
+    }
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -88,22 +118,51 @@ export default function EstimatingSupportClient() {
               <h2 className="text-xl font-extrabold text-[#0B132B] mb-1">Schedule a 20-Min Intro Call</h2>
               <p className="text-xs text-slate-500 mb-6">Tell us about your bid volume. A founder will follow up.</p>
 
-              <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
+              <form className="space-y-4" onSubmit={handleSubmit}>
                 <div>
-                  <label className="text-xs font-bold text-slate-700 block mb-1">First Name</label>
-                  <input type="text" className="w-full bg-slate-50 border border-slate-200 rounded-lg px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                  <label htmlFor="intro-first-name" className="text-xs font-bold text-slate-700 block mb-1">First Name</label>
+                  <input
+                    id="intro-first-name"
+                    name="firstName"
+                    type="text"
+                    required
+                    value={formData.firstName}
+                    onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
+                    className="w-full bg-slate-50 border border-slate-200 rounded-lg px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  />
                 </div>
                 <div>
-                  <label className="text-xs font-bold text-slate-700 block mb-1">Business Email</label>
-                  <input type="email" className="w-full bg-slate-50 border border-slate-200 rounded-lg px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                  <label htmlFor="intro-email" className="text-xs font-bold text-slate-700 block mb-1">Business Email</label>
+                  <input
+                    id="intro-email"
+                    name="email"
+                    type="email"
+                    required
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    className="w-full bg-slate-50 border border-slate-200 rounded-lg px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  />
                 </div>
                 <div>
-                  <label className="text-xs font-bold text-slate-700 block mb-1">Phone Number</label>
-                  <input type="tel" className="w-full bg-slate-50 border border-slate-200 rounded-lg px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                  <label htmlFor="intro-phone" className="text-xs font-bold text-slate-700 block mb-1">Phone Number</label>
+                  <input
+                    id="intro-phone"
+                    name="phone"
+                    type="tel"
+                    value={formData.phone}
+                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                    className="w-full bg-slate-50 border border-slate-200 rounded-lg px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  />
                 </div>
                 <div>
-                  <label className="text-xs font-bold text-slate-700 block mb-1">Monthly Bid Volume</label>
-                  <select defaultValue="" className="w-full bg-slate-50 border border-slate-200 rounded-lg px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 appearance-none">
+                  <label htmlFor="intro-volume" className="text-xs font-bold text-slate-700 block mb-1">Monthly Bid Volume</label>
+                  <select
+                    id="intro-volume"
+                    name="volume"
+                    value={formData.volume}
+                    onChange={(e) => setFormData({ ...formData, volume: e.target.value })}
+                    className="w-full bg-slate-50 border border-slate-200 rounded-lg px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 appearance-none"
+                  >
                     <option value="" disabled>Select a range</option>
                     <option value="1-10">1-10 bids/month</option>
                     <option value="11-25">11-25 bids/month</option>
@@ -111,9 +170,36 @@ export default function EstimatingSupportClient() {
                   </select>
                 </div>
 
-                <button type="submit" className="w-full bg-[#84cc16] hover:bg-lime-500 text-[#0B132B] font-extrabold text-sm py-3.5 rounded-full transition-colors flex items-center justify-center gap-2 mt-2 shadow-sm">
-                  Schedule a 20-Min Intro Call <ArrowRight className="w-4 h-4" strokeWidth={3} />
+                <button
+                  type="submit"
+                  disabled={status === 'loading' || status === 'success'}
+                  className={`w-full font-extrabold text-sm py-3.5 rounded-full transition-colors flex items-center justify-center gap-2 mt-2 shadow-sm ${status === 'success'
+                      ? 'bg-emerald-700 text-white cursor-default'
+                      : status === 'loading'
+                        ? 'bg-lime-500 text-[#0B132B] opacity-80 cursor-wait'
+                        : 'bg-[#84cc16] hover:bg-lime-500 text-[#0B132B] cursor-pointer'
+                    }`}
+                >
+                  {status === 'loading' && (
+                    <>
+                      <Loader2 className="w-4 h-4 animate-spin" />
+                      <span>Sending...</span>
+                    </>
+                  )}
+                  {status === 'success' && <span>Request Sent ✓</span>}
+                  {(status === 'idle' || status === 'error') && (
+                    <>
+                      <span>Schedule a 20-Min Intro Call</span>
+                      <ArrowRight className="w-4 h-4" strokeWidth={3} />
+                    </>
+                  )}
                 </button>
+
+                {status === 'error' && (
+                  <p className="text-xs text-red-600 font-semibold text-center mt-2">
+                    Something went wrong. Please try again.
+                  </p>
+                )}
               </form>
 
               <p className="text-[11px] text-slate-400 text-center mt-3">

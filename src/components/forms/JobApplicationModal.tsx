@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { X, UploadCloud, FileText, ArrowRight, CheckCircle2, Check } from "lucide-react";
+import { X, UploadCloud, FileText, ArrowRight, CheckCircle2 } from "lucide-react";
 
 interface JobApplicationModalProps {
   isOpen: boolean;
@@ -21,10 +21,17 @@ export default function JobApplicationModal({
   const [isSubmitting, setIsSubmitting] = useState(false);
   const modalContentRef = useRef<HTMLDivElement>(null);
 
+  const handleClose = () => {
+    setIsSubmitted(false);
+    setResumeFile(null);
+    setAdditionalFiles(null);
+    onClose();
+  };
+
   // Close on Escape key and prevent background scroll
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "Escape") onClose();
+      if (e.key === "Escape") handleClose();
     };
 
     if (isOpen) {
@@ -32,14 +39,13 @@ export default function JobApplicationModal({
       window.addEventListener("keydown", handleKeyDown);
     } else {
       document.body.style.overflow = "unset";
-      setIsSubmitted(false);
     }
 
     return () => {
       document.body.style.overflow = "unset";
       window.removeEventListener("keydown", handleKeyDown);
     };
-  }, [isOpen, onClose]);
+  }, [isOpen]);
 
   if (!isOpen) return null;
 
@@ -76,7 +82,7 @@ export default function JobApplicationModal({
     <div
       className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 sm:p-6 transition-all duration-300 animate-in fade-in"
       onClick={(e) => {
-        if (e.target === e.currentTarget) onClose();
+        if (e.target === e.currentTarget) handleClose();
       }}
     >
       <div
@@ -95,7 +101,7 @@ export default function JobApplicationModal({
           </div>
           <button
             type="button"
-            onClick={onClose}
+            onClick={handleClose}
             aria-label="Close modal"
             className="w-10 h-10 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 hover:text-[#0B132B] flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-sky-500"
           >
@@ -116,7 +122,7 @@ export default function JobApplicationModal({
               </p>
               <button
                 type="button"
-                onClick={onClose}
+                onClick={handleClose}
                 className="bg-[#0B132B] hover:bg-[#1e3a8a] text-white font-bold px-8 py-3.5 rounded-full text-sm transition-all hover:scale-105 active:scale-95 shadow-md"
               >
                 Close Window
