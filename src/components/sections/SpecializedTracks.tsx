@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Check, ArrowRight } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
 
 const constructionChecks = [
   "Quantity takeoffs",
@@ -20,41 +20,28 @@ const propertyManagementChecks = [
 ];
 
 export default function SpecializedTracks() {
-  const [isVisible, setIsVisible] = useState(false);
-  const sectionRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
-
   return (
-    <section ref={sectionRef} className="bg-slate-50/50">
+    <section className="bg-slate-50/50">
       <div className="max-w-7xl mx-auto px-4 py-6 relative">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 relative items-stretch">
 
           {/* Badge Central ("OR") */}
-          <div className="hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white shadow-md border border-slate-100 items-center justify-center">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.4, delay: 0.2 }}
+            className="hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white shadow-md border border-slate-100 items-center justify-center"
+          >
             <span className="text-[#0B132B] text-xs font-extrabold tracking-wider">OR</span>
-          </div>
+          </motion.div>
 
           {/* Tarjeta 1 - Construcción */}
-          <div
-            className={`transition-all duration-700 ease-out transform ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-              }`}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
           >
             <Link
               href="/services/estimating-support"
@@ -103,12 +90,14 @@ export default function SpecializedTracks() {
                 </div>
               </div>
             </Link>
-          </div>
+          </motion.div>
 
           {/* Tarjeta 2 - Property Management */}
-          <div
-            className={`transition-all duration-700 ease-out delay-150 transform ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-              }`}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.6, delay: 0.15, ease: "easeOut" }}
           >
             <div
               className="group block h-full bg-white rounded-3xl border border-slate-100 shadow-sm p-6 sm:p-8 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:border-blue-100 cursor-default"
@@ -155,7 +144,7 @@ export default function SpecializedTracks() {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
 
         </div>
       </div>

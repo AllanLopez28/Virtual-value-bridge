@@ -6,28 +6,42 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { firstName, email, phone, volume } = body;
+    const {
+      name,
+      firstName,
+      company,
+      email,
+      countryCode,
+      phone,
+      supportType,
+      processDetails,
+      volume,
+    } = body;
 
-    // Validación básica
-    if (!firstName || !email) {
+    const clientName = name || firstName;
+
+    // Basic validation
+    if (!clientName || !email) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
     }
 
-    // En modo de prueba con onboarding@resend.dev, Resend sólo permite enviar al correo registrado (tescalante@vvbridge.net).
-    // Al verificar el dominio en resend.com/domains, se puede configurar INTRO_CALL_TO_EMAIL=jgoldstein@vvbridge.net
     const toEmail = process.env.INTRO_CALL_TO_EMAIL || 'tescalante@vvbridge.net';
     const fromEmail = process.env.RESEND_FROM_EMAIL || 'VVBridge Leads <onboarding@resend.dev>';
+    const clientPhone =
+      countryCode && phone ? `${countryCode} ${phone}`.trim() : (phone || 'Not provided');
 
     const { data, error } = await resend.emails.send({
       from: fromEmail,
       to: toEmail,
-      subject: `New Estimating Support Lead: ${firstName}`,
+      subject: `New Lead - Estimating Support: ${clientName}`,
       html: `
-        <h2>New Intro Call Request - Estimating Support</h2>
-        <p><strong>Name:</strong> ${firstName}</p>
+        <h2>New Lead - Estimating Support</h2>
+        <p><strong>Name:</strong> ${clientName}</p>
+        <p><strong>Company:</strong> ${company || 'Not provided'}</p>
         <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Phone:</strong> ${phone || 'Not provided'}</p>
-        <p><strong>Monthly Bid Volume:</strong> ${volume || 'Not specified'}</p>
+        <p><strong>Phone:</strong> ${clientPhone}</p>
+        <p><strong>Support Type:</strong> ${supportType || 'Estimating Support'}</p>
+        <p><strong>Process Details:</strong> ${processDetails || volume || 'Not specified'}</p>
       `,
     });
 

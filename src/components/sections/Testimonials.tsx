@@ -32,7 +32,7 @@ export default function Testimonials() {
 
   return (
     <section className="w-full relative flex flex-col items-center bg-slate-50">
-      
+
       {/* Block 1: Header (Blue Background) */}
       <div className="w-full bg-primary pt-24 pb-48 px-4 flex justify-center">
         <div className="container mx-auto max-w-6xl">
@@ -52,7 +52,7 @@ export default function Testimonials() {
               ))}
             </div>
             <span className="text-white/80 text-sm font-semibold group-hover:text-white transition-colors duration-300">
-              4.9 / 5 average across 50+ U.S. clients
+              5 average across 50+ U.S. clients
             </span>
           </div>
         </div>
@@ -61,15 +61,15 @@ export default function Testimonials() {
       {/* Block 2: Featured Case Study (Overlapping) */}
       <div className="w-full container mx-auto px-4 md:px-6 max-w-6xl relative z-20 -mt-32 mb-20 group">
         <div className="w-full bg-secondary rounded-[2rem] shadow-2xl overflow-hidden flex flex-col hover:shadow-[0_20px_50px_rgba(11,19,43,0.3)] transition-shadow duration-500">
-          
+
           {/* Full Width: Quote & Metrics */}
           <div className="w-full p-8 md:p-12 lg:p-16 flex flex-col justify-center">
             <span className="inline-flex self-start items-center rounded-full bg-white/5 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-slate-300 mb-8 border border-white/10 shadow-inner">
               • FEATURED CASE STUDY
             </span>
-            
+
             <Quote className="w-12 h-12 text-accent mb-6 rotate-180 opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300" strokeWidth={1.5} />
-            
+
             <p className="text-xl md:text-2xl lg:text-3xl text-white font-bold leading-snug mb-8">
               "Bringing on support for our administrative and project needs has made a big difference in how we operate. Moving takeoffs and estimates out of the daily workload of our project team has been one of the best decisions we’ve made. It allows our team to stay focused on active projects, while estimates are completed faster and details stay organized. The team at Virtual Value Bridge integrated seamlessly and has become a reliable extension of our business."
             </p>
@@ -80,7 +80,7 @@ export default function Testimonials() {
 
             {/* Metrics Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-              
+
               <div className="bg-white/5 border border-white/10 rounded-2xl p-5 flex flex-col justify-between hover:bg-white/10 hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(132,204,22,0.15)] transition-all duration-300 cursor-default">
                 <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-4">TENANT RESPONSE</span>
                 <div className="flex items-baseline gap-3 mb-2">

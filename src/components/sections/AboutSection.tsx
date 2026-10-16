@@ -30,7 +30,7 @@ export default function AboutSection() {
             {/* Mini Metrics Row */}
             <div className="grid grid-cols-3 gap-4">
               <div className="bg-white rounded-xl md:rounded-2xl p-4 flex flex-col items-center justify-center text-center shadow-sm hover:-translate-y-1.5 hover:shadow-md transition-all duration-300 cursor-default">
-                <span className="text-2xl md:text-3xl font-bold text-primary mb-1">50+</span>
+                <span className="text-2xl md:text-3xl font-bold text-primary mb-1">200+</span>
                 <span className="text-[10px] md:text-xs font-semibold text-slate-400 tracking-wider">SPECIALISTS</span>
               </div>
               <div className="bg-white rounded-xl md:rounded-2xl p-4 flex flex-col items-center justify-center text-center shadow-sm hover:-translate-y-1.5 hover:shadow-md transition-all duration-300 cursor-default">
