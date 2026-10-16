@@ -551,7 +551,7 @@ export default function EstimatingSupportClient() {
               <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6">
                 <div className="w-48 sm:w-64 h-16 sm:h-20 bg-white rounded-2xl flex items-center justify-center flex-shrink-0 p-2.5 sm:p-3 shadow-md relative overflow-hidden">
                   <Image
-                    src="/artistictile-logo.png"
+                    src="/artistictile-logo.PNG"
                     alt="Artistic Tile Logo"
                     fill
                     className="object-contain p-1"
