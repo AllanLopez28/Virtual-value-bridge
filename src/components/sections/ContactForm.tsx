@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { getCalApi } from "@calcom/embed-react";
+import { sendGTMEvent } from "@next/third-parties/google";
 import { Calendar, Mail, Phone, ShieldCheck, CheckCircle } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -73,6 +74,7 @@ export default function ContactForm() {
       });
 
       if (response.ok) {
+        sendGTMEvent({ event: "generate_lead", lead_type: "general_contact" });
         setIsSubmitted(true);
       } else {
         setErrorMessage(

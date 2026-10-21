@@ -72,12 +72,17 @@ This is the highest-value gap on the site — it breaks the main conversion path
 
 ## 4. Analytics
 
-**Status:** None installed.
+**Status:** Google Tag Manager and Google Ads lead tracking installed. The sections above describe older integrations and should be checked against the current source before use.
 
-No Google Analytics, no Google Tag Manager, no Vercel Analytics, no Search Console verification tag. There is no way to measure traffic, conversion, or which service pages perform.
+`src/app/layout.tsx` loads GTM through `@next/third-parties/google`, using `NEXT_PUBLIC_GTM_ID` with fallback `GTM-WZMZC3ST`.
 
-- Analytics platform? `_TBD_`
-- Measurement ID? `_TBD_`
+- Google tag: `AW-18498223483`, triggered on **Initialization - All Pages**.
+- Google Ads conversion: **Lead - Estimating Support**, ID `18498223483`, label `iqWiCNzY4ZsdEPv60fRE`, triggered by the custom event **generate_lead**.
+- The estimating-support landing page sends `{ event: "generate_lead", lead_type: "estimating_support" }` only after `/api/intro-call` returns success.
+- The general contact form sends `{ event: "generate_lead", lead_type: "general_contact" }` only after Formspree returns success. This source change must be deployed before that path is measured in production.
+- Do not include names, email addresses, phone numbers, or message contents in these events. Failed submissions and career applications must not emit a business lead event.
+
+Validate changes with Tag Assistant: page load should fire the Google tag without a lead conversion; one successful customer form submission should fire one lead conversion. GTM container publication and website source deployment are separate steps.
 
 ---
 
