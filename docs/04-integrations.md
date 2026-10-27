@@ -79,6 +79,8 @@ This is the highest-value gap on the site — it breaks the main conversion path
 - Google tag: `AW-18498223483`, triggered on **Initialization - All Pages**.
 - Google Ads conversion: **Lead - Estimating Support**, ID `18498223483`, label `iqWiCNzY4ZsdEPv60fRE`, triggered by the custom event **generate_lead**.
 - The estimating-support landing page sends `{ event: "generate_lead", lead_type: "estimating_support" }` only after `/api/intro-call` returns success.
+- The estimating-support form now asks only for name, work email, and company. The existing API already accepts submissions without a phone number. Empty phone/country-code fields are sent rather than a fabricated phone number. Conversion success still depends on the API response, not clicks or form visibility.
+- On `/services/estimating-support`, navigation contact/booking links target `#estimating-inquiry`; the direct Calendly booking CTA remains available. The page offers dedicated estimators and project-based takeoff support, confirmed by the business on October 27, 2026.
 - The general contact form sends `{ event: "generate_lead", lead_type: "general_contact" }` only after Formspree returns success. This source change must be deployed before that path is measured in production.
 - Do not include names, email addresses, phone numbers, or message contents in these events. Failed submissions and career applications must not emit a business lead event.
 

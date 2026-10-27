@@ -6,7 +6,6 @@ import {
   Clock,
   MonitorCheck,
   RefreshCw,
-  ArrowRight,
   Ruler,
   FileSpreadsheet,
   Scale,
@@ -22,20 +21,27 @@ import { useState } from "react";
 import { sendGTMEvent } from "@next/third-parties/google";
 import { motion } from "framer-motion";
 
+const leadFields = [
+  { name: "name", label: "Name", type: "text", autoComplete: "name" },
+  { name: "email", label: "Work email", type: "email", autoComplete: "email" },
+  { name: "company", label: "Company", type: "text", autoComplete: "organization" },
+] as const;
+
+const supportOptions = [
+  { title: "Dedicated Remote Estimator", description: "A full-time bilingual specialist working in your software and U.S. business hours." },
+  { title: "Project-Based Takeoff Support", description: "Takeoff and estimating support scoped to the plans and bids you need help with." },
+];
+
 export default function EstimatingSupportClient() {
   const [formData, setFormData] = useState({
     name: "",
     company: "",
     email: "",
-    countryCode: "US +1",
-    phone: "",
-    supportType: "",
-    processDetails: "",
   });
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement>
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -47,10 +53,6 @@ export default function EstimatingSupportClient() {
       name: "",
       company: "",
       email: "",
-      countryCode: "US +1",
-      phone: "",
-      supportType: "",
-      processDetails: "",
     });
   };
 
@@ -58,15 +60,14 @@ export default function EstimatingSupportClient() {
     e.preventDefault();
     setStatus("loading");
 
-    const fullPhone = `${formData.countryCode} ${formData.phone}`.trim();
     const payload = {
-      name: formData.name,
-      company: formData.company,
-      email: formData.email,
-      countryCode: formData.countryCode,
-      phone: fullPhone,
-      supportType: formData.supportType,
-      processDetails: formData.processDetails,
+      name: formData.name.trim(),
+      company: formData.company.trim(),
+      email: formData.email.trim(),
+      countryCode: "",
+      phone: "",
+      supportType: "Estimating support inquiry",
+      processDetails: "",
     };
 
     try {
@@ -91,7 +92,7 @@ export default function EstimatingSupportClient() {
           body: formDataPayload,
           headers: { Accept: "application/json" },
         }).catch(() => {});
-      } catch (_) {}
+      } catch {}
 
       if (res.ok) {
         sendGTMEvent({ event: "generate_lead", lead_type: "estimating_support" });
@@ -100,10 +101,6 @@ export default function EstimatingSupportClient() {
           name: "",
           company: "",
           email: "",
-          countryCode: "US +1",
-          phone: "",
-          supportType: "",
-          processDetails: "",
         });
       } else {
         setStatus("error");
@@ -120,17 +117,17 @@ export default function EstimatingSupportClient() {
   return (
     <main className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="bg-[#1d4ed8] bg-[linear-gradient(to_right,#ffffff15_1px,transparent_1px),linear-gradient(to_bottom,#ffffff15_1px,transparent_1px)] bg-[size:4rem_4rem] pb-28 pt-12 sm:pt-16 lg:pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <section className="bg-[#1d4ed8] bg-[linear-gradient(to_right,#ffffff15_1px,transparent_1px),linear-gradient(to_bottom,#ffffff15_1px,transparent_1px)] bg-[size:4rem_4rem] pb-28 pt-6 lg:pt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-center">
           {/* Columna Izquierda */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="lg:col-span-7 pt-4 sm:pt-8 lg:pt-14"
+            className="lg:col-span-7 lg:pt-14"
           >
             {/* Avatar */}
-            <div className="relative inline-block mb-8">
+            <div className="relative hidden lg:inline-block mb-8">
               <div className="w-44 h-44 sm:w-52 sm:h-52 rounded-full bg-white border-4 border-white/80 overflow-hidden shadow-xl relative">
                 <Image
                   src="/constructpng.png"
@@ -145,27 +142,17 @@ export default function EstimatingSupportClient() {
             </div>
 
             {/* Título Principal */}
-            <h1 className="text-4xl sm:text-5xl lg:text-[54px] font-extrabold tracking-tight leading-[1.15] mb-6">
-              <span className="text-white block">Dedicated</span>
-              <span className="bg-[#84cc16] text-[#0B132B] px-2.5 py-0.5 inline-block my-1 rounded-sm">
-                Roofing & Construction
-              </span>
-              <br className="hidden sm:block" />
-              <span className="bg-[#84cc16] text-[#0B132B] px-2.5 py-0.5 inline-block mr-3 rounded-sm mt-1 sm:mt-0">
-                Estimators
-              </span>
-              <span className="text-white">for</span>
-              <span className="text-white block mt-1">U.S. Contractors</span>
+            <h1 className="text-2xl min-[375px]:text-3xl lg:text-[54px] font-extrabold tracking-tight leading-tight mb-3 lg:mb-6 text-white">
+              <span className="text-accent">Roofing &amp; Construction</span>{" "}
+              Estimating Support
+              <span className="block text-lg lg:text-3xl mt-2">for U.S. Contractors</span>
             </h1>
-
-            {/* Párrafo Descriptivo */}
-            <p className="text-blue-100 text-base sm:text-lg max-w-xl mb-8 leading-relaxed font-normal">
-              Scale your bid volume without inflating payroll. Get full-time, bilingual estimators who
-              deliver accurate material takeoffs in your software and time zone.
+            <p className="text-blue-100 text-sm lg:text-lg max-w-xl lg:mb-8 leading-relaxed">
+              Dedicated remote estimators or project-based takeoffs, in your software and time zone.
             </p>
 
             {/* Tagline Inferior */}
-            <div className="flex items-center">
+            <div className="hidden lg:flex items-center">
               <span className="text-white font-bold tracking-widest text-xs">VIRTUAL VALUE BRIDGE</span>
               <span className="text-white/50 mx-2">|</span>
               <span className="text-[#84cc16] font-bold tracking-widest text-xs">WHERE VIRTUAL MEETS VALUE</span>
@@ -177,11 +164,12 @@ export default function EstimatingSupportClient() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-            className="lg:col-span-5 flex flex-col gap-4"
+            id="estimating-inquiry"
+            className="lg:col-span-5 flex flex-col gap-4 scroll-mt-24"
           >
-            <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-2xl border border-slate-100 max-w-md mx-auto lg:ml-auto w-full">
+            <div className="bg-white rounded-3xl p-5 lg:p-8 shadow-2xl border border-slate-100 max-w-md mx-auto lg:ml-auto w-full">
               {status === "success" ? (
-                <div className="flex flex-col items-center justify-center py-10 text-center gap-4 animate-in fade-in zoom-in duration-300">
+                <div role="status" className="flex flex-col items-center justify-center py-10 text-center gap-4 animate-in fade-in zoom-in duration-300">
                   <CheckCircle className="w-16 h-16 text-[#84cc16] mb-2" />
                   <h3 className="text-2xl font-extrabold text-[#0B132B]">Thanks for reaching out!</h3>
                   <p className="text-slate-600 max-w-sm text-sm leading-relaxed">
@@ -196,122 +184,27 @@ export default function EstimatingSupportClient() {
                   </button>
                 </div>
               ) : (
-                <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
-                  {/* Name */}
-                  <div>
-                    <input
-                      type="text"
-                      name="name"
-                      placeholder="Name *"
-                      required
-                      value={formData.name}
-                      onChange={handleChange}
-                      className={inputBaseStyle}
-                    />
-                  </div>
-
-                  {/* Company */}
-                  <div>
-                    <input
-                      type="text"
-                      name="company"
-                      placeholder="Company *"
-                      required
-                      value={formData.company}
-                      onChange={handleChange}
-                      className={inputBaseStyle}
-                    />
-                  </div>
-
-                  {/* Email */}
-                  <div>
-                    <input
-                      type="email"
-                      name="email"
-                      placeholder="Email *"
-                      required
-                      value={formData.email}
-                      onChange={handleChange}
-                      className={inputBaseStyle}
-                    />
-                  </div>
-
-                  {/* Fila de Teléfono (Grid de 2 columnas) */}
-                  <div className="grid grid-cols-[115px_1fr] sm:grid-cols-[130px_1fr] gap-3">
-                    <div className="relative">
-                      <select
-                        name="countryCode"
-                        value={formData.countryCode}
-                        onChange={handleChange}
-                        className="w-full border border-slate-200 rounded-xl px-3 py-3 text-sm focus:ring-2 focus:ring-blue-600 outline-none bg-white text-slate-700 cursor-pointer appearance-none"
-                      >
-                        <option value="US +1">US +1</option>
-                        <option value="CA +1">CA +1</option>
-                        <option value="MX +52">MX +52</option>
-                        <option value="GB +44">GB +44</option>
-                        <option value="ES +34">ES +34</option>
-                        <option value="CO +57">CO +57</option>
-                        <option value="SV +503">SV +503</option>
-                        <option value="GT +502">GT +502</option>
-                        <option value="HN +504">HN +504</option>
-                        <option value="CR +506">CR +506</option>
-                        <option value="PA +507">PA +507</option>
-                        <option value="AR +54">AR +54</option>
-                        <option value="CL +56">CL +56</option>
-                        <option value="PE +51">PE +51</option>
-                        <option value="Other">Other</option>
-                      </select>
-                      <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-slate-400">
-                        <svg className="w-4 h-4 fill-current" viewBox="0 0 20 20">
-                          <path
-                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                            clipRule="evenodd"
-                            fillRule="evenodd"
-                          />
-                        </svg>
-                      </div>
-                    </div>
-                    <div>
+                <form className="flex flex-col gap-2.5 lg:gap-3" onSubmit={handleSubmit} aria-labelledby="estimating-form-title">
+                  <h2 id="estimating-form-title" className="text-xl font-extrabold text-secondary">Get estimating support</h2>
+                  {leadFields.map(({ name, label, type, autoComplete }) => (
+                    <div key={name}>
+                      <label htmlFor={`estimating-${name}`} className="block text-xs font-semibold text-slate-700 mb-1">{label}</label>
                       <input
-                        type="tel"
-                        name="phone"
-                        placeholder="Phone *"
+                        id={`estimating-${name}`}
+                        type={type}
+                        name={name}
+                        autoComplete={autoComplete}
                         required
-                        value={formData.phone}
+                        maxLength={254}
+                        value={formData[name]}
                         onChange={handleChange}
                         className={inputBaseStyle}
                       />
                     </div>
-                  </div>
-
-                  {/* Support Type */}
-                  <div>
-                    <input
-                      type="text"
-                      name="supportType"
-                      placeholder="What kind of support are you looking for? *"
-                      required
-                      value={formData.supportType}
-                      onChange={handleChange}
-                      className={inputBaseStyle}
-                    />
-                  </div>
-
-                  {/* Process Details */}
-                  <div>
-                    <textarea
-                      rows={4}
-                      name="processDetails"
-                      placeholder="What process would you like to outsource? *"
-                      required
-                      value={formData.processDetails}
-                      onChange={handleChange}
-                      className={`${inputBaseStyle} resize-none`}
-                    />
-                  </div>
+                  ))}
 
                   {/* Disclaimer */}
-                  <p className="text-xs text-slate-500 mt-2 mb-2 leading-relaxed">
+                  <p className="text-xs text-slate-500 leading-relaxed">
                     By submitting this form, I agree to be contacted by Virtual Value Bridge via any of
                     the methods shared above.
                   </p>
@@ -320,7 +213,7 @@ export default function EstimatingSupportClient() {
                   <button
                     type="submit"
                     disabled={status === "loading"}
-                    className="bg-[#1e3a8a] text-white font-bold w-full py-3.5 rounded-full flex justify-center items-center gap-2 hover:bg-blue-900 transition-colors disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer shadow-md"
+                    className="bg-primary text-white font-bold w-full py-3.5 rounded-full flex justify-center items-center gap-2 hover:bg-blue-900 transition-colors disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer shadow-md"
                   >
                     {status === "loading" ? (
                       <>
@@ -329,7 +222,7 @@ export default function EstimatingSupportClient() {
                       </>
                     ) : (
                       <>
-                        Submit <span aria-hidden="true">→</span>
+                        Request estimating support <span aria-hidden="true">→</span>
                       </>
                     )}
                   </button>
@@ -341,7 +234,7 @@ export default function EstimatingSupportClient() {
                   </div>
 
                   {status === "error" && (
-                    <p className="text-xs text-red-600 font-semibold text-center mt-2">
+                    <p role="alert" className="text-xs text-red-600 font-semibold text-center mt-2">
                       Something went wrong. Please try again or email us directly at info@vvbridge.net.
                     </p>
                   )}
@@ -661,6 +554,19 @@ export default function EstimatingSupportClient() {
         </div>
       </section>
 
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
+        <h2 className="text-2xl sm:text-3xl font-extrabold text-secondary mb-6">Flexible Support for Your Bid Volume</h2>
+        <div className="grid md:grid-cols-2 gap-4">
+          {supportOptions.map(({ title, description }) => (
+            <div key={title} className="rounded-2xl border border-slate-200 bg-background p-6">
+              <h3 className="font-bold text-secondary mb-2">{title}</h3>
+              <p className="text-sm text-slate-600">{description}</p>
+            </div>
+          ))}
+        </div>
+        <a href="#estimating-inquiry" className="inline-flex mt-6 rounded-full bg-primary text-white px-6 py-3 text-sm font-bold">Discuss your estimating needs</a>
+      </section>
+
       {/* Sección 3: The ROI Angle */}
       <section className="bg-white py-16 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -817,12 +723,12 @@ export default function EstimatingSupportClient() {
               No long-term contracts. No reason to overthink it.
             </span>
           </div>
-          <button
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          <a
+            href="#estimating-inquiry"
             className="bg-[#0B132B] hover:bg-slate-800 text-white text-xs sm:text-sm font-bold px-7 py-3.5 rounded-full transition-colors flex-shrink-0 shadow-sm cursor-pointer"
           >
             Talk to a founder
-          </button>
+          </a>
         </motion.div>
       </section>
 

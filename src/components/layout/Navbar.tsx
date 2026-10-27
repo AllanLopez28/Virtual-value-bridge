@@ -2,11 +2,14 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+  const contactHref = pathname === "/services/estimating-support" ? "#estimating-inquiry" : "/#contact";
 
   return (
     <nav className="w-full bg-background/95 backdrop-blur-md sticky top-0 z-50 border-b border-slate-200">
@@ -48,13 +51,13 @@ export default function Navbar() {
             <Link href="/calculator" className="text-sm font-semibold text-slate-500 hover:text-primary transition-colors">
               Calculator
             </Link>
-            <Link href="/#contact" className="text-sm font-semibold text-slate-500 hover:text-primary transition-colors">
+            <Link href={contactHref} className="text-sm font-semibold text-slate-500 hover:text-primary transition-colors">
               Contact
             </Link>
           </div>
           <div className="flex items-center gap-4">
             <Link
-              href="/#contact"
+              href={contactHref}
               className="hidden md:inline-flex items-center justify-center rounded-full bg-accent px-6 py-2.5 text-sm font-bold text-secondary hover:bg-accent/90 hover:scale-105 hover:shadow-lg active:scale-95 transition-all duration-300"
             >
               Book a call
@@ -65,6 +68,8 @@ export default function Navbar() {
         {/* Mobile Menu Button */}
         <button
           className="md:hidden text-secondary p-2"
+          aria-label={isOpen ? "Close menu" : "Open menu"}
+          aria-expanded={isOpen}
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -95,12 +100,12 @@ export default function Navbar() {
           <Link href="/calculator" onClick={() => setIsOpen(false)} className="text-sm font-semibold text-slate-600">
             Calculator
           </Link>
-          <Link href="/#contact" onClick={() => setIsOpen(false)} className="text-sm font-semibold text-slate-600">
+          <Link href={contactHref} onClick={() => setIsOpen(false)} className="text-sm font-semibold text-slate-600">
             Contact
           </Link>
           <div className="pt-2 border-t border-slate-100">
             <Link
-              href="/#contact"
+              href={contactHref}
               onClick={() => setIsOpen(false)}
               className="inline-flex w-full items-center justify-center rounded-full bg-accent px-6 py-3 text-sm font-bold text-secondary hover:bg-accent/90 hover:scale-105 active:scale-95 transition-all duration-300 mt-2 shadow-sm"
             >
