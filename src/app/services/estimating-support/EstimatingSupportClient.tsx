@@ -128,7 +128,7 @@ export default function EstimatingSupportClient() {
         <div className={styles.profile}>
           <span className={styles.available}><span />Available Now</span>
           <div className={styles.profileCircle} />
-          <Image src="/constructpng.png" alt="Bilingual remote estimating specialist" fill sizes="(min-width: 1024px) 45vw, 100vw" className={styles.profileImage} preload />
+          <Image src="/constructpng.png" alt="Bilingual remote estimating specialist" fill sizes="(min-width: 1024px) 400px, (min-width: 768px) 360px, 100vw" className={styles.profileImage} preload />
           <div className={styles.profileCaption}><h2>{supportOptions[0].title}</h2><p>{supportOptions[0].description}</p></div>
         </div>
       </section>
@@ -144,10 +144,29 @@ export default function EstimatingSupportClient() {
 
       <section className={styles.services} aria-labelledby="services-title">
         <h2 id="services-title" className={styles.sectionTitle}>Four Ways to Speed<br className="md:hidden" /> Up <span className={styles.highlight}>Your Bids</span></h2>
-        <div className={styles.serviceGrid}>{services.map(({ icon: Icon, title, description, tags }, index) => <div key={title} className={styles.serviceItem}>
-          <article className={`${styles.serviceCard} ${styles.panel}`}><span className={styles.iconBox}><Icon size={30} strokeWidth={1.7} /></span><h3>{title}</h3><p>{description}</p>{tags && <ul className={styles.tags}>{tags.map(tag => <li key={tag}>{tag}</li>)}</ul>}</article>
-          {index === 2 && <div className={styles.workPhoto}><Image src="/const-ej1.jpg" alt="Construction estimator comparing roof plans and material costs on two monitors" fill sizes="100vw" className="object-cover" /></div>}
-        </div>)}</div>
+        <div className={styles.serviceGrid}>
+          {services.map(({ icon: Icon, title, description, tags }) => (
+            <article key={title} className={`${styles.serviceCard} ${styles.panel}`}>
+              <span className={styles.iconBox}><Icon size={26} strokeWidth={1.8} /></span>
+              <h3>{title}</h3>
+              <p>{description}</p>
+              {tags && (
+                <ul className={styles.tags}>
+                  {tags.map((tag) => <li key={tag}>{tag}</li>)}
+                </ul>
+              )}
+            </article>
+          ))}
+        </div>
+        <div className={styles.workPhoto}>
+          <Image
+            src="/const-ej1.jpg"
+            alt="Construction estimator comparing roof plans and material costs on two monitors"
+            fill
+            sizes="(min-width: 1024px) 1220px, 100vw"
+            className="object-cover"
+          />
+        </div>
       </section>
 
       <section className={`${styles.support} ${styles.blueGrid}`} aria-labelledby="support-title">
