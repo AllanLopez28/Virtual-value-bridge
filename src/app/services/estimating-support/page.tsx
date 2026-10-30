@@ -1,5 +1,5 @@
-import { Metadata } from "next";
-import EstimatingSupportClient from "./EstimatingSupportClient";
+import type { Metadata } from "next";
+import EstimatingSupportClient from "@/app/services/estimating-support/EstimatingSupportClient";
 
 export const metadata: Metadata = {
   title: "Estimating & Bid Support | Virtual Value Bridge",

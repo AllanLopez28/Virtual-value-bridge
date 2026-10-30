@@ -1,8 +1,7 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
-import { getCalApi } from "@calcom/embed-react";
 import { sendGTMEvent } from "@next/third-parties/google";
 import { Calendar, Mail, Phone, ShieldCheck, CheckCircle } from "lucide-react";
 import { motion } from "framer-motion";
@@ -22,20 +21,6 @@ export default function ContactForm() {
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
-  useEffect(() => {
-    (async function () {
-      try {
-        const cal = await getCalApi();
-        cal("ui", {
-          styles: { branding: { brandColor: "#1e3a8a" } },
-          hideEventTypeDetails: false,
-          layout: "month_view",
-        });
-      } catch (err) {
-        console.error("Cal.com initialization error:", err);
-      }
-    })();
-  }, []);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
@@ -216,8 +201,7 @@ export default function ContactForm() {
               <div>
                 <button
                   type="button"
-                  data-cal-link="virtualvaluebridge/intro-call"
-                  data-cal-config='{"layout":"month_view"}'
+                  onClick={(e) => e.preventDefault()}
                   className="bg-[#84cc16] text-[#0B132B] font-bold px-6 py-3 rounded-full hover:bg-lime-500 transition-colors inline-flex items-center gap-2 text-sm shadow-sm cursor-pointer"
                 >
                   Open calendar <span aria-hidden="true">→</span>
