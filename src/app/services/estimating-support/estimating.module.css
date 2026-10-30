@@ -1,5 +1,7 @@
 /* Page & Focus */
 .page {
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
   color: var(--secondary);
   background: var(--background);
   padding-bottom: 56px;
@@ -105,7 +107,7 @@
 
 .hero h1 .highlight {
   margin-top: 6px;
-  transform: rotate(-2deg);
+  transform: none;
 }
 
 .intro {
@@ -132,7 +134,7 @@
   max-width: 360px;
   margin-inline: auto;
   cursor: pointer;
-  transition: transform 160ms, background-color 160ms, box-shadow 160ms;
+  transition: transform 160ms var(--ease-out), background-color 160ms ease, box-shadow 160ms ease;
 }
 
 .hero .cta {
@@ -140,8 +142,10 @@
   white-space: nowrap;
 }
 
-.cta:hover {
-  background: color-mix(in srgb, var(--accent) 85%, white);
+@media (hover: hover) and (pointer: fine) {
+  .cta:hover {
+    background: color-mix(in srgb, var(--accent) 85%, white);
+  }
 }
 
 .cta:active {
@@ -166,7 +170,7 @@
   gap: 10px;
   width: 100%;
   max-width: 360px;
-  margin-inline: auto;
+  margin: 0 auto 14px;
 }
 
 .actionBtn {
@@ -182,16 +186,22 @@
   background: white;
   border: 1.5px solid var(--color-slate-200);
   box-shadow: 0 2px 8px rgb(15 23 42 / 4%);
-  transition: all 160ms ease;
+  transition: transform 160ms var(--ease-out), border-color 160ms ease, color 160ms ease, background-color 160ms ease, box-shadow 160ms ease;
   text-decoration: none;
 }
 
-.actionBtn:hover {
-  border-color: var(--primary);
-  color: var(--primary);
-  background: color-mix(in srgb, var(--primary) 4%, white);
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgb(15 23 42 / 8%);
+.actionBtn:active {
+  transform: scale(0.98);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .actionBtn:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+    background: color-mix(in srgb, var(--primary) 4%, white);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgb(15 23 42 / 8%);
+  }
 }
 
 .actionBtn svg {
@@ -800,6 +810,11 @@
   color: white;
   border: 3px solid rgb(255 255 255 / 75%);
   box-shadow: 0 8px 20px rgb(15 23 42 / 22%);
+  transition: background-color 200ms ease, color 200ms ease, transform 160ms var(--ease-out);
+}
+
+.floatingCall:active {
+  transform: scale(0.94);
 }
 
 .floatingCallGreen {
@@ -1054,7 +1069,7 @@
 
   .contactActions {
     max-width: 390px;
-    margin-inline: 0;
+    margin: 0 0 16px 0;
   }
 
   .actionBtn {
@@ -1184,13 +1199,15 @@
   .serviceCard {
     padding: 38px 34px;
     border-radius: 28px;
-    transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
+    transition: transform 200ms var(--ease-out), box-shadow 200ms ease, border-color 200ms ease;
   }
 
-  .serviceCard:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 16px 36px rgb(15 23 42 / 7%);
-    border-color: color-mix(in srgb, var(--primary) 30%, transparent);
+  @media (hover: hover) and (pointer: fine) {
+    .serviceCard:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 16px 36px rgb(15 23 42 / 7%);
+      border-color: color-mix(in srgb, var(--primary) 30%, transparent);
+    }
   }
 
   .iconBox {
@@ -1433,9 +1450,343 @@
   }
 }
 
+/* ==========================================================================
+   MOTION
+   ========================================================================== */
+
+/* Hero: staggered load-in. CSS keyframes so it stays smooth while the page hydrates. */
+.heroCopy > * {
+  animation: riseIn 600ms var(--ease-out) backwards;
+}
+
+.heroCopy > :nth-child(2) { animation-delay: 60ms; }
+.heroCopy > :nth-child(3) { animation-delay: 120ms; }
+.heroCopy > :nth-child(4) { animation-delay: 180ms; }
+.heroCopy > :nth-child(5) { animation-delay: 240ms; }
+.heroCopy > :nth-child(6) { animation-delay: 300ms; }
+
+.profile {
+  animation: settleIn 700ms var(--ease-out) 150ms backwards;
+}
+
+.available {
+  animation: riseIn 400ms var(--ease-out) 550ms backwards;
+}
+
+/* Scroll reveal. Only hides content once JS has marked the page ready,
+   so nothing is invisible without JavaScript. */
+.page[data-motion] [data-reveal]:not([data-revealed]) {
+  opacity: 0;
+}
+
+.page[data-motion] [data-revealed] {
+  animation: riseIn 600ms var(--ease-out) backwards;
+  animation-delay: calc(var(--reveal-i, 0) * 70ms);
+}
+
+/* Highlights: a marker-swipe reveal, left to right. */
+.hero h1 .highlight {
+  animation: wipeIn 700ms var(--ease-out) 380ms backwards;
+}
+
+.page[data-motion] [data-revealed] .highlight {
+  animation: wipeIn 700ms var(--ease-out) 250ms backwards;
+}
+
+/* Hero details */
+.profileCircle {
+  animation: settleIn 900ms var(--ease-out) 250ms backwards;
+}
+
+.profileCaption {
+  animation: riseIn 600ms var(--ease-out) 500ms backwards;
+}
+
+.benefits li {
+  animation: slideIn 500ms var(--ease-out) backwards;
+}
+
+.benefits li:nth-child(1) { animation-delay: 420ms; }
+.benefits li:nth-child(2) { animation-delay: 480ms; }
+.benefits li:nth-child(3) { animation-delay: 540ms; }
+
+/* Available-now status dot: a live pulse ring. */
+.available span {
+  position: relative;
+}
+
+.available span::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: currentColor;
+  animation: pulseRing 1800ms var(--ease-out) infinite;
+}
+
+/* Hero CTA: an occasional light sweep to draw the eye. */
+.hero .cta {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.hero .cta::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(105deg, transparent 35%, rgb(255 255 255 / 45%) 50%, transparent 65%);
+  transform: translateX(-100%);
+  animation: shine 5s var(--ease-in-out) 1.2s infinite;
+}
+
+/* Floating call button: a periodic ring so it reads as tappable. */
+.floatingCall::after {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  z-index: -1;
+  border-radius: 50%;
+  background: inherit;
+  pointer-events: none;
+  animation: pulseRing 2400ms var(--ease-out) 1s infinite;
+}
+
+/* Trust: software chips pop in one by one. */
+.page[data-motion] [data-revealed] .software li {
+  animation: popIn 450ms var(--ease-out) backwards;
+}
+
+.page[data-motion] [data-revealed] .software li:nth-child(1) { animation-delay: 150ms; }
+.page[data-motion] [data-revealed] .software li:nth-child(2) { animation-delay: 200ms; }
+.page[data-motion] [data-revealed] .software li:nth-child(3) { animation-delay: 250ms; }
+.page[data-motion] [data-revealed] .software li:nth-child(4) { animation-delay: 300ms; }
+.page[data-motion] [data-revealed] .software li:nth-child(5) { animation-delay: 350ms; }
+.page[data-motion] [data-revealed] .software li:nth-child(6) { animation-delay: 400ms; }
+
+/* Service cards: icon tile and tags land after the card. */
+.page[data-motion] [data-revealed] .iconBox {
+  animation: iconIn 600ms var(--ease-out) backwards;
+  animation-delay: calc(var(--reveal-i, 0) * 70ms + 200ms);
+}
+
+.page[data-motion] [data-revealed] .tags li {
+  animation: popIn 400ms var(--ease-out) backwards;
+}
+
+.page[data-motion] [data-revealed] .tags li:nth-child(1) { animation-delay: 380ms; }
+.page[data-motion] [data-revealed] .tags li:nth-child(2) { animation-delay: 430ms; }
+.page[data-motion] [data-revealed] .tags li:nth-child(3) { animation-delay: 480ms; }
+
+.iconBox {
+  transition: transform 250ms var(--ease-out);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .serviceCard:hover .iconBox {
+    transform: rotate(-6deg) scale(1.06);
+  }
+}
+
+/* Work photo: curtain reveal with a slow settle on the image. */
+.workPhoto[data-revealed] {
+  animation: curtainIn 900ms var(--ease-out) backwards;
+}
+
+.workPhoto[data-revealed] img {
+  animation: zoomSettle 1400ms var(--ease-out) backwards;
+}
+
+/* Support: options and ROI cards follow the block in. */
+.page[data-motion] [data-revealed] .option {
+  animation: slideIn 550ms var(--ease-out) backwards;
+}
+
+.page[data-motion] [data-revealed] .option:nth-child(1) { animation-delay: 150ms; }
+.page[data-motion] [data-revealed] .option:nth-child(2) { animation-delay: 230ms; }
+
+.page[data-motion] [data-revealed] .optionNumber {
+  animation: iconIn 550ms var(--ease-out) backwards;
+}
+
+.page[data-motion] [data-revealed] .option:nth-child(1) .optionNumber { animation-delay: 300ms; }
+.page[data-motion] [data-revealed] .option:nth-child(2) .optionNumber { animation-delay: 380ms; }
+
+.page[data-motion] [data-revealed] .roiGrid > div {
+  animation: riseIn 550ms var(--ease-out) backwards;
+}
+
+.page[data-motion] [data-revealed] .roiGrid > div:nth-child(1) { animation-delay: 150ms; }
+.page[data-motion] [data-revealed] .roiGrid > div:nth-child(2) { animation-delay: 240ms; }
+
+.roiGrid > div:last-child {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.page[data-motion] [data-revealed] .roiGrid > div:last-child::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(105deg, transparent 35%, rgb(255 255 255 / 50%) 50%, transparent 65%);
+  transform: translateX(-100%);
+  animation: sweep 1100ms var(--ease-in-out) 700ms;
+}
+
+/* Testimonial and form */
+.page[data-motion] .testimonial[data-revealed] > svg {
+  animation: iconIn 600ms var(--ease-out) 200ms backwards;
+}
+
+.page[data-motion] [data-revealed] .avatar {
+  animation: popIn 450ms var(--ease-out) 350ms backwards;
+}
+
+.page[data-motion] [data-revealed] .field {
+  animation: riseIn 500ms var(--ease-out) backwards;
+}
+
+.page[data-motion] [data-revealed] .field:nth-of-type(1) { animation-delay: 220ms; }
+.page[data-motion] [data-revealed] .field:nth-of-type(2) { animation-delay: 280ms; }
+.page[data-motion] [data-revealed] .field:nth-of-type(3) { animation-delay: 340ms; }
+
+@keyframes wipeIn {
+  from {
+    clip-path: inset(0 100% 0 0 round 10px);
+  }
+
+  to {
+    clip-path: inset(0 0 0 0 round 10px);
+  }
+}
+
+@keyframes curtainIn {
+  from {
+    clip-path: inset(0 0 100% 0 round 22px);
+  }
+
+  to {
+    clip-path: inset(0 0 0 0 round 22px);
+  }
+}
+
+@keyframes zoomSettle {
+  from {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-12px);
+  }
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+}
+
+@keyframes iconIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9) rotate(-12deg);
+  }
+}
+
+@keyframes pulseRing {
+  from {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+
+  70%,
+  to {
+    opacity: 0;
+    transform: scale(2.6);
+  }
+}
+
+/* Sweeps across in the first 20% of the cycle, then rests. */
+@keyframes shine {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  20%,
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes sweep {
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes riseIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+}
+
+@keyframes settleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .cta,
-  .serviceCard {
+  .actionBtn,
+  .serviceCard,
+  .floatingCall {
+    transition-property: background-color, color, border-color, box-shadow;
+  }
+
+  .heroCopy > *,
+  .profile,
+  .available,
+  .page[data-motion] [data-revealed] {
+    animation-name: fadeIn;
+    animation-duration: 300ms;
+  }
+
+  /* Drop decorative motion entirely; keep the content-level fades above. */
+  .hero h1 .highlight,
+  .page[data-motion] [data-revealed] .highlight,
+  .profileCircle,
+  .profileCaption,
+  .benefits li,
+  .page[data-motion] [data-revealed] :is(.software li, .iconBox, .tags li, .option, .optionNumber, .roiGrid > div, .avatar, .field),
+  .page[data-motion] .testimonial[data-revealed] > svg,
+  .workPhoto[data-revealed],
+  .workPhoto[data-revealed] img,
+  .available span::after,
+  .hero .cta::after,
+  .floatingCall::after,
+  .page[data-motion] [data-revealed] .roiGrid > div:last-child::after {
+    animation: none;
+  }
+
+  .iconBox {
     transition: none;
   }
 }

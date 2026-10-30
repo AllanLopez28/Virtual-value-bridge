@@ -112,16 +112,41 @@ export default function EstimatingSupportClient() {
     return () => observer.disconnect();
   }, []);
 
+  const pageRef = useRef<HTMLElement>(null);
+  useEffect(() => {
+    const page = pageRef.current;
+    if (!page) return;
+    const pending = new Set<Element>();
+    const observer = new IntersectionObserver((entries) => {
+      if (!entries.some((entry) => entry.isIntersecting)) return;
+      // Reveal everything at or above the fold, so a jump-scroll never leaves skipped sections hidden.
+      for (const el of pending) {
+        if (el.getBoundingClientRect().top >= window.innerHeight) continue;
+        el.setAttribute("data-revealed", "");
+        observer.unobserve(el);
+        pending.delete(el);
+      }
+    }, { rootMargin: "0px 0px -10% 0px" });
+    page.querySelectorAll<HTMLElement>("[data-reveal]").forEach((el) => {
+      // Already on screen at hydration: leave it visible instead of hiding and replaying it.
+      if (el.getBoundingClientRect().top < window.innerHeight) {
+        el.removeAttribute("data-reveal");
+      } else {
+        pending.add(el);
+        observer.observe(el);
+      }
+    });
+    page.dataset.motion = "ready";
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <main className={styles.page}>
-      <div className="bg-secondary px-5 py-3 text-center text-xs font-bold leading-snug text-white md:text-sm"><span className="mr-2 inline-block h-2 w-2 rounded-full bg-accent" />Not the right fit? We replace your specialist free. Ask about it on your Discovery Call.</div>
+    <main ref={pageRef} className={styles.page}>
       <section className={`${styles.hero} ${styles.lightGrid}`} aria-labelledby="estimating-title">
         <div className={styles.heroCopy}>
           <p className={styles.eyebrow}><span />Roofing &amp; construction estimating</p>
           <h1 id="estimating-title">Stop turning<br className="lg:hidden" /> down bids.<br /><span className={styles.highlight}>Add capacity.</span></h1>
           <p className={styles.intro}>Dedicated remote estimators or project-based takeoffs for U.S. contractors, working in your software and your time zone.</p>
-          <button type="button" className={styles.cta} onClick={(e) => e.preventDefault()}><Calendar size={19} />Book Your Free Discovery Call</button>
-          <p className={styles.finePrint}>30 minutes · Founder-led · No sales pitch</p>
           <div className={styles.contactActions}>
             <a className={styles.actionBtn} href="tel:+17186506786">
               <Phone size={16} />
@@ -132,6 +157,7 @@ export default function EstimatingSupportClient() {
               <span>Click here to text: +1 (718) 650-6786</span>
             </a>
           </div>
+          <button type="button" className={styles.cta} onClick={(e) => e.preventDefault()}><Calendar size={19} />Book Your Free Discovery Call</button>
           <ul className={styles.benefits}>{benefits.map(benefit => <li key={benefit}><span><Check size={13} /></span>{benefit}</li>)}</ul>
         </div>
         <div className={styles.profile}>
@@ -152,7 +178,7 @@ export default function EstimatingSupportClient() {
         </div>
       </section>
 
-      <section className={`${styles.trust} ${styles.panel}`} aria-labelledby="trust-title">
+      <section data-reveal className={`${styles.trust} ${styles.panel}`} aria-labelledby="trust-title">
         <div className={styles.trustProof}>
           <h2 id="trust-title">Trusted by U.S. construction &amp; trade businesses</h2>
           <Image src="/artistictile-logo.PNG" alt="Artistic Tile" width={190} height={85} className={styles.clientLogo} />
@@ -161,10 +187,10 @@ export default function EstimatingSupportClient() {
       </section>
 
       <section className={styles.services} aria-labelledby="services-title">
-        <h2 id="services-title" className={styles.sectionTitle}>Four Ways to Speed<br className="md:hidden" /> Up <span className={styles.highlight}>Your Bids</span></h2>
+        <h2 id="services-title" data-reveal className={styles.sectionTitle}>Four Ways to Speed<br className="md:hidden" /> Up <span className={styles.highlight}>Your Bids</span></h2>
         <div className={styles.serviceGrid}>
-          {services.map(({ icon: Icon, title, description, tags }) => (
-            <article key={title} className={`${styles.serviceCard} ${styles.panel}`}>
+          {services.map(({ icon: Icon, title, description, tags }, index) => (
+            <article key={title} data-reveal style={{ "--reveal-i": index } as React.CSSProperties} className={`${styles.serviceCard} ${styles.panel}`}>
               <span className={styles.iconBox}><Icon size={26} strokeWidth={1.8} /></span>
               <h3>{title}</h3>
               <p>{description}</p>
@@ -176,7 +202,7 @@ export default function EstimatingSupportClient() {
             </article>
           ))}
         </div>
-        <div className={styles.workPhoto}>
+        <div data-reveal className={styles.workPhoto}>
           <Image
             src="/const-ej1.jpg"
             alt="Construction estimator comparing roof plans and material costs on two monitors"
@@ -188,14 +214,14 @@ export default function EstimatingSupportClient() {
       </section>
 
       <section className={`${styles.support} ${styles.blueGrid}`} aria-labelledby="support-title">
-        <div className={styles.supportIntro}><p className={styles.greenEyebrow}><span />Our services</p><h2 id="support-title">Flexible Support<br />for Your Bid Volume</h2><p>Your estimator takes the takeoffs and pricing off your project team’s plate, so they stay focused on active jobs while bids go out faster.</p></div>
-        <div className={styles.ways}><h2>Two ways to work with us</h2><div className={styles.optionGrid}>{supportOptions.map(({ title, description }, index) => <article key={title} className={styles.option}><span className={styles.optionNumber}>0{index + 1}</span><div><h3>{title}</h3><p>{description}</p></div></article>)}</div></div>
-        <div className={styles.roi}><h2>The ROI angle</h2><div className={styles.roiGrid}><div><h3>U.S. in-house estimator</h3><strong>$75K – $95K+ / year</strong><p>Plus weeks of hiring and payroll tax</p></div><div><h3>Virtual Value Bridge</h3><strong>Up to 60% savings</strong><p>Hand-picked, pre-vetted, free replacement</p></div></div></div>
+        <div data-reveal className={styles.supportIntro}><p className={styles.greenEyebrow}><span />Our services</p><h2 id="support-title">Flexible Support<br />for Your Bid Volume</h2><p>Your estimator takes the takeoffs and pricing off your project team’s plate, so they stay focused on active jobs while bids go out faster.</p></div>
+        <div data-reveal className={styles.ways}><h2>Two ways to work with us</h2><div className={styles.optionGrid}>{supportOptions.map(({ title, description }, index) => <article key={title} className={styles.option}><span className={styles.optionNumber}>0{index + 1}</span><div><h3>{title}</h3><p>{description}</p></div></article>)}</div></div>
+        <div data-reveal className={styles.roi}><h2>The ROI angle</h2><div className={styles.roiGrid}><div><h3>U.S. in-house estimator</h3><strong>$75K – $95K+ / year</strong><p>Plus weeks of hiring and payroll tax</p></div><div><h3>Virtual Value Bridge</h3><strong>Up to 60% savings</strong><p>Hand-picked, pre-vetted, free replacement</p></div></div></div>
       </section>
 
       <section ref={proofRef} className={styles.proof} aria-label="Client testimonial and estimating inquiry">
-        <figure className={styles.testimonial}><Quote className="text-accent" size={30} fill="currentColor" strokeWidth={0} /><blockquote>“Moving takeoffs and estimates out of the daily workload of our project team has been one of the best decisions we’ve made.”</blockquote><figcaption><span className={styles.avatar}>M</span><div><strong>Moses G.</strong><p>Project Manager, Artistic Tile &amp; Installation</p></div></figcaption></figure>
-        <div id="estimating-inquiry" className={`${styles.formCard} ${styles.panel}`}>
+        <figure data-reveal className={styles.testimonial}><Quote className="text-accent" size={30} fill="currentColor" strokeWidth={0} /><blockquote>“Moving takeoffs and estimates out of the daily workload of our project team has been one of the best decisions we’ve made.”</blockquote><figcaption><span className={styles.avatar}>M</span><div><strong>Moses G.</strong><p>Project Manager, Artistic Tile &amp; Installation</p></div></figcaption></figure>
+        <div id="estimating-inquiry" data-reveal style={{ "--reveal-i": 1 } as React.CSSProperties} className={`${styles.formCard} ${styles.panel}`}>
           {status === "success" ? <div role="status" className={styles.success}><CheckCircle size={48} className="text-accent" /><h2>Thanks for reaching out!</h2><p>Your message has been sent successfully. A founder will follow up with you shortly.</p><button type="button" className={styles.cta} onClick={handleReset}>Send another message</button></div> : <form onSubmit={handleSubmit} aria-labelledby="estimating-form-title">
             <h2 id="estimating-form-title">Get estimating support</h2><p className={styles.formIntro}>Just 3 details. Founder-led follow-up, no sales pitch.</p>
             {leadFields.map(({ name, label, type, autoComplete, placeholder }) => <div className={styles.field} key={name}><label htmlFor={`estimating-${name}`}>{label}</label><input id={`estimating-${name}`} name={name} type={type} autoComplete={autoComplete} placeholder={placeholder} required maxLength={254} value={formData[name]} onChange={handleChange} /></div>)}
