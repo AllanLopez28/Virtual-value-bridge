@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { ArrowRight, Calendar, Check, CheckCircle, ClipboardList, FileSpreadsheet, Loader2, Phone, Quote, Ruler, Scale, Star } from "lucide-react";
+import { ArrowRight, Calendar, Check, CheckCircle, ClipboardList, FileSpreadsheet, Loader2, MessageSquare, Phone, Quote, Ruler, Scale } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { sendGTMEvent } from "@next/third-parties/google";
 import styles from "@/app/services/estimating-support/estimating.module.css";
@@ -122,14 +122,33 @@ export default function EstimatingSupportClient() {
           <p className={styles.intro}>Dedicated remote estimators or project-based takeoffs for U.S. contractors, working in your software and your time zone.</p>
           <button type="button" className={styles.cta} onClick={(e) => e.preventDefault()}><Calendar size={19} />Book Your Free Discovery Call</button>
           <p className={styles.finePrint}>30 minutes · Founder-led · No sales pitch</p>
-          <a className={styles.callLink} href="tel:+17186506786"><Phone size={17} />Call: +1 (718) 650-6786</a>
+          <div className={styles.contactActions}>
+            <a className={styles.actionBtn} href="tel:+17186506786">
+              <Phone size={16} />
+              <span>Click here to call: +1 (718) 650-6786</span>
+            </a>
+            <a className={styles.actionBtn} href="sms:+17186506786">
+              <MessageSquare size={16} />
+              <span>Click here to text: +1 (718) 650-6786</span>
+            </a>
+          </div>
           <ul className={styles.benefits}>{benefits.map(benefit => <li key={benefit}><span><Check size={13} /></span>{benefit}</li>)}</ul>
         </div>
         <div className={styles.profile}>
           <span className={styles.available}><span />Available Now</span>
           <div className={styles.profileCircle} />
-          <Image src="/constructpng.png" alt="Bilingual remote estimating specialist" fill sizes="(min-width: 1024px) 400px, (min-width: 768px) 360px, 100vw" className={styles.profileImage} preload />
-          <div className={styles.profileCaption}><h2>{supportOptions[0].title}</h2><p>{supportOptions[0].description}</p></div>
+          <Image src="/constructpng.png" alt="Bilingual remote estimating specialist" fill sizes="(min-width: 1024px) 440px, (min-width: 768px) 360px, 100vw" className={styles.profileImage} preload />
+          <div className={styles.profileCaption}>
+            <h2>{supportOptions[0].title}</h2>
+            <div className={styles.specialistCredentials}>
+              <span>Engineer</span>
+              <span className={styles.credentialDot}>·</span>
+              <span>2 years experience</span>
+              <span className={styles.credentialDot}>·</span>
+              <span>Bilingual</span>
+            </div>
+            <p>{supportOptions[0].description}</p>
+          </div>
         </div>
       </section>
 
@@ -137,7 +156,6 @@ export default function EstimatingSupportClient() {
         <div className={styles.trustProof}>
           <h2 id="trust-title">Trusted by U.S. construction &amp; trade businesses</h2>
           <Image src="/artistictile-logo.PNG" alt="Artistic Tile" width={190} height={85} className={styles.clientLogo} />
-          <div className={styles.rating}><span aria-label="5 out of 5 stars">{Array.from({ length: 5 }, (_, i) => <Star key={i} size={16} fill="currentColor" strokeWidth={0} />)}</span><p>5.0 average across 50+ U.S. clients</p></div>
         </div>
         <div className={styles.software}><h3>Trained on the software you already use</h3><ul>{software.map(tool => <li key={tool}>{tool}</li>)}</ul></div>
       </section>
