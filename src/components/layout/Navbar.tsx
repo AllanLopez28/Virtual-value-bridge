@@ -4,7 +4,28 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
-import { Menu, X } from "lucide-react";
+import { Mail, Phone, Menu, X } from "lucide-react";
+
+function Linkedin({ className, strokeWidth = 1.5 }: { className?: string; strokeWidth?: number | string }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={strokeWidth}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+    >
+      <rect x="2" y="2" width="20" height="20" rx="4" />
+      <path d="M7.5 11v5" />
+      <path d="M7.5 8v.01" />
+      <path d="M12 16v-5" />
+      <path d="M12 13a2.5 2.5 0 0 1 5 0V16" />
+    </svg>
+  );
+}
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,8 +49,8 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-8">
-          <div className="flex gap-6">
+        <div className="hidden md:flex items-center gap-4 lg:gap-8">
+          <div className="flex gap-4 lg:gap-6">
             <Link href="/" className="text-sm font-semibold text-secondary hover:text-primary transition-colors">
               Home
             </Link>
@@ -55,10 +76,42 @@ export default function Navbar() {
               Contact
             </Link>
           </div>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center">
+            {/* Quick Contact Icons */}
+            <div className="hidden sm:flex items-center gap-2 mr-2 lg:mr-4 shrink-0">
+              {/* Email Button */}
+              <a 
+                href="mailto:info@vvbridge.net" 
+                className="w-10 h-10 flex items-center justify-center rounded-[10px] border border-slate-200 bg-white text-slate-600 hover:text-blue-600 hover:border-blue-200 hover:bg-blue-50 transition-all shadow-sm"
+                aria-label="Email Us"
+              >
+                <Mail className="w-[18px] h-[18px]" strokeWidth={1.5} />
+              </a>
+
+              {/* Phone Button */}
+              <a 
+                href="tel:+17186506786" 
+                className="w-10 h-10 flex items-center justify-center rounded-[10px] border border-slate-200 bg-white text-slate-600 hover:text-blue-600 hover:border-blue-200 hover:bg-blue-50 transition-all shadow-sm"
+                aria-label="Call Us"
+              >
+                <Phone className="w-[18px] h-[18px]" strokeWidth={1.5} />
+              </a>
+
+              {/* LinkedIn Button */}
+              <a 
+                href="https://www.linkedin.com/company/virtual-value-bridge" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="w-10 h-10 flex items-center justify-center rounded-[10px] border border-slate-200 bg-white text-slate-600 hover:text-blue-600 hover:border-blue-200 hover:bg-blue-50 transition-all shadow-sm"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="w-[18px] h-[18px]" strokeWidth={1.5} />
+              </a>
+            </div>
+
             <Link
               href={contactHref}
-              className="hidden md:inline-flex items-center justify-center rounded-full bg-accent px-6 py-2.5 text-sm font-bold text-secondary hover:bg-accent/90 hover:scale-105 hover:shadow-lg active:scale-95 transition-all duration-300"
+              className="hidden md:inline-flex items-center justify-center rounded-full bg-accent px-6 py-2.5 text-sm font-bold text-secondary hover:bg-accent/90 hover:scale-105 hover:shadow-lg active:scale-95 transition-all duration-300 whitespace-nowrap"
             >
               Book a call
             </Link>
@@ -104,11 +157,41 @@ export default function Navbar() {
           <Link href={contactHref} onClick={() => setIsOpen(false)} className="text-sm font-semibold text-slate-600">
             Contact
           </Link>
-          <div className="pt-2 border-t border-slate-100">
+          <div className="pt-2 border-t border-slate-100 flex flex-col gap-3">
+            <div className="flex items-center justify-center gap-3 py-1">
+              {/* Email Button */}
+              <a 
+                href="mailto:info@vvbridge.net" 
+                className="w-10 h-10 flex items-center justify-center rounded-[10px] border border-slate-200 bg-white text-slate-600 hover:text-blue-600 hover:border-blue-200 hover:bg-blue-50 transition-all shadow-sm"
+                aria-label="Email Us"
+              >
+                <Mail className="w-[18px] h-[18px]" strokeWidth={1.5} />
+              </a>
+
+              {/* Phone Button */}
+              <a 
+                href="tel:+17186506786" 
+                className="w-10 h-10 flex items-center justify-center rounded-[10px] border border-slate-200 bg-white text-slate-600 hover:text-blue-600 hover:border-blue-200 hover:bg-blue-50 transition-all shadow-sm"
+                aria-label="Call Us"
+              >
+                <Phone className="w-[18px] h-[18px]" strokeWidth={1.5} />
+              </a>
+
+              {/* LinkedIn Button */}
+              <a 
+                href="https://www.linkedin.com/company/virtual-value-bridge" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="w-10 h-10 flex items-center justify-center rounded-[10px] border border-slate-200 bg-white text-slate-600 hover:text-blue-600 hover:border-blue-200 hover:bg-blue-50 transition-all shadow-sm"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="w-[18px] h-[18px]" strokeWidth={1.5} />
+              </a>
+            </div>
             <Link
               href={contactHref}
               onClick={() => setIsOpen(false)}
-              className="inline-flex w-full items-center justify-center rounded-full bg-accent px-6 py-3 text-sm font-bold text-secondary hover:bg-accent/90 hover:scale-105 active:scale-95 transition-all duration-300 mt-2 shadow-sm"
+              className="inline-flex w-full items-center justify-center rounded-full bg-accent px-6 py-3 text-sm font-bold text-secondary hover:bg-accent/90 hover:scale-105 active:scale-95 transition-all duration-300 shadow-sm"
             >
               Book a call
             </Link>
