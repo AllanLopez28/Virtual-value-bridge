@@ -157,7 +157,7 @@ export default function EstimatingSupportClient() {
               <span>Click here to text: +1 (718) 650-6786</span>
             </a>
           </div>
-          <button type="button" className={styles.cta} onClick={(e) => e.preventDefault()}><Calendar size={19} />Book Your Free Discovery Call</button>
+          <a className={styles.cta} href="#estimating-inquiry"><Calendar size={19} />Book Your Free Discovery Call</a>
           <ul className={styles.benefits}>{benefits.map(benefit => <li key={benefit}><span><Check size={13} /></span>{benefit}</li>)}</ul>
         </div>
         <div className={styles.profile}>
