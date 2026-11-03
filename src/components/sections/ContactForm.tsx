@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { sendGTMEvent } from "@next/third-parties/google";
-import { Calendar, Mail, Phone, ShieldCheck, CheckCircle } from "lucide-react";
+import { Calendar, Mail, MessageSquare, Phone, ShieldCheck, CheckCircle } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function ContactForm() {
@@ -142,20 +142,22 @@ export default function ContactForm() {
                 </div>
               </a>
 
-              <a
-                href="tel:+17186506786"
-                className="flex items-center gap-3.5 group hover:opacity-90 transition-opacity"
-              >
-                <div className="w-11 h-11 rounded-2xl bg-slate-100 flex items-center justify-center text-slate-600 group-hover:bg-blue-50 group-hover:text-blue-600 transition-colors shrink-0">
-                  <Phone className="w-5 h-5" strokeWidth={1.75} />
-                </div>
-                <div className="flex flex-col">
-                  <span className="text-xs text-slate-400 font-medium">Phone</span>
-                  <span className="text-sm sm:text-base font-bold text-[#0B132B] group-hover:text-blue-600 transition-colors">
-                    +1 (718) 650-6786
-                  </span>
-                </div>
-              </a>
+              <div className="flex flex-col gap-2.5 w-full max-w-md my-1">
+                <a
+                  href="tel:+17186506786"
+                  className="inline-flex items-center gap-2.5 px-5 py-3 rounded-full text-sm sm:text-[14.5px] font-bold text-secondary bg-white border-[1.5px] border-slate-200 shadow-xs hover:border-primary hover:text-primary hover:bg-primary/5 hover:-translate-y-0.5 active:scale-[0.98] transition-all"
+                >
+                  <Phone size={16} className="text-primary shrink-0" />
+                  <span>Click here to call: +1 (718) 650-6786</span>
+                </a>
+                <a
+                  href="sms:+17186506786"
+                  className="inline-flex items-center gap-2.5 px-5 py-3 rounded-full text-sm sm:text-[14.5px] font-bold text-secondary bg-white border-[1.5px] border-slate-200 shadow-xs hover:border-primary hover:text-primary hover:bg-primary/5 hover:-translate-y-0.5 active:scale-[0.98] transition-all"
+                >
+                  <MessageSquare size={16} className="text-primary shrink-0" />
+                  <span>Click here to text: +1 (718) 650-6786</span>
+                </a>
+              </div>
 
               <a
                 href="https://www.linkedin.com/company/virtual-value-bridge"
