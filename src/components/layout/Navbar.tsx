@@ -4,28 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
-import { Mail, Phone, Menu, X } from "lucide-react";
-
-function Linkedin({ className, strokeWidth = 1.5 }: { className?: string; strokeWidth?: number | string }) {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={strokeWidth}
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className={className}
-    >
-      <rect x="2" y="2" width="20" height="20" rx="4" />
-      <path d="M7.5 11v5" />
-      <path d="M7.5 8v.01" />
-      <path d="M12 16v-5" />
-      <path d="M12 13a2.5 2.5 0 0 1 5 0V16" />
-    </svg>
-  );
-}
+import { Mail, Phone, MessageSquare, Menu, X } from "lucide-react";
 
 function QuickContactIcons({ className = "" }: { className?: string }) {
   return (
@@ -38,26 +17,6 @@ function QuickContactIcons({ className = "" }: { className?: string }) {
       >
         <Mail className="w-4 h-4 sm:w-[18px] sm:h-[18px]" strokeWidth={1.5} />
       </a>
-
-      {/* Phone Button */}
-      <a 
-        href="tel:+17186506786" 
-        className="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-[10px] border border-slate-200 bg-white text-slate-600 hover:text-blue-600 hover:border-blue-200 hover:bg-blue-50 transition-all shadow-sm shrink-0"
-        aria-label="Call Us"
-      >
-        <Phone className="w-4 h-4 sm:w-[18px] sm:h-[18px]" strokeWidth={1.5} />
-      </a>
-
-      {/* LinkedIn Button */}
-      <a 
-        href="https://www.linkedin.com/company/virtual-value-bridge" 
-        target="_blank" 
-        rel="noopener noreferrer" 
-        className="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-[10px] border border-slate-200 bg-white text-slate-600 hover:text-blue-600 hover:border-blue-200 hover:bg-blue-50 transition-all shadow-sm shrink-0"
-        aria-label="LinkedIn"
-      >
-        <Linkedin className="w-4 h-4 sm:w-[18px] sm:h-[18px]" strokeWidth={1.5} />
-      </a>
     </div>
   );
 }
@@ -69,6 +28,29 @@ export default function Navbar() {
 
   return (
     <nav className="w-full bg-background/95 backdrop-blur-md sticky top-0 z-50 border-b border-slate-200">
+      {/* Top Phone & SMS Ribbon */}
+      <div className="w-full bg-[#47b0d8] text-white py-2 sm:py-2.5 shadow-xs">
+        <div className="container mx-auto px-4 md:px-6 flex items-center justify-center gap-x-6 gap-y-1 flex-wrap">
+          <a
+            href="tel:+17186506786"
+            className="inline-flex items-center gap-2 text-xs sm:text-sm md:text-base font-bold text-white hover:text-white/85 transition-opacity tracking-wide"
+            aria-label="Call +1 (718) 650-6786"
+          >
+            <Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0 fill-white" />
+            <span>Call: +1 (718) 650-6786</span>
+          </a>
+          <span className="text-white/40 hidden sm:inline" aria-hidden="true">|</span>
+          <a
+            href="sms:+17186506786"
+            className="inline-flex items-center gap-2 text-xs sm:text-sm md:text-base font-bold text-white hover:text-white/85 transition-opacity tracking-wide"
+            aria-label="Text +1 (718) 650-6786"
+          >
+            <MessageSquare className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" strokeWidth={2.2} />
+            <span>Text: +1 (718) 650-6786</span>
+          </a>
+        </div>
+      </div>
+
       <div className="container mx-auto px-4 md:px-6 h-20 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
@@ -139,7 +121,7 @@ export default function Navbar() {
 
       {/* Mobile Navigation Dropdown */}
       {isOpen && (
-        <div id="mobile-navigation" className="md:hidden absolute top-20 left-0 w-full bg-white border-b border-slate-200 shadow-lg py-4 px-4 flex flex-col gap-4">
+        <div id="mobile-navigation" className="md:hidden absolute top-full left-0 w-full bg-white border-b border-slate-200 shadow-lg py-4 px-4 flex flex-col gap-4">
           <Link href="/" onClick={() => setIsOpen(false)} className="text-sm font-semibold text-secondary">
             Home
           </Link>
