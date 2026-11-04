@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { Calendar, Loader2, X } from "lucide-react";
-import { CALENDLY_URL } from "@/config/constants";
+import { CALENDLY_EMBED_URL } from "@/config/constants";
 
 interface CalendlyModalProps {
   isOpen: boolean;
@@ -78,7 +78,7 @@ export default function CalendlyModal({ isOpen, onClose }: CalendlyModalProps) {
             </div>
           )}
           <iframe
-            src={CALENDLY_URL}
+            src={CALENDLY_EMBED_URL}
             width="100%"
             height="100%"
             title="Schedule a Call with Virtual Value Bridge"

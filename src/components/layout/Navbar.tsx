@@ -58,7 +58,7 @@ export default function Navbar() {
         <Link href="/" className="flex items-center gap-2 group">
           <div className="relative w-44 h-12">
             <Image
-              src="/logo.png"
+              src="/Logo-vv.png"
               alt="Virtual Value Bridge Logo"
               fill
               className="object-contain object-left"

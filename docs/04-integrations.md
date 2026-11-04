@@ -56,7 +56,7 @@ If the answer is "same as the contact form," the fastest path is to reuse the `h
 ## 3. Calendar booking
 
 **Status:** Active via Calendly in-page popup modal (`CalendlyModal.tsx` and `CalendlyContext.tsx`).
-**File:** `src/config/constants.ts` (`CALENDLY_URL`)
+**File:** `src/config/constants.ts` (`CALENDLY_URL`, `CALENDLY_EMBED_URL`)
 **Endpoint:** `https://calendly.com/tescalante-vvbridge/30min`
 
 Connected across primary CTAs via `useCalendly()`:
