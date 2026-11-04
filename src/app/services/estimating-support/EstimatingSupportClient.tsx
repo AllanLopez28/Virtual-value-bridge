@@ -5,6 +5,7 @@ import { ArrowRight, Calendar, Check, CheckCircle, ClipboardList, FileSpreadshee
 import { useEffect, useRef, useState } from "react";
 import { sendGTMEvent } from "@next/third-parties/google";
 import styles from "@/app/services/estimating-support/estimating.module.css";
+import { useCalendly } from "@/context/CalendlyContext";
 
 const leadFields = [
   { name: "name", label: "Name", type: "text", autoComplete: "name", placeholder: "Your full name" },
@@ -25,6 +26,7 @@ const services = [
 ];
 
 export default function EstimatingSupportClient() {
+  const { openCalendly } = useCalendly();
 
   const [formData, setFormData] = useState({
     name: "",
@@ -157,7 +159,7 @@ export default function EstimatingSupportClient() {
               <span>Click here to text: +1 (718) 650-6786</span>
             </a>
           </div>
-          <a className={styles.cta} href="#estimating-inquiry"><Calendar size={19} />Book Your Free Discovery Call</a>
+          <button type="button" className={styles.cta} onClick={openCalendly}><Calendar size={19} />Book Your Free Discovery Call</button>
           <ul className={styles.benefits}>{benefits.map(benefit => <li key={benefit}><span><Check size={13} /></span>{benefit}</li>)}</ul>
         </div>
         <div className={styles.profile}>

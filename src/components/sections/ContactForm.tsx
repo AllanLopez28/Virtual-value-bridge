@@ -5,8 +5,10 @@ import Link from "next/link";
 import { sendGTMEvent } from "@next/third-parties/google";
 import { Calendar, Mail, MessageSquare, Phone, ShieldCheck, CheckCircle } from "lucide-react";
 import { motion } from "framer-motion";
+import { useCalendly } from "@/context/CalendlyContext";
 
 export default function ContactForm() {
+  const { openCalendly } = useCalendly();
   const [formData, setFormData] = useState({
     name: "",
     company: "",
@@ -203,7 +205,7 @@ export default function ContactForm() {
               <div>
                 <button
                   type="button"
-                  onClick={(e) => e.preventDefault()}
+                  onClick={openCalendly}
                   className="bg-[#84cc16] text-[#0B132B] font-bold px-6 py-3 rounded-full hover:bg-lime-500 transition-colors inline-flex items-center gap-2 text-sm shadow-sm cursor-pointer"
                 >
                   Open calendar <span aria-hidden="true">→</span>

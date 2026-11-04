@@ -55,18 +55,14 @@ If the answer is "same as the contact form," the fastest path is to reuse the `h
 
 ## 3. Calendar booking
 
-**Status:** Placeholder.
-**File:** `src/components/sections/ContactForm.tsx`
+**Status:** Active via Calendly in-page popup modal (`CalendlyModal.tsx` and `CalendlyContext.tsx`).
+**File:** `src/config/constants.ts` (`CALENDLY_URL`)
+**Endpoint:** `https://calendly.com/tescalante-vvbridge/30min`
 
-The "Prefer to book directly?" card promises a 30-minute founder-led slot and has an "Open calendar" button linking to `#calendar` — an anchor that does not exist anywhere on the site. The card's own footer reads "Calendar embed placeholder."
-
-Every "Book a call" button in the navigation also points to `/#contact`, which lands on this same card. So the site's primary CTA currently ends at a dead link.
-
-- Booking tool (Calendly, Cal.com, HubSpot, other)? `_TBD_`
-- Whose calendar? `_TBD_`
-- Embed inline or link out to a hosted page? `_TBD_`
-
-This is the highest-value gap on the site — it breaks the main conversion path.
+Connected across primary CTAs via `useCalendly()`:
+- `Navbar.tsx`: "Book a call" buttons (desktop and mobile dropdown) open the in-page popup modal.
+- `ContactForm.tsx`: "Prefer to book directly?" card "Open calendar →" button opens the in-page popup modal.
+- `EstimatingSupportClient.tsx`: Hero "Book Your Free Discovery Call" CTA opens the in-page popup modal.
 
 ---
 

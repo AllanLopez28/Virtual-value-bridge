@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { Mail, Phone, MessageSquare, Menu, X } from "lucide-react";
+import { useCalendly } from "@/context/CalendlyContext";
 
 function QuickContactIcons({ className = "" }: { className?: string }) {
   return (
@@ -25,6 +26,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
   const contactHref = pathname === "/services/estimating-support" ? "#estimating-inquiry" : "/#contact";
+  const { openCalendly } = useCalendly();
 
   return (
     <nav className="w-full bg-background/95 backdrop-blur-md sticky top-0 z-50 border-b border-slate-200">
@@ -37,37 +39,37 @@ export default function Navbar() {
             aria-label="Call +1 (718) 650-6786"
           >
             <Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0 fill-white" />
-            <span>Call: +1 (718) 650-6786</span>
+            <span>+1 (718) 650-6786</span>
           </a>
-          <span className="text-white/40 hidden sm:inline" aria-hidden="true">|</span>
+          <span className="hidden sm:inline text-white/40">|</span>
           <a
             href="sms:+17186506786"
             className="inline-flex items-center gap-2 text-xs sm:text-sm md:text-base font-bold text-white hover:text-white/85 transition-opacity tracking-wide"
             aria-label="Text +1 (718) 650-6786"
           >
-            <MessageSquare className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" strokeWidth={2.2} />
-            <span>Text: +1 (718) 650-6786</span>
+            <MessageSquare className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
+            <span>Click here to text: +1 (718) 650-6786</span>
           </a>
         </div>
       </div>
 
       <div className="container mx-auto px-4 md:px-6 h-20 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2">
-          <div className="relative w-32 sm:w-40 h-10 sm:h-12">
+        <Link href="/" className="flex items-center gap-2 group">
+          <div className="relative w-44 h-12">
             <Image
-              src="/Logo-vv.png"
-              alt="Virtual Value Bridge"
+              src="/logo.png"
+              alt="Virtual Value Bridge Logo"
               fill
-              className="object-contain"
+              className="object-contain object-left"
               priority
             />
           </div>
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-4 lg:gap-8">
-          <div className="flex gap-4 lg:gap-6">
+        <div className="hidden md:flex items-center gap-8">
+          <div className="flex items-center gap-6">
             <Link href="/" className="text-sm font-semibold text-secondary hover:text-primary transition-colors">
               Home
             </Link>
@@ -95,12 +97,13 @@ export default function Navbar() {
           </div>
           <div className="flex items-center">
             <QuickContactIcons className="mr-2 lg:mr-4 shrink-0" />
-            <Link
-              href={contactHref}
-              className="hidden md:inline-flex items-center justify-center rounded-full bg-accent px-6 py-2.5 text-sm font-bold text-secondary hover:bg-accent/90 hover:scale-105 hover:shadow-lg active:scale-95 transition-all duration-300 whitespace-nowrap"
+            <button
+              type="button"
+              onClick={openCalendly}
+              className="hidden md:inline-flex items-center justify-center rounded-full bg-accent px-6 py-2.5 text-sm font-bold text-secondary hover:bg-accent/90 hover:scale-105 hover:shadow-lg active:scale-95 transition-all duration-300 whitespace-nowrap cursor-pointer"
             >
               Book a call
-            </Link>
+            </button>
           </div>
         </div>
 
@@ -147,13 +150,16 @@ export default function Navbar() {
             Contact
           </Link>
           <div className="pt-2 border-t border-slate-100">
-            <Link
-              href={contactHref}
-              onClick={() => setIsOpen(false)}
-              className="inline-flex w-full items-center justify-center rounded-full bg-accent px-6 py-3 text-sm font-bold text-secondary hover:bg-accent/90 hover:scale-105 active:scale-95 transition-all duration-300 mt-2 shadow-sm"
+            <button
+              type="button"
+              onClick={() => {
+                setIsOpen(false);
+                openCalendly();
+              }}
+              className="inline-flex w-full items-center justify-center rounded-full bg-accent px-6 py-3 text-sm font-bold text-secondary hover:bg-accent/90 hover:scale-105 active:scale-95 transition-all duration-300 mt-2 shadow-sm cursor-pointer"
             >
               Book a call
-            </Link>
+            </button>
           </div>
         </div>
       )}

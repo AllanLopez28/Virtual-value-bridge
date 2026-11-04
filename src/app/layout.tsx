@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { GoogleTagManager } from "@next/third-parties/google";
 import "./globals.css";
+import Navbar from "@/components/layout/Navbar";
+import { CalendlyProvider } from "@/context/CalendlyContext";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -15,8 +17,6 @@ export const metadata: Metadata = {
     icon: '/icon-03.svg',
   },
 };
-
-import Navbar from "@/components/layout/Navbar";
 
 export default function RootLayout({
   children,
@@ -43,8 +43,10 @@ export default function RootLayout({
             })
           }}
         />
-        <Navbar />
-        {children}
+        <CalendlyProvider>
+          <Navbar />
+          {children}
+        </CalendlyProvider>
       </body>
     </html>
   );
