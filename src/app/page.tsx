@@ -1,25 +1,9 @@
-import HeroSection from "@/components/sections/HeroSection";
-import TeamHighlights from "@/components/sections/TeamHighlights";
-import SpecializedTracks from "@/components/sections/SpecializedTracks";
-import WhyChooseUsSection from "@/components/sections/WhyChooseUsSection";
-import AboutSection from "@/components/sections/AboutSection";
-import ServicesGrid from "@/components/sections/ServicesGrid";
-import CTASection from "@/components/sections/CTASection";
-import Testimonials from "@/components/sections/Testimonials";
-import ContactForm from "@/components/sections/ContactForm";
+import type { Metadata } from "next";
+import { HomeDesign } from "@/components/redesign/ReferenceDesign";
+import ReferenceSurface from "@/components/redesign/ReferenceSurface";
 
-export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between">
-      <HeroSection />
-      <TeamHighlights />
-      <SpecializedTracks />
-      <WhyChooseUsSection />
-      <AboutSection />
-      {/* <ServicesGrid hideHeader={true} /> */}
-      <CTASection />
-      <Testimonials />
-      <ContactForm />
-    </main>
-  );
+export const metadata: Metadata = { title: "Virtual Value Bridge | Where Virtual Meets Value", description: "Bilingual specialists who work U.S. hours and become part of your day-to-day team. Hand-picked for your industry, trained on your tools and backed by our on-site team in San Salvador." };
+
+export default function Page() {
+  return <main className=""><ReferenceSurface><HomeDesign /></ReferenceSurface></main>;
 }

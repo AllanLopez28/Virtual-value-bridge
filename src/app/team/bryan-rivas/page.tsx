@@ -166,7 +166,7 @@ export default function BryanRivasProfile() {
       {/* 8. Bottom CTA */}
       <section className="w-full bg-slate-50 py-20 mt-12 flex flex-col items-center justify-center text-center px-4">
         <h2 className="text-2xl md:text-4xl font-extrabold text-slate-900 mb-8 tracking-tight max-w-2xl">
-          Want Bryan's team on your <span className="text-blue-600 italic">back office?</span>
+          Want Bryan&apos;s team on your <span className="text-blue-600 italic">back office?</span>
         </h2>
         <Link 
           href="/#contact"

@@ -1,9 +1,7 @@
-"use client";
+import Link from "next/link";
+import { ArrowRight, Check, X } from "lucide-react";
 
-import { Check, X } from "lucide-react";
-
-export default function Comparison() {
-  const comparisonData = [
+const comparisonData = [
     {
       factor: "Time zone",
       vvb: "Same as U.S. (CST)",
@@ -41,75 +39,8 @@ export default function Comparison() {
     },
   ];
 
-  return (
-    <section id="compare" className="w-full relative flex flex-col items-center">
-      {/* Dark Top Half */}
-      <div className="w-full bg-secondary pt-24 pb-40 px-4 text-center flex flex-col items-center">
-        <span className="inline-flex items-center rounded-full bg-white/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-slate-300 mb-8 border border-white/10">
-          Buyer's guide
-        </span>
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 tracking-tight">
-          Nearshore vs Offshore<br />
-          <span className="inline-block bg-accent text-secondary px-3 py-1 mt-3 rounded-lg -rotate-1 hover:rotate-0 transition-transform duration-300">
-            VAs.
-          </span>
-        </h2>
-        <p className="max-w-2xl text-slate-300 text-lg leading-relaxed">
-          The honest comparison. If you've been burned by offshore agencies or generic VA platforms, 
-          here's what changes with a nearshore partner.
-        </p>
-      </div>
+const copy = ["BUYER’S GUIDE", "Nearshore vs offshore", "VAs.", "The honest comparison. If you’ve been burned by offshore agencies or generic VA platforms, here’s what changes with a nearshore partner.", "Factor", "Virtual Value Bridge", "Nearshore · El Salvador", "Typical Offshore VAs", "India / Philippines agencies", "Calculate your savings"];
 
-      {/* Light Bottom Half with Overlapping Table */}
-      <div className="w-full bg-slate-50 pb-24 px-4 flex justify-center">
-        <div className="w-full max-w-5xl -mt-20 relative z-10">
-          <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border border-slate-200">
-            
-            {/* Table Header */}
-            <div className="grid grid-cols-3 bg-secondary text-white p-6 border-b border-white/10">
-              <div className="flex items-center text-xs md:text-sm font-bold uppercase tracking-widest text-slate-400">
-                Factor
-              </div>
-              <div className="flex flex-col items-center justify-center text-center">
-                <span className="font-extrabold text-lg md:text-xl">Virtual value bridge</span>
-                <span className="text-accent text-[10px] md:text-xs font-bold uppercase tracking-wider mt-1">
-                  Nearshore · El Salvador
-                </span>
-              </div>
-              <div className="flex flex-col items-center justify-center text-center text-slate-400">
-                <span className="font-extrabold text-lg md:text-xl text-white">Typical Offshore VAs</span>
-                <span className="text-[10px] md:text-xs font-bold uppercase tracking-wider mt-1">
-                  India / Philippines agencies
-                </span>
-              </div>
-            </div>
-
-            {/* Table Body */}
-            <div className="flex flex-col divide-y divide-slate-100">
-              {comparisonData.map((item, i) => (
-                <div key={i} className="grid grid-cols-3 p-5 md:p-6 items-center hover:bg-slate-50 transition-colors">
-                  <div className="font-bold text-slate-800 text-xs md:text-sm pr-4">
-                    {item.factor}
-                  </div>
-                  <div className="flex items-center gap-3 justify-start md:pl-8">
-                    <Check className="w-5 h-5 text-primary flex-shrink-0" strokeWidth={3} />
-                    <span className="font-semibold text-slate-800 text-xs md:text-sm leading-tight">
-                      {item.vvb}
-                    </span>
-                  </div>
-                  <div className="flex items-center gap-3 justify-start md:pl-8 opacity-80">
-                    <X className="w-5 h-5 text-red-400 flex-shrink-0" strokeWidth={3} />
-                    <span className="font-medium text-slate-500 text-xs md:text-sm leading-tight">
-                      {item.offshore}
-                    </span>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </section>
-  );
+export default function Comparison() {
+ return <section className="comparison-page"><div className="simple-page-title"><p className="eyebrow">{copy[0]}</p><h1>{copy[1]} <em>{copy[2]}</em></h1><p>{copy[3]}</p></div><div className="comparison-scroll"><table><caption className="sr-only">Virtual Value Bridge compared with typical offshore virtual assistants</caption><thead><tr><th scope="col">{copy[4]}</th><th scope="col">{copy[5]}<small>{copy[6]}</small></th><th scope="col">{copy[7]}<small>{copy[8]}</small></th></tr></thead><tbody>{comparisonData.map(item=><tr key={item.factor}><th scope="row">{item.factor}</th><td><span><Check aria-hidden="true" />{item.vvb}</span></td><td><span><X aria-hidden="true" />{item.offshore}</span></td></tr>)}</tbody></table></div><Link className="ag-btn" href="/calculator">{copy[9]}<ArrowRight size={16} /></Link></section>;
 }

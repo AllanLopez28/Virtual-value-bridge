@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { DM_Sans, Manrope } from "next/font/google";
 import { GoogleTagManager } from "@next/third-parties/google";
 import "./globals.css";
-import Navbar from "@/components/layout/Navbar";
+import SiteExperience from "@/components/redesign/SiteExperience";
+import { ReferenceFooter } from "@/components/redesign/ReferenceDesign";
+import "./reference.css";
+import "./redesign.css";
 import { CalendlyProvider } from "@/context/CalendlyContext";
 
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-});
+const dmSans = DM_Sans({ variable: "--font-dm-sans", subsets: ["latin"], display: "swap" });
+const manrope = Manrope({ variable: "--font-manrope", subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
   title: "Virtual Value Bridge | BPO Outsourcing",
@@ -26,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID || "GTM-WZMZC3ST"} />
-      <body className={`${inter.variable} antialiased font-sans`}>
+      <body className={`${dmSans.variable} ${manrope.variable} antialiased font-sans`}>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -44,8 +45,7 @@ export default function RootLayout({
           }}
         />
         <CalendlyProvider>
-          <Navbar />
-          {children}
+          <SiteExperience footer={<ReferenceFooter />}>{children}</SiteExperience>
         </CalendlyProvider>
       </body>
     </html>

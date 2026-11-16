@@ -1,178 +1,45 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Check, Download } from "lucide-react";
+import { useCalendly } from "@/context/CalendlyContext";
+
+const roles = ["Admin / tenant support", "Bookkeeping (AP/AR)", "Leasing support", "Collections"];
+const copy = ["THE SAVINGS CALCULATOR", "See your", "savings", "in seconds.", "Estimate what you’d save by replacing a local hire with a dedicated Virtual Value Bridge specialist — fully loaded with benefits and overhead.", "Choose a role", "Hours per week", "Local hourly rate", "We add 25% for benefits, payroll tax, and equipment overhead.", "ESTIMATED MONTHLY SAVINGS", "Local hire (loaded)", "Virtual Value Bridge specialist", "Download breakdown", "Discuss your savings", "Same U.S. time zone", "Free replacement", "No long-term contract"];
+const money = (value: number) => value.toLocaleString("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 });
 
 export default function SavingsCalculator() {
-  const roles = [
-    "Admin / tenant support",
-    "Bookkeeping (AP/AR)",
-    "Leasing support",
-    "Collections",
-  ];
-
   const [role, setRole] = useState(roles[0]);
   const [hours, setHours] = useState(21);
   const [localRate, setLocalRate] = useState(25);
+  const { openCalendly } = useCalendly();
 
-  // Constants
+  // Sales-facing pricing commitments: unchanged from the existing calculator.
   const WEEKS_PER_MONTH = 4.33;
   const VVBRIDGE_HOURLY_RATE = 12;
   const LOCAL_OVERHEAD_MULTIPLIER = 1.25;
-
-  // Math Logic
   const localWeeklyCost = hours * localRate * LOCAL_OVERHEAD_MULTIPLIER;
   const localMonthlyCost = Math.round(localWeeklyCost * WEEKS_PER_MONTH);
   const vvbridgeMonthlyCost = Math.round(hours * VVBRIDGE_HOURLY_RATE * WEEKS_PER_MONTH);
   const monthlySavings = localMonthlyCost - vvbridgeMonthlyCost;
   const annualSavings = monthlySavings * 12;
 
-  return (
-    <section id="calculator" className="w-full relative flex flex-col items-center bg-slate-50">
-      
-      {/* Header Block (Blue Background) */}
-      <div className="w-full bg-primary pt-24 pb-32 px-4 flex justify-center text-center">
-        <div className="max-w-3xl">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight mb-6 leading-tight">
-            See your{" "}
-            <span className="inline-block bg-accent text-secondary px-4 py-1 md:py-2 rounded-2xl -rotate-2">
-              savings
-            </span>{" "}
-            in<br className="hidden md:block" /> seconds.
-          </h2>
-          <p className="text-white/90 text-base md:text-lg font-medium leading-relaxed max-w-2xl mx-auto">
-            Estimate what you'd save by replacing a local hire with a dedicated Virtual value bridge specialist — fully loaded with benefits and overhead.
-          </p>
-        </div>
+  function download() {
+    const report = ["Virtual Value Bridge — Savings estimate", `Role: ${role}`, `Hours per week: ${hours}`, `Local hourly rate: ${money(localRate)}`, "Local overhead: 25%", "Weeks per month: 4.33", `Local hire (loaded): ${money(localMonthlyCost)}/month`, `Virtual Value Bridge: ${money(vvbridgeMonthlyCost)}/month`, `Monthly savings: ${money(monthlySavings)}`, `Annual savings: ${money(annualSavings)}`, "Estimate only. Contact info@vvbridge.net to discuss your needs."].join("\n");
+    const url = URL.createObjectURL(new Blob([report], { type: "text/plain;charset=utf-8" }));
+    const link = document.createElement("a"); link.href = url; link.download = "vvbridge-savings-estimate.txt"; link.click();
+    window.setTimeout(() => URL.revokeObjectURL(url), 1000);
+  }
+  return <section className="savings-page" id="calculator">
+    <div className="simple-page-title"><p className="eyebrow">{copy[0]}</p><h1>{copy[1]} <em>{copy[2]}</em> {copy[3]}</h1><p>{copy[4]}</p></div>
+    <div className="savings-grid">
+      <div className="savings-controls">
+        <fieldset><legend>{copy[5]}</legend><div className="savings-roles">{roles.map(item => <button type="button" className={item === role ? "active" : ""} aria-pressed={item === role} key={item} onClick={() => setRole(item)}>{item}</button>)}</div></fieldset>
+        <div className="savings-slider"><label htmlFor="hours">{copy[6]}<output htmlFor="hours">{hours} hrs</output></label><input id="hours" type="range" min="1" max="40" value={hours} onChange={event => setHours(Number(event.target.value))} style={{ background: `linear-gradient(to right,var(--primary) ${((hours - 1) / 39) * 100}%,var(--line) ${((hours - 1) / 39) * 100}%)` }} /><div><span>1 hr</span><span>40 hrs</span></div></div>
+        <div className="savings-slider"><label htmlFor="local-rate">{copy[7]}<output htmlFor="local-rate">${localRate}/hr</output></label><input id="local-rate" type="range" min="15" max="100" value={localRate} onChange={event => setLocalRate(Number(event.target.value))} style={{ background: `linear-gradient(to right,var(--primary) ${((localRate - 15) / 85) * 100}%,var(--line) ${((localRate - 15) / 85) * 100}%)` }} /><div><span>$15/hr</span><span>$100/hr</span></div></div>
+        <p className="savings-disclosure">{copy[8]}</p><ul className="savings-checks">{copy.slice(14).map(item => <li key={item}><Check size={15} />{item}</li>)}</ul>
       </div>
-
-      {/* Main Container (Cards) */}
-      <div className="w-full container mx-auto px-4 md:px-6 max-w-5xl relative z-20 -mt-16 mb-12">
-        <div className="flex flex-col lg:flex-row gap-6 items-stretch">
-          
-          {/* Left Card: Inputs */}
-          <div className="w-full lg:w-1/2 bg-white rounded-3xl p-8 md:p-10 shadow-lg border border-slate-200 flex flex-col">
-            <h3 className="text-2xl font-extrabold text-secondary mb-6">Your situation</h3>
-            
-            {/* Roles Grid */}
-            <div className="mb-8">
-              <label className="block text-sm font-bold text-slate-700 mb-3">Role</label>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {roles.map((r) => (
-                  <button
-                    key={r}
-                    onClick={() => setRole(r)}
-                    className={`px-4 py-3 rounded-full text-sm font-semibold border transition-colors text-left ${
-                      role === r
-                        ? "border-primary text-primary bg-primary/5"
-                        : "border-slate-200 text-slate-600 hover:border-slate-300 hover:bg-slate-50"
-                    }`}
-                  >
-                    {r}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {/* Hours Slider */}
-            <div className="mb-8">
-              <div className="flex justify-between items-end mb-4">
-                <label className="block text-sm font-bold text-slate-700">Hours per week</label>
-                <span className="text-primary font-bold">{hours} hrs</span>
-              </div>
-              <input
-                type="range"
-                min="1"
-                max="40"
-                value={hours}
-                onChange={(e) => setHours(Number(e.target.value))}
-                className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-primary"
-                style={{
-                  background: `linear-gradient(to right, #2563eb 0%, #2563eb ${(hours / 40) * 100}%, #e2e8f0 ${(hours / 40) * 100}%, #e2e8f0 100%)`
-                }}
-              />
-            </div>
-
-            {/* Local Rate Slider */}
-            <div className="mb-8">
-              <div className="flex justify-between items-end mb-4">
-                <label className="block text-sm font-bold text-slate-700">Local hourly rate (USD)</label>
-                <span className="text-primary font-bold">${localRate}/hr</span>
-              </div>
-              <input
-                type="range"
-                min="15"
-                max="100"
-                value={localRate}
-                onChange={(e) => setLocalRate(Number(e.target.value))}
-                className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-primary"
-                style={{
-                  background: `linear-gradient(to right, #2563eb 0%, #2563eb ${((localRate - 15) / 85) * 100}%, #e2e8f0 ${((localRate - 15) / 85) * 100}%, #e2e8f0 100%)`
-                }}
-              />
-            </div>
-
-            <p className="text-[10px] text-slate-500 font-medium mt-auto">
-              We add 25% for benefits, payroll tax, and equipment overhead.
-            </p>
-          </div>
-
-          {/* Right Card: Results */}
-          <div className="w-full lg:w-1/2 bg-[#0B132B] rounded-3xl p-8 md:p-10 shadow-2xl flex flex-col justify-between relative overflow-hidden">
-            {/* Subtle glow decoration */}
-            <div className="absolute top-0 right-0 w-64 h-64 bg-accent/5 rounded-full blur-3xl pointer-events-none"></div>
-
-            <div>
-              <span className="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">
-                ESTIMATED MONTHLY SAVINGS
-              </span>
-              <div className="text-6xl md:text-7xl font-extrabold text-accent mb-2 tracking-tight">
-                ${monthlySavings.toLocaleString("en-US")}
-              </div>
-              <div className="text-sm font-bold text-white/80 mb-10">
-                ≈ ${annualSavings.toLocaleString("en-US")} per year
-              </div>
-
-              {/* Breakdown Table */}
-              <div className="space-y-4 mb-10 border-t border-white/10 pt-6">
-                <div className="flex justify-between items-center text-sm">
-                  <span className="text-slate-300 font-medium">Local hire (loaded)</span>
-                  <span className="text-white font-bold">${localMonthlyCost.toLocaleString("en-US")}/mo</span>
-                </div>
-                <div className="flex justify-between items-center text-sm">
-                  <span className="text-slate-300 font-medium">Virtual value bridge specialist</span>
-                  <span className="text-accent font-bold">${vvbridgeMonthlyCost.toLocaleString("en-US")}/mo</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Lead Gen Form */}
-            <div className="mt-auto">
-              <span className="block text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-3">
-                GET THE FULL BREAKDOWN
-              </span>
-              <div className="flex flex-col gap-3">
-                <input 
-                  type="email" 
-                  placeholder="you@company.com" 
-                  className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/50 transition-colors"
-                />
-                <button className="w-full bg-accent text-secondary font-bold text-sm px-4 py-3.5 rounded-xl hover:bg-accent/90 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2 shadow-lg shadow-accent/20">
-                  Email me the report <ArrowRight className="w-4 h-4" />
-                </button>
-              </div>
-              <div className="text-center mt-4">
-                <Link href="#contact" className="text-xs text-slate-400 hover:text-white transition-colors">
-                  or book a call instead
-                </Link>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-      </div>
-    </section>
-  );
+      <div className="savings-result"><div aria-live="polite" aria-atomic="true"><p className="eyebrow">{copy[9]}</p><h2>{money(monthlySavings)}</h2><p className="savings-annual">≈ {money(annualSavings)} per year</p><dl><div><dt>{copy[10]}</dt><dd>{money(localMonthlyCost)}/mo</dd></div><div><dt>{copy[11]}</dt><dd>{money(vvbridgeMonthlyCost)}/mo</dd></div></dl></div><div className="savings-actions"><button type="button" onClick={openCalendly}>{copy[13]}<ArrowRight size={16} /></button><button type="button" className="download" onClick={download}><Download size={15} />{copy[12]}</button></div></div>
+    </div>
+  </section>;
 }

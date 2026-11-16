@@ -100,7 +100,7 @@ export default function AnaRodriguezProfile() {
               ABOUT
             </p>
             <p className="text-lg md:text-xl text-slate-700 leading-relaxed max-w-4xl">
-              She joined Virtual Value Bridge in August 2024 as a Medical Professional, delivering clinical support and guidance while safeguarding the quality and accuracy of every patient care process. In January 2026 she stepped into the role of New Physician Trainer, onboarding and mentoring incoming medical professionals across the team. A natural teacher, she's passionate about helping others sharpen their skills, build confidence, and deliver high-quality care. Her time at Virtual Value Bridge has let her grow professionally — combining a solid medical background with a genuine drive for leadership, teamwork, and education.
+              She joined Virtual Value Bridge in August 2024 as a Medical Professional, delivering clinical support and guidance while safeguarding the quality and accuracy of every patient care process. In January 2026 she stepped into the role of New Physician Trainer, onboarding and mentoring incoming medical professionals across the team. A natural teacher, she&apos;s passionate about helping others sharpen their skills, build confidence, and deliver high-quality care. Her time at Virtual Value Bridge has let her grow professionally — combining a solid medical background with a genuine drive for leadership, teamwork, and education.
             </p>
           </div>
 

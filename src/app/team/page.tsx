@@ -1,17 +1,4 @@
+import type { Metadata } from "next";
 import TeamProfiles from "@/components/sections/TeamProfiles";
-
-
-export default function TeamPage() {
-  return (
-    <main className="min-h-screen bg-white pt-32 pb-20">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl md:text-5xl font-extrabold text-center text-[#0B132B] mb-12">
-          Meet Our Top Specialists
-        </h1>
-        <div className="mt-8">
-          <TeamProfiles />
-        </div>
-      </div>
-    </main>
-  );
-}
+export const metadata: Metadata = { title: "Our Team | Virtual Value Bridge", description: "Meet Dora Belloso, Bryan Rivas and Ana Rodríguez — the people behind Virtual Value Bridge." };
+export default function TeamPage() { return <main><TeamProfiles /></main>; }

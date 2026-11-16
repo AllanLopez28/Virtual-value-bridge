@@ -1,0 +1,236 @@
+{
+  "bookkeeping-accounting": {
+    "title": "Bookkeeping & Accounting Support Specialist",
+    "description": "Clean books only happen when someone keeps up with them every week. Get a dedicated bookkeeping specialist who records your transactions, reconciles your accounts, chases your invoices, and closes your books on a fixed monthly schedule — so your numbers are always ready.",
+    "image": "/karla.png",
+    "name": "Karla",
+    "experience": "4+ yrs",
+    "responsibilities": [
+      "Daily transaction recording and expense categorization in QuickBooks or Xero",
+      "Bank and credit card reconciliations matched against your records",
+      "Accounts payable: vendor bill entry, approval routing, and payment scheduling",
+      "Accounts receivable: invoicing, payment application, and collections follow-up",
+      "Receipt and document capture, plus chasing missing statements and paperwork",
+      "Weekly cash-flow snapshot and AR aging review so nothing slips through",
+      "Monthly close prep on a fixed calendar, with books delivered by a set date",
+      "Financial reporting: P&L, balance sheet, and the summaries you ask for",
+      "1099 and W-2 prep support and vendor record cleanup for your accountant",
+      "Payroll run support in Gusto or ADP — final review stays with your accountant"
+    ],
+    "tools": [
+      "QuickBooks Online",
+      "Xero",
+      "Bill.com",
+      "Dext",
+      "Gusto",
+      "Melio",
+      "Excel / Google Sheets",
+      "NetSuite",
+      "FreshBooks",
+      "Expensify"
+    ]
+  },
+  "customer-service": {
+    "title": "Customer Service Specialist",
+    "description": "Stop letting calls, emails, and chats pile up. Get a dedicated customer service specialist who answers your customers, resolves issues, and keeps every request moving — so nothing gets dropped.",
+    "image": "/valeria.png",
+    "name": "Your specialist",
+    "experience": "5+ yrs",
+    "responsibilities": [
+      "Answering customer calls, emails, live chat, and text messages",
+      "Creating, updating, and closing support tickets in your help desk",
+      "Following up until every open issue is resolved",
+      "Escalating complex cases to your team using your own process",
+      "Order status, scheduling, and service request coordination",
+      "Responding to reviews, comments, and direct messages",
+      "Keeping customer records and notes accurate in your CRM",
+      "Reporting on response times, ticket volume, and recurring issues"
+    ],
+    "tools": [
+      "Zendesk",
+      "Freshdesk",
+      "Intercom",
+      "HubSpot",
+      "Gorgias",
+      "Salesforce",
+      "RingCentral",
+      "Slack",
+      "Google Workspace",
+      "Microsoft Office"
+    ]
+  },
+  "data-entry-back-office": {
+    "title": "Data Entry & Back- Office Specialist",
+    "description": "Back-office work piles up fast when no one owns it. Get a dedicated data & back-office specialist who keeps your records clean, processes your orders, runs the research, and turns raw data into reports you can actually use — accurately and on a schedule you can count on.",
+    "image": "/sofia3.png",
+    "name": "Sofia",
+    "experience": "4+ yrs",
+    "responsibilities": [
+      "Accurate data entry into spreadsheets, CRMs, and internal databases",
+      "Data cleaning: deduplication, format standardizing, and fixing bad records",
+      "Validation against source documents with a second-pass QA review",
+      "Order processing: entering, updating, and tracking orders end to end",
+      "Invoice, receipt, and purchase-order processing, filing, and matching",
+      "Document digitization and transcription into clean, searchable files",
+      "Web research to collect, verify, and compile data points and lists",
+      "Product catalog and inventory updates for your e-commerce listings",
+      "Report prep and recurring summaries built from your raw data",
+      "Flagging anomalies instead of entering bad data, and building reusable templates"
+    ],
+    "tools": [
+      "Microsoft Excel",
+      "Google Sheets",
+      "Airtable",
+      "Google Workspace",
+      "Adobe Acrobat",
+      "Zapier",
+      "Shopify",
+      "NetSuite",
+      "Salesforce",
+      "Notion"
+    ]
+  },
+  "marketing-support": {
+    "title": "Marketing Support Specialist",
+    "description": "Your marketing plan only works if someone executes it every week. Get a dedicated marketing support specialist who builds your posts, sends your campaigns, updates your site, and reports on what worked.",
+    "image": "/ana.png",
+    "name": "Your specialist",
+    "experience": "4+ yrs",
+    "responsibilities": [
+      "Content calendar planning, caption drafting, and post scheduling",
+      "Publishing and monitoring posts across Facebook, Instagram, and LinkedIn",
+      "Replying to comments, direct messages, and reviews",
+      "Email campaign builds, list cleanup, segmentation, and send coordination",
+      "Blog uploads, formatting, image placement, and basic website updates",
+      "Graphic and short-video edits in Canva using your brand templates",
+      "Repurposing existing content into posts, carousels, and newsletters",
+      "Keyword research and on-page SEO updates",
+      "CRM hygiene, lead source tagging, and follow-up task creation",
+      "Weekly reporting on reach, engagement, open rates, and leads"
+    ],
+    "tools": [
+      "Canva",
+      "Meta Business Suite",
+      "Mailchimp",
+      "HubSpot",
+      "Hootsuite",
+      "Later",
+      "WordPress",
+      "Google Analytics",
+      "Google Ads",
+      "Adobe Express"
+    ]
+  },
+  "project-coordination": {
+    "title": "Project Coordination Specialist",
+    "description": "Projects stall when no one is chasing the details. Get a dedicated project coordinator who keeps your boards up to date, follows up on every deliverable, coordinates your vendors, and flags blockers before they turn into missed deadlines.",
+    "image": "/andres.png",
+    "name": "Andrés",
+    "experience": "4+ yrs",
+    "responsibilities": [
+      "Keeping project boards current in Asana, ClickUp, or Monday — dates, owners, dependencies",
+      "Breaking high-level goals into clear tasks and subtasks with owners",
+      "Tracking completion daily and following up on overdue deliverables",
+      "Vendor and contractor coordination: briefs, timelines, and check-ins",
+      "Scheduling check-ins and preparing focused agendas that drive decisions",
+      "Taking meeting notes and logging action items — who does what by when",
+      "Flagging blockers and risks early, before they turn into missed deadlines",
+      "Weekly status reports on progress, risks, and what needs a decision from you",
+      "Organizing documentation, shared folders, and version control for SOWs and briefs",
+      "Keeping one single source of truth accurate as of the end of each day"
+    ],
+    "tools": [
+      "Asana",
+      "ClickUp",
+      "Monday.com",
+      "Trello",
+      "Jira",
+      "Notion",
+      "Slack",
+      "Zoom",
+      "Google Workspace",
+      "Smartsheet"
+    ]
+  },
+  "property-management": {
+    "title": "Property Management Specialist",
+    "description": "Stop juggling tenant calls, maintenance tickets, and owner reports on your own. Get a dedicated property management specialist who learns your properties, runs your systems, and reports directly to you.",
+    "image": "/sofia2.png",
+    "name": "Sofía",
+    "experience": "5+ yrs",
+    "responsibilities": [
+      "Tenant communication, leasing inquiries, and move-in / move-out coordination",
+      "Maintenance request triage and vendor coordination",
+      "Rent collection follow-ups and delinquency tracking",
+      "Owner reporting and monthly statements",
+      "Property listing updates and vacancy management",
+      "Data entry and record-keeping inside your property management software"
+    ],
+    "tools": [
+      "AppFolio",
+      "Buildium",
+      "RentManager",
+      "Yardi",
+      "QuickBooks",
+      "Google Workspace",
+      "DocuSign",
+      "Slack"
+    ]
+  },
+  "sales-lead-generation": {
+    "title": "Sales & Lead Generation Specialist",
+    "description": "Pipeline doesn't fill itself — it takes steady outreach every single day. Get a dedicated sales development specialist who builds your prospect lists, runs your outreach, qualifies leads, and books discovery calls straight into your team's calendar.",
+    "image": "/mateo.png",
+    "name": "Mateo",
+    "experience": "4+ yrs",
+    "responsibilities": [
+      "Building targeted prospect lists from your ideal customer profile (ICP)",
+      "Contact research, data enrichment, and email verification before outreach",
+      "Multi-channel outreach across cold email, LinkedIn, and phone sequences",
+      "Writing and A/B testing subject lines, messaging, and follow-up cadences",
+      "Qualifying leads against your criteria so only real fits reach your reps",
+      "Booking and confirming discovery calls straight into your team's calendar",
+      "Same-business-day response to new inbound leads so none go cold",
+      "Reminder sequences that keep no-show rates down on booked meetings",
+      "CRM hygiene: activity logging, lead-source tagging, and pipeline updates",
+      "Weekly reporting on outreach volume, reply rates, meetings booked, and pipeline"
+    ],
+    "tools": [
+      "HubSpot",
+      "Salesforce",
+      "Apollo.io",
+      "LinkedIn Sales Navigator",
+      "ZoomInfo",
+      "Instantly",
+      "Lemlist",
+      "Outreach",
+      "Calendly",
+      "Clay"
+    ]
+  },
+  "virtual-assistant": {
+    "title": "Administrative Support Specialist",
+    "description": "Stop drowning in email, calendar conflicts, and paperwork. Get a dedicated administrative support specialist who manages your calendars, inboxes, and document prep — so you can focus on running your business.",
+    "image": "/diego.png",
+    "name": "Diego",
+    "experience": "4+ yrs",
+    "responsibilities": [
+      "Calendar management and scheduling coordination",
+      "Inbox management and email triage",
+      "Meeting prep, agendas, and follow-up notes",
+      "Document creation, formatting, and organization",
+      "Travel arrangements and itinerary planning",
+      "Data entry and file management across your systems"
+    ],
+    "tools": [
+      "Google Workspace",
+      "Microsoft Office",
+      "Calendly",
+      "Notion",
+      "Asana",
+      "DocuSign",
+      "Slack",
+      "Zoom"
+    ]
+  }
+}

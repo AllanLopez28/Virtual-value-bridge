@@ -1,14 +1,4 @@
+import type { Metadata } from "next";
 import Comparison from "@/components/sections/Comparison";
-
-export default function ComparisonPage() {
-  return (
-    <main className="min-h-screen bg-white pt-32 pb-20">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl md:text-5xl font-extrabold text-center text-[#0B132B] mb-12">
-          Local Hires vs. VVBridge Specialists
-        </h1>
-        <Comparison />
-      </div>
-    </main>
-  );
-}
+export const metadata: Metadata = { title: "Nearshore vs Offshore | Virtual Value Bridge", description: "Compare time zones, English fluency, founder oversight, replacement guarantees and software training." };
+export default function ComparisonPage() { return <main><Comparison /></main>; }

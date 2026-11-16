@@ -100,7 +100,7 @@ export default function DoraBellosoProfile() {
               ABOUT
             </p>
             <p className="text-lg md:text-xl text-slate-700 leading-relaxed max-w-4xl">
-              Dora Elizabeth Belloso is an Auditor at Virtual Value Bridge, where she's spent close to three years. In that time she's worked across every area of her account, deepening her command of the services the company delivers and strengthening the collaboration that keeps her team reaching its goals. With a full-picture view of how the account runs, she brings a careful, detail-oriented eye to her work — and stays eager to keep learning and contributing more.
+              Dora Elizabeth Belloso is an Auditor at Virtual Value Bridge, where she&apos;s spent close to three years. In that time she&apos;s worked across every area of her account, deepening her command of the services the company delivers and strengthening the collaboration that keeps her team reaching its goals. With a full-picture view of how the account runs, she brings a careful, detail-oriented eye to her work — and stays eager to keep learning and contributing more.
             </p>
           </div>
 

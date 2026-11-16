@@ -71,7 +71,7 @@ export default function Testimonials() {
             <Quote className="w-12 h-12 text-accent mb-6 rotate-180 opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300" strokeWidth={1.5} />
 
             <p className="text-xl md:text-2xl lg:text-3xl text-white font-bold leading-snug mb-8">
-              "Bringing on support for our administrative and project needs has made a big difference in how we operate. Moving takeoffs and estimates out of the daily workload of our project team has been one of the best decisions we’ve made. It allows our team to stay focused on active projects, while estimates are completed faster and details stay organized. The team at Virtual Value Bridge integrated seamlessly and has become a reliable extension of our business."
+              &quot;Bringing on support for our administrative and project needs has made a big difference in how we operate. Moving takeoffs and estimates out of the daily workload of our project team has been one of the best decisions we’ve made. It allows our team to stay focused on active projects, while estimates are completed faster and details stay organized. The team at Virtual Value Bridge integrated seamlessly and has become a reliable extension of our business.&quot;
             </p>
             <div className="flex flex-col mb-12">
               <span className="text-lg font-extrabold text-white">Moses G.</span>
@@ -165,7 +165,7 @@ export default function Testimonials() {
                 </div>
                 <Quote className="w-8 h-8 text-secondary/20 mb-4 rotate-180 group-hover:text-accent/40 group-hover:scale-110 transition-all duration-300" strokeWidth={2} />
                 <p className="text-slate-700 font-medium leading-relaxed mb-6 group-hover:text-secondary transition-colors duration-300">
-                  "{testimonial.quote}"
+                  &quot;{testimonial.quote}&quot;
                 </p>
                 <div className="inline-block bg-accent/20 text-secondary text-[10px] font-bold uppercase tracking-wider px-3 py-1.5 rounded-full mb-8 group-hover:bg-accent group-hover:shadow-md transition-all duration-300">
                   {testimonial.achievement}
@@ -192,7 +192,7 @@ export default function Testimonials() {
             Want results like <span className="inline-block bg-accent text-secondary px-3 py-1 rounded-md -rotate-2 hover:rotate-0 transition-transform duration-300 shadow-md">these?</span>
           </h2>
           <p className="text-slate-300 text-sm md:text-base font-medium mb-6 hover:text-white transition-colors cursor-default">
-            Book a free 20-minute call. We'll tell you straight up whether Virtual value bridge can help.
+            Book a free 20-minute call. We&apos;ll tell you straight up whether Virtual value bridge can help.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
             <Link

@@ -1,9 +1,9 @@
-import ServicesGrid from "@/components/sections/ServicesGrid";
+import type { Metadata } from "next";
+import { ServicesDesign } from "@/components/redesign/ReferenceDesign";
+import ReferenceSurface from "@/components/redesign/ReferenceSurface";
 
-export default function ServicesPage() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-start bg-secondary">
-      <ServicesGrid />
-    </main>
-  );
+export const metadata: Metadata = { title: "Services | Virtual Value Bridge", description: "Explore bilingual nearshore support for construction, property, finance, marketing and business operations." };
+
+export default function Page() {
+  return <main className="standalone-services"><h1 className="sr-only">Our services</h1><ReferenceSurface><ServicesDesign /></ReferenceSurface></main>;
 }
