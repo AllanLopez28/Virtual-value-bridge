@@ -10,6 +10,7 @@ const referencePaths = ["/", "/our-agents", "/industries/construction", "/servic
 
 export default function SiteExperience({ children, footer }: { children: ReactNode; footer: ReactNode }) {
   const pathname = usePathname();
+  const isEstimatingLanding = pathname === "/services/estimating-support";
   const { openCalendly } = useCalendly();
   const [finder, setFinder] = useState<FinderPreset | null>(null);
   const returnFocus = useRef<HTMLElement | null>(null);
@@ -30,9 +31,9 @@ export default function SiteExperience({ children, footer }: { children: ReactNo
   function closeFinder() { setFinder(null); window.requestAnimationFrame(() => returnFocus.current?.focus()); }
   return <>
     <div onClick={intercept} inert={finder !== null}>
-      <Navbar key={pathname} />
-      <div id="main-content" tabIndex={-1} className={referencePaths.includes(pathname) ? "" : "legacy-surface"}>{children}</div>
-      {footer}
+      {!isEstimatingLanding && <Navbar key={pathname} />}
+      <div id="main-content" tabIndex={-1} className={isEstimatingLanding || referencePaths.includes(pathname) ? "" : "legacy-surface"}>{children}</div>
+      {!isEstimatingLanding && footer}
     </div>
     {finder && <SpecialistFinder preset={finder} onClose={closeFinder} />}
   </>;

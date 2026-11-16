@@ -62,7 +62,7 @@ If the answer is "same as the contact form," the fastest path is to reuse the `h
 Connected across primary CTAs via `useCalendly()`:
 - `Navbar.tsx`: "Book a call" buttons (desktop and mobile dropdown) open the in-page popup modal.
 - `ContactForm.tsx`: "Prefer to book directly?" card "Open calendar →" button opens the in-page popup modal.
-- `EstimatingSupportClient.tsx`: Hero "Book Your Free Discovery Call" CTA opens the in-page popup modal.
+- `EstimatorForm.tsx`: Hero "Book Your Free Discovery Call" CTA opens the in-page popup modal.
 
 ---
 
@@ -75,7 +75,7 @@ Connected across primary CTAs via `useCalendly()`:
 - Google tag: `AW-18498223483`, triggered on **Initialization - All Pages**.
 - Google Ads conversion: **Lead - Estimating Support**, ID `18498223483`, label `iqWiCNzY4ZsdEPv60fRE`, triggered by the custom event **generate_lead**.
 - The estimating-support landing page sends `{ event: "generate_lead", lead_type: "estimating_support" }` only after `/api/intro-call` returns success.
-- The estimating-support form now asks only for name, work email, and company. The existing API already accepts submissions without a phone number. Empty phone/country-code fields are sent rather than a fabricated phone number. Conversion success still depends on the API response, not clicks or form visibility.
+- The estimating-support form uses four steps: contact details (name, work email, optional U.S. phone), support model, contractor type, and estimating software. It submits to `/api/intro-call`, retaining the existing redundant Formspree delivery. The API permits an empty company. No phone number is fabricated. Conversion success still depends on the API response, not clicks or form visibility.
 - On `/services/estimating-support`, navigation contact/booking links and the hero discovery-call CTA target `#estimating-inquiry`. The external Calendly link remains disconnected. The page offers dedicated estimators and project-based takeoff support, confirmed by the business on October 27, 2026. On November 3, the hero CTA was changed from a no-op button to an anchor so visitors can reach the existing form.
 - The general contact form sends `{ event: "generate_lead", lead_type: "general_contact" }` only after Formspree returns success. This source change must be deployed before that path is measured in production.
 - Do not include names, email addresses, phone numbers, or message contents in these events. Failed submissions and career applications must not emit a business lead event.
@@ -100,3 +100,18 @@ These appear as static text in `ContactForm.tsx` and are the only real contact c
 
 - **Email:** `info@vvbridge.net` (plain text — not a `mailto:` link)
 - **Phone:** +1 (718) 650-6786 (linked as `tel:+17186506786`)
+
+
+## Estimating landing update — November 16, 2026
+
+`/services/estimating-support` now reproduces the supplied `VVB_Estimators_LP_coordinated.html`. `EstimatingLanding.tsx` holds the server-rendered content, `EstimatorForm.tsx` the four-step form, and `LandingInteractions.tsx` the CTA scrolling, allowlisted keyword matching and mobile sticky visibility. The CSS module scopes the supplied colors, typography, responsive rules and animation timings to this route. Embedded reference images were extracted to `public/estimating/`.
+
+`SiteExperience.tsx` omits the global navbar, global footer and legacy page styling only for this exact route. The landing retains the reference’s compact logo/call header and `noindex` metadata. Its CTA anchors return to the form and preselect a model where supplied. UTM values, gclid and landing URL accompany the lead in process details. The reference’s mailto submission and placeholder tracking scripts are replaced by the existing delivery and `generate_lead` conversion event. No personal contact data is added to analytics events.
+
+Verification: changed-file ESLint passed; a temporary isolated webpack build passed for all 27 pages; generated HTML confirmed navigation absent on the landing and present on the homepage. Formatting checks covered optional U.S. phone inputs and image paths. Full-repository lint remains blocked by 17 pre-existing errors outside this change. No server was started and no lead was submitted. Browser visual review remains pending.
+
+The coordinated landing was reapplied onto the fetched `origin/main` revision `2caee4c` (UpdatedDesign). It reuses the existing DM Sans and Manrope font variables from the current root layout, without replacing the updated site layout or navbar.
+
+After updating to origin/main: TypeScript and isolated build passed (29 pages); full lint passed with 0 errors and 13 existing warnings. Generated HTML confirmed the global navigation is absent only on estimating-support and the page has only its own footer. Local landing files and images match the pre-update backup, with only scoped font-variable integration adjusted.
+
+Contact details are now the first step. Continue validates contact data locally, then visitors select the model, trade and software. Only the final confirmation submits the complete lead and can emit a conversion. Model-specific CTAs preselect the model without skipping contact details. The hero savings badge and free-replacement check background use the landing’s blue token. A mocked flow test confirmed there is no request or conversion on the contact/selection steps.
