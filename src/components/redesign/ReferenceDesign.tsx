@@ -464,7 +464,7 @@ export function HomeDesign() {
 </div>
 
 <div className="spec-row spec-actions">
-<Link className="spec-btn" href="/services/estimating-support">{copy[43]}</Link><BookingButton className="spec-btn-o">{copy[44]}</BookingButton>
+<Link className="spec-btn spec-card-link" href="/services/estimating-support" aria-label="Explore Estimating & Bid Support">{copy[43]}</Link><BookingButton className="spec-btn-o">{copy[44]}</BookingButton>
 </div>
 
 </article>
@@ -520,7 +520,7 @@ export function HomeDesign() {
 </div>
 
 <div className="spec-row spec-actions">
-<Link className="spec-btn" href="/services/virtual-assistant">{copy[64]}</Link><BookingButton className="spec-btn-o">{copy[65]}</BookingButton>
+<Link className="spec-btn spec-card-link" href="/services/virtual-assistant" aria-label="Explore Virtual Assistant">{copy[64]}</Link><BookingButton className="spec-btn-o">{copy[65]}</BookingButton>
 </div>
 
 </article>
@@ -576,7 +576,7 @@ export function HomeDesign() {
 </div>
 
 <div className="spec-row spec-actions">
-<Link className="spec-btn" href="/services/property-management">{copy[85]}</Link><BookingButton className="spec-btn-o">{copy[86]}</BookingButton>
+<Link className="spec-btn spec-card-link" href="/services/property-management" aria-label="Explore Property Management">{copy[85]}</Link><BookingButton className="spec-btn-o">{copy[86]}</BookingButton>
 </div>
 
 </article>

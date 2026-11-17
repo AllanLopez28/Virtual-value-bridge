@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { Phone, DollarSign, Check, ShieldCheck, Users, Star, ArrowRight, Ruler, Calculator, Monitor, Scale, FileText, Clock, Globe, Wrench, RefreshCw, Eye } from 'lucide-react';
 import EstimatorForm from '@/app/services/estimating-support/EstimatorForm';
 import LandingInteractions from '@/app/services/estimating-support/LandingInteractions';
@@ -148,7 +149,7 @@ const copy = [
 ];
 
 export default function EstimatingLanding(){return <LandingInteractions className={styles.page}><header className="top">
-<Image className="logo" src="/estimating/4378676b61b1.png" alt="Virtual Value Bridge" width={450} height={120} sizes="165px" preload /><a className="tel" href="tel:+17186506786" aria-label="Call our team at +1 (718) 650-6786">
+<Link href="/" aria-label="Virtual Value Bridge home"><Image className="logo" src="/estimating/4378676b61b1.png" alt="Virtual Value Bridge" width={450} height={120} sizes="165px" preload /></Link><a className="tel" href="tel:+17186506786" aria-label="Call our team at +1 (718) 650-6786">
 <Phone aria-hidden="true" /><span>
 <small>
 {copy[0]}

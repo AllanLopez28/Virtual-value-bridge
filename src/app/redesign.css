@@ -139,5 +139,9 @@ section[id], article[id] { scroll-margin-top: 100px; }
 .comparison-page td:last-child svg { color: var(--muted); }
 .comparison-page > .ag-btn { display: flex; width: max-content; margin: 32px auto 0; }
 .spec-actions button { border-radius: 30px; padding: 11px 18px; font-size: 12px; font-weight: 800; white-space: nowrap; transition: .2s; }
+.spec-card:has(.spec-card-link) { position: relative; }
+.spec-card-link::after { content: ""; position: absolute; inset: 0; z-index: 1; border-radius: 18px; }
+.spec-card-link:focus-visible::after { outline: 3px solid var(--primary); outline-offset: -4px; }
+.spec-card:has(.spec-card-link) .spec-actions button { position: relative; z-index: 2; }
 .header .nav-dd:not(.open) .nav-dd-menu { opacity: 0; visibility: hidden; transform: translate(-50%,8px); }
 @media(max-width:680px) { .header .nav-dd:not(.open) .nav-dd-menu { display: none; } }
