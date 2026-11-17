@@ -202,7 +202,7 @@ export default function EstimatingLanding(){return <LandingInteractions classNam
 </p>
 <div className="h2-proof">
 <span className="h2-avs">
-<Image src="/estimating/681ca71001b1.jpg" alt="" width={1200} height={900} sizes="(max-width: 760px) 100vw, 600px" /><Image src="/estimating/5b3dc60400bd.jpg" alt="" width={1200} height={900} sizes="(max-width: 760px) 100vw, 600px" /><span>
+<Image src="/estimating/681ca71001b1.jpg" alt="" width={1200} height={900} sizes="(max-width: 760px) 100vw, 600px" /><Image src="/estimating/Colaboración en una oficina moderna.png" alt="" width={1200} height={900} sizes="(max-width: 760px) 100vw, 600px" /><span>
 <Users aria-hidden="true" />
 </span>
 
@@ -656,7 +656,7 @@ export default function EstimatingLanding(){return <LandingInteractions classNam
 </section>
 <section className="why">
 <div className="why-img">
-<Image src="/estimating/5b3dc60400bd.jpg" alt="Virtual Value Bridge specialists reviewing an estimate" width={1200} height={900} sizes="(max-width: 760px) 100vw, 600px" />
+<Image src="/estimating/Colaboración en una oficina moderna.png" alt="Virtual Value Bridge specialists reviewing an estimate" width={1086} height={1448} sizes="(max-width: 760px) 100vw, 600px" />
 </div>
 <div>
 <div className="head left">
