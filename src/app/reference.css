@@ -1196,4 +1196,12 @@ body.fs-open{overflow:hidden}
   .std-bar .std-more{white-space:normal}
 }
 @media(prefers-reduced-motion:reduce){.flip-btn.hint{animation:none}}
+.pm-case{grid-template-columns:1.4fr 1fr}
+.pm-case-list{list-style:none;margin:0;padding:0;display:grid;gap:12px;align-content:center}
+.pm-case-list li{display:flex;align-items:center;gap:12px;background:var(--ref-color-67);border:1px solid var(--ref-color-43);border-radius:14px;padding:16px 18px;font:800 15px var(--font-manrope)}
+.pm-case-list svg{width:24px;height:24px;padding:4px;border-radius:50%;background:var(--lime);color:var(--navy);flex-shrink:0}
+.pm-cl.all .cl-panel{display:grid!important;margin-bottom:14px}.pm-cl.all .cl-track{display:none}
+#property-management .c-visual img{object-position:center 18%}
+@media(max-width:1000px){.pm-case{grid-template-columns:1fr}}
+@media(max-width:680px){.pm-cl .cl-panel{display:grid!important;margin-bottom:14px}.pm-cl .cl-track,.pm-all{display:none}}
 

@@ -4,7 +4,7 @@ import type { CSSProperties } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import LeadForm from '@/components/redesign/LeadForm';
-import { Star, ArrowRight, Pause, Play, MessageSquare, Heart, BriefcaseBusiness, ClipboardCheck, Search, ShieldCheck, Headphones, Check, Users, Clock, Calculator, House, ChartNoAxesCombined, Megaphone, CalendarDays, ListChecks, Quote, Mail, Phone, SquareArrowOutUpRight, Globe, Hammer, CircleCheck, Grid2X2, Fan, Droplet, Zap, Ruler, ReceiptText, Monitor, FileText, RefreshCw, Eye } from 'lucide-react';
+import { Star, ArrowRight, Pause, Play, MessageSquare, Heart, BriefcaseBusiness, ClipboardCheck, Search, ShieldCheck, Headphones, Check, Users, Clock, Calculator, House, ChartNoAxesCombined, Megaphone, CalendarDays, ListChecks, Quote, Mail, Phone, SquareArrowOutUpRight, Globe, Hammer, CircleCheck, Grid2X2, Fan, Droplet, Zap, Ruler, ReceiptText, Monitor, FileText, RefreshCw, Eye, Building2, Store, KeyRound, Inbox, Wrench, Banknote, DoorOpen, TriangleAlert } from 'lucide-react';
 
 export function HomeDesign() {
  const copy = [
@@ -3482,6 +3482,1030 @@ export function ConstructionDesign() {
 {copy[169]}
 </p>
 <a className="ag-btn big" href="#find-specialist" data-open-fs="" role="button" aria-haspopup="dialog" data-fs-industry="Construction & trades">{copy[170]}<ArrowRight className="ic-arrow" aria-hidden="true" /></a><Link className="cta-cost" href="/calculator"><Calculator strokeWidth="1.8" aria-hidden="true" /><span><b>{copy[171]}</b>{copy[172]}</span></Link>
+</div>
+
+</section>
+
+</div>
+);
+}
+
+export function PropertyManagementDesign() {
+ const copy = [
+  "PROPERTY MANAGEMENT",
+  "Back-office support ",
+  "built for property managers.",
+  "Bilingual specialists who handle your tenant calls, maintenance tickets, rent follow-ups and owner reports, so your team can focus on growing the portfolio.",
+  "Single-family rentals",
+  "Multifamily",
+  "HOA & condo",
+  "Commercial",
+  "Mixed-use",
+  "Book a call ",
+  "See what we cover",
+  "Tenants & tickets",
+  "Done in your software",
+  "English + Spanish",
+  "With tenants and owners",
+  "Trained on the software property managers already use",
+  "AppFolio",
+  "Buildium",
+  "RentManager",
+  "Yardi",
+  "QuickBooks",
+  "Google Workspace",
+  "DocuSign",
+  "Slack",
+  "WHAT WE OFFER",
+  "Property Management Support ",
+  "by Role.",
+  "Four roles that cover your portfolio, from the first showing to the owner report. Hire one, or build a team with several.",
+  "01 · Lease",
+  "Leasing Coordinator",
+  "02 · Maintain",
+  "Maintenance Coordinator",
+  "03 · Collect",
+  "Rent & Accounting Specialist",
+  "04 · Report",
+  "Owner Reporting Admin",
+  "ROLE 01 · LEASE",
+  "Leasing Coordinator",
+  "Fills your vacancies and keeps tenants informed.",
+  "What your Leasing Coordinator handles →",
+  "Hire a Leasing Coordinator ",
+  "Tenant communication",
+  "Calls, emails and texts answered in English or Spanish.",
+  "Leasing inquiries",
+  "Every prospect answered and followed up.",
+  "Showing scheduling",
+  "Tours booked straight into your calendar.",
+  "Applications & lease paperwork",
+  "Applications tracked and leases sent for signature.",
+  "Move-in / move-out coordination",
+  "Keys, inspections and checklists on schedule.",
+  "Listing updates & vacancy management",
+  "Listings kept current until every unit is filled.",
+  "ROLE 02 · MAINTAIN",
+  "Maintenance Coordinator",
+  "Turns every request into a closed work order.",
+  "What your Maintenance Coordinator handles →",
+  "Hire a Maintenance Coordinator ",
+  "Maintenance request triage",
+  "Requests logged, prioritized and assigned.",
+  "Vendor coordination",
+  "Vendors scheduled, confirmed and followed up.",
+  "Work order tracking",
+  "Every ticket tracked until it is closed.",
+  "Tenant updates",
+  "Tenants told when the repair is scheduled and done.",
+  "After-hours escalation",
+  "Urgent issues routed to the right person.",
+  "Preventive maintenance calendar",
+  "Recurring inspections and service on schedule.",
+  "ROLE 03 · COLLECT",
+  "Rent & Accounting Specialist",
+  "Keeps rent coming in and the books clean.",
+  "What your Rent & Accounting Specialist handles →",
+  "Hire a Rent & Accounting Specialist ",
+  "Rent collection follow-ups",
+  "Friendly reminders before and after the due date.",
+  "Delinquency tracking",
+  "Late balances tracked and escalated on time.",
+  "Vendor invoices & bills",
+  "Invoices entered and routed for approval.",
+  "Bank reconciliations",
+  "Accounts reconciled every month.",
+  "Security deposit tracking",
+  "Deposits and move-out deductions documented.",
+  "Ledger entries",
+  "Charges and payments posted in your software.",
+  "ROLE 04 · REPORT",
+  "Owner Reporting Admin",
+  "Gets owners their numbers on time, every month.",
+  "What your Owner Reporting Admin handles →",
+  "Hire an Owner Reporting Admin ",
+  "Owner reporting",
+  "Clear reports on occupancy, rent and maintenance.",
+  "Monthly statements",
+  "Owner statements prepared and sent on time.",
+  "Data entry & record-keeping",
+  "Accurate records inside your property management software.",
+  "Lease & insurance document tracking",
+  "Renewals, COIs and expirations on file.",
+  "Lease renewal reminders",
+  "Renewals flagged before they expire.",
+  "Portfolio admin support",
+  "Inbox, calendar and files kept organized.",
+  "See all 4 roles at once",
+  "Each role is a ",
+  "separate, dedicated specialist",
+  ". Start with the one you need most and add more as you grow.",
+  "ONE SPECIALIST",
+  "Dedicated property management specialist",
+  "A full-time specialist who learns your properties, runs your systems and reports directly to you.",
+  "or",
+  "A TEAM",
+  "A property support team",
+  "Several roles working together as your portfolio grows, from leasing to owner reports.",
+  "REAL RESULTS",
+  "A property manager’s view.",
+  "“The team at Virtual Value Bridge has become a valuable extension of our team.”",
+  "M",
+  "Mendy K.",
+  "Maintenance Coordinator, Stone Edge NY",
+  "Tenant communication",
+  "Lease renewals",
+  "Rent follow-ups",
+  "WHY VIRTUAL VALUE BRIDGE",
+  "A specialist with ",
+  "a team behind them.",
+  "English + Spanish",
+  "Bilingual with your tenants, owners and vendors.",
+  "Your time zone",
+  "Working CST hours, aligned with U.S. teams.",
+  "Trained on your stack",
+  "Real onboarding into your software and SOPs.",
+  "Backed by an on-site team",
+  "HR, supervisors and quality reviews in San Salvador.",
+  "Free replacement",
+  "No long-term contract if the fit isn't right.",
+  "See real work first",
+  "Review real work before you commit to anything.",
+  "PROPERTY MANAGER FAQ",
+  "What property managers ask us.",
+  "Quick answers before your first call.",
+  "Which property management software do they use?",
+  "AppFolio, Buildium, RentManager, Yardi and QuickBooks, among others. We match you with someone who knows your system.",
+  "Can they talk to my tenants and vendors?",
+  "Yes. They handle tenant communication, leasing inquiries and vendor coordination for maintenance requests.",
+  "Do they speak Spanish with my tenants?",
+  "Every specialist is bilingual in English and Spanish.",
+  "Who approves repairs and payments?",
+  "You do. Your specialist triages requests, coordinates vendors and prepares the paperwork; you keep the final approval.",
+  "Do I need all four roles?",
+  "No. Start with the role you need most. Many teams begin with one specialist and add more as the portfolio grows.",
+  "What if it isn't the right fit?",
+  "We replace your specialist at no cost. There's no long-term contract.",
+  "LET’S TALK",
+  "Tell us about ",
+  "your portfolio.",
+  "A few details help us bring the right specialist profiles to your first call.",
+  "Free replacement, no long-term contract",
+  "See real work before you commit",
+  "Direct line to the founders",
+  "Match with a property management specialist.",
+  "Four quick questions, with property management already selected. All we ask for is your email.",
+  "Start now ",
+  "Compare the cost",
+  " of a dedicated specialist with a local hire"
+];
+ return (
+<div className="view" id="property-management">
+
+<section className="c-hero">
+
+<div className="c-hero-copy">
+
+<p className="eyebrow">
+{copy[0]}
+</p>
+
+<h1>
+{copy[1]}<em>{copy[2]}</em>
+</h1>
+
+<p className="c-lede">
+{copy[3]}
+</p>
+
+<ul className="c-trades" aria-label="Property types we support">
+
+<li>
+<House strokeWidth="1.8" aria-hidden="true" /><span>{copy[4]}</span>
+</li>
+
+<li>
+<Building2 strokeWidth="1.8" aria-hidden="true" /><span>{copy[5]}</span>
+</li>
+
+<li>
+<Users strokeWidth="1.8" aria-hidden="true" /><span>{copy[6]}</span>
+</li>
+
+<li>
+<Store strokeWidth="1.8" aria-hidden="true" /><span>{copy[7]}</span>
+</li>
+
+<li>
+<KeyRound strokeWidth="1.8" aria-hidden="true" /><span>{copy[8]}</span>
+</li>
+
+</ul>
+
+<div className="ag-cta">
+<BookingButton className="ag-btn big">{copy[9]}<ArrowRight className="ic-arrow" aria-hidden="true" /></BookingButton><a className="ag-btn-o big" href="#pm-cover">{copy[10]}</a>
+</div>
+
+</div>
+
+<div className="c-visual">
+<span className="c-shape" aria-hidden="true"></span><Image src="/redesign/d0c8d4068aaa.jpg" alt="Property management specialist" width={1200} height={900} sizes="(max-width: 680px) 100vw, (max-width: 1000px) 50vw, 600px" preload />
+<div className="c-float f1">
+<span><Inbox strokeWidth="1.8" aria-hidden="true" /></span>
+<div>
+<b>{copy[11]}</b><small>{copy[12]}</small>
+</div>
+
+</div>
+
+<div className="c-float f2">
+<span><Globe strokeWidth="1.8" aria-hidden="true" /></span>
+<div>
+<b>{copy[13]}</b><small>{copy[14]}</small>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section className="c-tools" aria-label="Software our specialists use">
+
+<p>
+{copy[15]}
+</p>
+
+<ul>
+
+<li>
+{copy[16]}
+</li>
+
+<li>
+{copy[17]}
+</li>
+
+<li>
+{copy[18]}
+</li>
+
+<li>
+{copy[19]}
+</li>
+
+<li>
+{copy[20]}
+</li>
+
+<li>
+{copy[21]}
+</li>
+
+<li>
+{copy[22]}
+</li>
+
+<li>
+{copy[23]}
+</li>
+
+</ul>
+
+</section>
+
+<section className="c-cover" id="pm-cover">
+
+<div className="c-cover-head">
+
+<p className="eyebrow">
+{copy[24]}
+</p>
+
+<h2>
+{copy[25]}<em>{copy[26]}</em>
+</h2>
+
+<p>
+{copy[27]}
+</p>
+
+</div>
+
+<div className="cl pm-cl">
+
+<div className="cl-track" role="tablist" aria-label="Roles by property stage">
+<span className="cl-line" aria-hidden="true"><i></i></span><button type="button" className="cl-node is-active" data-i="0" role="tab" aria-selected="true" aria-controls="pm-panel-lease" id="pm-tab-lease"><span className="cl-dot"><KeyRound strokeWidth="2" aria-hidden="true" /></span><b>{copy[28]}</b><small>{copy[29]}</small></button><button type="button" className="cl-node" data-i="1" role="tab" aria-selected="false" aria-controls="pm-panel-maintain" id="pm-tab-maintain"><span className="cl-dot"><Wrench strokeWidth="2" aria-hidden="true" /></span><b>{copy[30]}</b><small>{copy[31]}</small></button><button type="button" className="cl-node" data-i="2" role="tab" aria-selected="false" aria-controls="pm-panel-collect" id="pm-tab-collect"><span className="cl-dot"><Banknote strokeWidth="2" aria-hidden="true" /></span><b>{copy[32]}</b><small>{copy[33]}</small></button><button type="button" className="cl-node" data-i="3" role="tab" aria-selected="false" aria-controls="pm-panel-report" id="pm-tab-report"><span className="cl-dot"><ChartNoAxesCombined strokeWidth="2" aria-hidden="true" /></span><b>{copy[34]}</b><small>{copy[35]}</small></button>
+</div>
+
+<div className="cl-panel" id="pm-panel-lease" role="tabpanel" aria-labelledby="pm-tab-lease">
+
+<div className="cl-panel-head">
+<span className="cl-tag">{copy[36]}</span>
+<h3>
+{copy[37]}
+</h3>
+
+<p>
+{copy[38]}
+</p>
+
+<p className="cl-what">
+{copy[39]}
+</p>
+<a className="ag-btn" href="#find-specialist" data-open-fs="" role="button" aria-haspopup="dialog" data-fs-need="Property management" data-fs-industry="Property management">{copy[40]}<ArrowRight className="ic-arrow" aria-hidden="true" /></a>
+</div>
+
+<div className="cl-cards">
+
+<article style={{"--d":"0"} as CSSProperties}>
+<span className="cl-ic"><MessageSquare strokeWidth="1.8" aria-hidden="true" /></span>
+<div>
+<h4>{copy[41]}</h4>
+<p>
+{copy[42]}
+</p>
+
+</div>
+
+</article>
+
+<article style={{"--d":"1"} as CSSProperties}>
+<span className="cl-ic"><Inbox strokeWidth="1.8" aria-hidden="true" /></span>
+<div>
+<h4>{copy[43]}</h4>
+<p>
+{copy[44]}
+</p>
+
+</div>
+
+</article>
+
+<article style={{"--d":"2"} as CSSProperties}>
+<span className="cl-ic"><CalendarDays strokeWidth="1.8" aria-hidden="true" /></span>
+<div>
+<h4>{copy[45]}</h4>
+<p>
+{copy[46]}
+</p>
+
+</div>
+
+</article>
+
+<article style={{"--d":"3"} as CSSProperties}>
+<span className="cl-ic"><FileText strokeWidth="1.8" aria-hidden="true" /></span>
+<div>
+<h4>{copy[47]}</h4>
+<p>
+{copy[48]}
+</p>
+
+</div>
+
+</article>
+
+<article style={{"--d":"4"} as CSSProperties}>
+<span className="cl-ic"><DoorOpen strokeWidth="1.8" aria-hidden="true" /></span>
+<div>
+<h4>{copy[49]}</h4>
+<p>
+{copy[50]}
+</p>
+
+</div>
+
+</article>
+
+<article style={{"--d":"5"} as CSSProperties}>
+<span className="cl-ic"><House strokeWidth="1.8" aria-hidden="true" /></span>
+<div>
+<h4>{copy[51]}</h4>
+<p>
+{copy[52]}
+</p>
+
+</div>
+
+</article>
+
+</div>
+
+</div>
+
+<div className="cl-panel" id="pm-panel-maintain" role="tabpanel" aria-labelledby="pm-tab-maintain" hidden>
+
+<div className="cl-panel-head">
+<span className="cl-tag">{copy[53]}</span>
+<h3>
+{copy[54]}
+</h3>
+
+<p>
+{copy[55]}
+</p>
+
+<p className="cl-what">
+{copy[56]}
+</p>
+<a className="ag-btn" href="#find-specialist" data-open-fs="" role="button" aria-haspopup="dialog" data-fs-need="Property management" data-fs-industry="Property management">{copy[57]}<ArrowRight className="ic-arrow" aria-hidden="true" /></a>
+</div>
+
+<div className="cl-cards">
+
+<article style={{"--d":"0"} as CSSProperties}>
+<span className="cl-ic"><Inbox strokeWidth="1.8" aria-hidden="true" /></span>
+<div>
+<h4>{copy[58]}</h4>
+<p>
+{copy[59]}
+</p>
+
+</div>
+
+</article>
+
+<article style={{"--d":"1"} as CSSProperties}>
+<span className="cl-ic"><Users strokeWidth="1.8" aria-hidden="true" /></span>
+<div>
+<h4>{copy[60]}</h4>
+<p>
+{copy[61]}
+</p>
+
+</div>
+
+</article>
+
+<article style={{"--d":"2"} as CSSProperties}>
+<span className="cl-ic"><ListChecks strokeWidth="1.8" aria-hidden="true" /></span>
+<div>
+<h4>{copy[62]}</h4>
+<p>
+{copy[63]}
+</p>
+
+</div>
+
+</article>
+
+<article style={{"--d":"3"} as CSSProperties}>
+<span className="cl-ic"><MessageSquare strokeWidth="1.8" aria-hidden="true" /></span>
+<div>
+<h4>{copy[64]}</h4>
+<p>
+{copy[65]}
+</p>
+
+</div>
+
+</article>
+
+<article style={{"--d":"4"} as CSSProperties}>
+<span className="cl-ic"><TriangleAlert strokeWidth="1.8" aria-hidden="true" /></span>
+<div>
+<h4>{copy[66]}</h4>
+<p>
+{copy[67]}
+</p>
+
+</div>
+
+</article>
+
+<article style={{"--d":"5"} as CSSProperties}>
+<span className="cl-ic"><CalendarDays strokeWidth="1.8" aria-hidden="true" /></span>
+<div>
+<h4>{copy[68]}</h4>
+<p>
+{copy[69]}
+</p>
+
+</div>
+
+</article>
+
+</div>
+
+</div>
+
+<div className="cl-panel" id="pm-panel-collect" role="tabpanel" aria-labelledby="pm-tab-collect" hidden>
+
+<div className="cl-panel-head">
+<span className="cl-tag">{copy[70]}</span>
+<h3>
+{copy[71]}
+</h3>
+
+<p>
+{copy[72]}
+</p>
+
+<p className="cl-what">
+{copy[73]}
+</p>
+<a className="ag-btn" href="#find-specialist" data-open-fs="" role="button" aria-haspopup="dialog" data-fs-need="Bookkeeping & billing" data-fs-industry="Property management">{copy[74]}<ArrowRight className="ic-arrow" aria-hidden="true" /></a>
+</div>
+
+<div className="cl-cards">
+
+<article style={{"--d":"0"} as CSSProperties}>
+<span className="cl-ic"><Banknote strokeWidth="1.8" aria-hidden="true" /></span>
+<div>
+<h4>{copy[75]}</h4>
+<p>
+{copy[76]}
+</p>
+
+</div>
+
+</article>
+
+<article style={{"--d":"1"} as CSSProperties}>
+<span className="cl-ic"><TriangleAlert strokeWidth="1.8" aria-hidden="true" /></span>
+<div>
+<h4>{copy[77]}</h4>
+<p>
+{copy[78]}
+</p>
+
+</div>
+
+</article>
+
+<article style={{"--d":"2"} as CSSProperties}>
+<span className="cl-ic"><ReceiptText strokeWidth="1.8" aria-hidden="true" /></span>
+<div>
+<h4>{copy[79]}</h4>
+<p>
+{copy[80]}
+</p>
+
+</div>
+
+</article>
+
+<article style={{"--d":"3"} as CSSProperties}>
+<span className="cl-ic"><ClipboardCheck strokeWidth="1.8" aria-hidden="true" /></span>
+<div>
+<h4>{copy[81]}</h4>
+<p>
+{copy[82]}
+</p>
+
+</div>
+
+</article>
+
+<article style={{"--d":"4"} as CSSProperties}>
+<span className="cl-ic"><ShieldCheck strokeWidth="1.8" aria-hidden="true" /></span>
+<div>
+<h4>{copy[83]}</h4>
+<p>
+{copy[84]}
+</p>
+
+</div>
+
+</article>
+
+<article style={{"--d":"5"} as CSSProperties}>
+<span className="cl-ic"><Calculator strokeWidth="1.8" aria-hidden="true" /></span>
+<div>
+<h4>{copy[85]}</h4>
+<p>
+{copy[86]}
+</p>
+
+</div>
+
+</article>
+
+</div>
+
+</div>
+
+<div className="cl-panel" id="pm-panel-report" role="tabpanel" aria-labelledby="pm-tab-report" hidden>
+
+<div className="cl-panel-head">
+<span className="cl-tag">{copy[87]}</span>
+<h3>
+{copy[88]}
+</h3>
+
+<p>
+{copy[89]}
+</p>
+
+<p className="cl-what">
+{copy[90]}
+</p>
+<a className="ag-btn" href="#find-specialist" data-open-fs="" role="button" aria-haspopup="dialog" data-fs-need="Admin & scheduling" data-fs-industry="Property management">{copy[91]}<ArrowRight className="ic-arrow" aria-hidden="true" /></a>
+</div>
+
+<div className="cl-cards">
+
+<article style={{"--d":"0"} as CSSProperties}>
+<span className="cl-ic"><ChartNoAxesCombined strokeWidth="1.8" aria-hidden="true" /></span>
+<div>
+<h4>{copy[92]}</h4>
+<p>
+{copy[93]}
+</p>
+
+</div>
+
+</article>
+
+<article style={{"--d":"1"} as CSSProperties}>
+<span className="cl-ic"><FileText strokeWidth="1.8" aria-hidden="true" /></span>
+<div>
+<h4>{copy[94]}</h4>
+<p>
+{copy[95]}
+</p>
+
+</div>
+
+</article>
+
+<article style={{"--d":"2"} as CSSProperties}>
+<span className="cl-ic"><ClipboardCheck strokeWidth="1.8" aria-hidden="true" /></span>
+<div>
+<h4>{copy[96]}</h4>
+<p>
+{copy[97]}
+</p>
+
+</div>
+
+</article>
+
+<article style={{"--d":"3"} as CSSProperties}>
+<span className="cl-ic"><ShieldCheck strokeWidth="1.8" aria-hidden="true" /></span>
+<div>
+<h4>{copy[98]}</h4>
+<p>
+{copy[99]}
+</p>
+
+</div>
+
+</article>
+
+<article style={{"--d":"4"} as CSSProperties}>
+<span className="cl-ic"><CalendarDays strokeWidth="1.8" aria-hidden="true" /></span>
+<div>
+<h4>{copy[100]}</h4>
+<p>
+{copy[101]}
+</p>
+
+</div>
+
+</article>
+
+<article style={{"--d":"5"} as CSSProperties}>
+<span className="cl-ic"><ListChecks strokeWidth="1.8" aria-hidden="true" /></span>
+<div>
+<h4>{copy[102]}</h4>
+<p>
+{copy[103]}
+</p>
+
+</div>
+
+</article>
+
+</div>
+
+</div>
+
+</div>
+<button type="button" className="cl-all pm-all" aria-expanded="false">{copy[104]}</button>
+<p className="cl-note">
+<Users strokeWidth="1.8" aria-hidden="true" /><span>{copy[105]}<b>{copy[106]}</b>{copy[107]}</span>
+</p>
+
+<div className="c-models">
+
+<article>
+<span className="c-model-tag">{copy[108]}</span>
+<h3>
+{copy[109]}
+</h3>
+
+<p>
+{copy[110]}
+</p>
+
+</article>
+<span className="c-or" aria-hidden="true">{copy[111]}</span>
+<article>
+<span className="c-model-tag lime">{copy[112]}</span>
+<h3>
+{copy[113]}
+</h3>
+
+<p>
+{copy[114]}
+</p>
+
+</article>
+
+</div>
+
+</section>
+
+<section className="c-result">
+
+<div className="c-result-head">
+
+<p className="eyebrow">
+{copy[115]}
+</p>
+
+<h2>
+{copy[116]}
+</h2>
+
+</div>
+
+<article className="case c-case pm-case">
+
+<div className="case-quote">
+
+<div className="c-case-logo">
+<Image src="/redesign/d9467c9bad9f.png" alt="Stone Edge Management logo" width={1200} height={900} sizes="(max-width: 680px) 100vw, (max-width: 1000px) 50vw, 600px" />
+</div>
+
+<blockquote>
+{copy[117]}
+</blockquote>
+
+<div className="story-author">
+<span className="avatar av-lime">{copy[118]}</span>
+<div>
+<b>{copy[119]}</b><span>{copy[120]}</span>
+</div>
+
+</div>
+
+</div>
+
+<ul className="pm-case-list">
+
+<li>
+<Check strokeWidth="2.6" aria-hidden="true" />{copy[121]}
+</li>
+
+<li>
+<Check strokeWidth="2.6" aria-hidden="true" />{copy[122]}
+</li>
+
+<li>
+<Check strokeWidth="2.6" aria-hidden="true" />{copy[123]}
+</li>
+
+</ul>
+
+</article>
+
+</section>
+
+<section className="c-trust">
+
+<div className="c-trust-head">
+
+<p className="eyebrow">
+{copy[124]}
+</p>
+
+<h2>
+{copy[125]}<em>{copy[126]}</em>
+</h2>
+
+</div>
+
+<div className="c-trust-grid">
+
+<article>
+<span className="ct-ic"><Globe strokeWidth="1.8" aria-hidden="true" /></span>
+<h3>
+{copy[127]}
+</h3>
+
+<p>
+{copy[128]}
+</p>
+
+</article>
+
+<article>
+<span className="ct-ic"><Clock strokeWidth="1.8" aria-hidden="true" /></span>
+<h3>
+{copy[129]}
+</h3>
+
+<p>
+{copy[130]}
+</p>
+
+</article>
+
+<article>
+<span className="ct-ic"><Wrench strokeWidth="1.8" aria-hidden="true" /></span>
+<h3>
+{copy[131]}
+</h3>
+
+<p>
+{copy[132]}
+</p>
+
+</article>
+
+<article>
+<span className="ct-ic"><Users strokeWidth="1.8" aria-hidden="true" /></span>
+<h3>
+{copy[133]}
+</h3>
+
+<p>
+{copy[134]}
+</p>
+
+</article>
+
+<article>
+<span className="ct-ic"><RefreshCw strokeWidth="1.8" aria-hidden="true" /></span>
+<h3>
+{copy[135]}
+</h3>
+
+<p>
+{copy[136]}
+</p>
+
+</article>
+
+<article>
+<span className="ct-ic"><Eye strokeWidth="1.8" aria-hidden="true" /></span>
+<h3>
+{copy[137]}
+</h3>
+
+<p>
+{copy[138]}
+</p>
+
+</article>
+
+</div>
+
+</section>
+
+<section className="faq c-faq">
+
+<div className="faq-head">
+
+<p className="eyebrow">
+{copy[139]}
+</p>
+
+<h2>
+{copy[140]}
+</h2>
+
+<p>
+{copy[141]}
+</p>
+
+</div>
+
+<div className="faq-list">
+
+<details>
+
+<summary>
+{copy[142]}<span className="faq-ic" aria-hidden="true"></span>
+</summary>
+
+<p>
+{copy[143]}
+</p>
+
+</details>
+
+<details>
+
+<summary>
+{copy[144]}<span className="faq-ic" aria-hidden="true"></span>
+</summary>
+
+<p>
+{copy[145]}
+</p>
+
+</details>
+
+<details>
+
+<summary>
+{copy[146]}<span className="faq-ic" aria-hidden="true"></span>
+</summary>
+
+<p>
+{copy[147]}
+</p>
+
+</details>
+
+<details>
+
+<summary>
+{copy[148]}<span className="faq-ic" aria-hidden="true"></span>
+</summary>
+
+<p>
+{copy[149]}
+</p>
+
+</details>
+
+<details>
+
+<summary>
+{copy[150]}<span className="faq-ic" aria-hidden="true"></span>
+</summary>
+
+<p>
+{copy[151]}
+</p>
+
+</details>
+
+<details>
+
+<summary>
+{copy[152]}<span className="faq-ic" aria-hidden="true"></span>
+</summary>
+
+<p>
+{copy[153]}
+</p>
+
+</details>
+
+</div>
+
+</section>
+
+<section className="c-form-wrap">
+
+<div className="c-form-copy">
+
+<p className="eyebrow">
+{copy[154]}
+</p>
+
+<h2>
+{copy[155]}<em>{copy[156]}</em>
+</h2>
+
+<p>
+{copy[157]}
+</p>
+
+<ul className="checks">
+
+<li>
+<Check strokeWidth="2.6" aria-hidden="true" />{copy[158]}
+</li>
+
+<li>
+<Check strokeWidth="2.6" aria-hidden="true" />{copy[159]}
+</li>
+
+<li>
+<Check strokeWidth="2.6" aria-hidden="true" />{copy[160]}
+</li>
+
+</ul>
+
+</div>
+
+<div className="contact-form cta-card">
+<span className="cta-card-ic"><Building2 strokeWidth="1.8" aria-hidden="true" /></span>
+<h3>
+{copy[161]}
+</h3>
+
+<p>
+{copy[162]}
+</p>
+<a className="ag-btn big" href="#find-specialist" data-open-fs="" role="button" aria-haspopup="dialog" data-fs-need="Property management" data-fs-industry="Property management">{copy[163]}<ArrowRight className="ic-arrow" aria-hidden="true" /></a><Link className="cta-cost" href="/calculator"><Calculator strokeWidth="1.8" aria-hidden="true" /><span><b>{copy[164]}</b>{copy[165]}</span></Link>
 </div>
 
 </section>

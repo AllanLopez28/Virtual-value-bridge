@@ -69,7 +69,8 @@ else {
                 void p.offsetWidth;
                 p.classList.add('in');
             } });
-            line.style.transform = 'scaleX(' + (i / (nodes.length - 1)) + ')';
+            if (line)
+                line.style.transform = 'scaleX(' + (i / (nodes.length - 1)) + ')';
             if (focus)
                 nodes[i].focus();
         }
