@@ -3709,7 +3709,7 @@ export function PropertyManagementDesign() {
 </div>
 
 <div className="c-visual">
-<span className="c-shape" aria-hidden="true"></span><Image src="/redesign/d0c8d4068aaa.jpg" alt="Property management specialist" width={1200} height={900} sizes="(max-width: 680px) 100vw, (max-width: 1000px) 50vw, 600px" preload />
+<span className="c-shape" aria-hidden="true"></span><Image src="/redesign/property.png" alt="Property management specialist" width={1200} height={900} sizes="(max-width: 680px) 100vw, (max-width: 1000px) 50vw, 600px" preload />
 <div className="c-float f1">
 <span><Inbox strokeWidth="1.8" aria-hidden="true" /></span>
 <div>
