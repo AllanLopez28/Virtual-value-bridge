@@ -8,7 +8,7 @@ import { Star, ArrowRight, Pause, Play, MessageSquare, Heart, BriefcaseBusiness,
 
 export function HomeDesign() {
  const copy = [
-  "NEARSHORE TALENT FROM EL SALVADOR",
+  "",
   "Great talent.",
   "Real impact.",
   "Real results.",

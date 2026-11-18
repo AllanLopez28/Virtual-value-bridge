@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Phone, DollarSign, Check, ShieldCheck, Users, Star, ArrowRight, Ruler, Calculator, Monitor, Scale, FileText, Clock, Globe, Wrench, RefreshCw, Eye } from 'lucide-react';
+import { Phone, Mail, MessageSquare, DollarSign, Check, ShieldCheck, Users, Star, ArrowRight, Ruler, Calculator, Monitor, Scale, FileText, Clock, Globe, Wrench, RefreshCw, Eye } from 'lucide-react';
 import EstimatorForm from '@/app/services/estimating-support/EstimatorForm';
 import LandingInteractions from '@/app/services/estimating-support/LandingInteractions';
 import styles from '@/app/services/estimating-support/estimating.module.css';
@@ -149,7 +149,7 @@ const copy = [
 ];
 
 export default function EstimatingLanding(){return <LandingInteractions className={styles.page}><header className="top">
-<Link href="/" aria-label="Virtual Value Bridge home"><Image className="logo" src="/estimating/4378676b61b1.png" alt="Virtual Value Bridge" width={450} height={120} sizes="165px" preload /></Link><a className="tel" href="tel:+17186506786" aria-label="Call our team at +1 (718) 650-6786">
+<Link href="/" aria-label="Virtual Value Bridge home"><Image className="logo" src="/estimating/4378676b61b1.png" alt="Virtual Value Bridge" width={450} height={120} sizes="165px" preload /></Link><div className="top-contact"><a className="top-ic" href="sms:+17186506786" aria-label="Text our team at +1 (718) 650-6786"><MessageSquare aria-hidden="true" /></a><a className="top-ic" href="mailto:info@vvbridge.net" aria-label="Email our team at info@vvbridge.net"><Mail aria-hidden="true" /></a><a className="tel" href="tel:+17186506786" aria-label="Call our team at +1 (718) 650-6786">
 <Phone aria-hidden="true" /><span>
 <small>
 {copy[0]}
@@ -157,7 +157,7 @@ export default function EstimatingLanding(){return <LandingInteractions classNam
 {copy[1]}
 </span>
 
-</a>
+</a></div>
 
 </header>
 

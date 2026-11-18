@@ -5,11 +5,10 @@ import { ArrowRight, Check, Phone, ShieldCheck } from "lucide-react";
 import { sendGTMEvent } from "@next/third-parties/google";
 
 const questions = [
-  { key: "model", title: "What kind of estimating help do you need?", options: ["A dedicated full-time estimator", "Project-based takeoffs", "Not sure yet"] },
+  { key: "model", title: "What kind of estimating help do you need?", options: ["A dedicated full-time estimator", "Project-based takeoffs", "Other"] },
   { key: "trade", title: "What type of contractor are you?", options: ["Roofing", "General contractor", "Remodeling", "Tile & flooring", "HVAC", "Plumbing", "Electrical", "Other"] },
-  { key: "software", title: "Which estimating software do you use?", options: ["Xactimate", "Bluebeam Revu", "PlanSwift", "Procore", "AccuLynx", "Excel / other"] },
 ];
-const copy = ["Get matched in 48 hours", "← Back", "Where should we send your estimator profiles?", "Name", "Email", "Phone", "(optional)", "Please add your name and a valid email.", "Please enter a 10-digit U.S. phone number, or leave it blank.", "Get matched with an estimator", "Your information is secure and will not be shared. No spam.", "Thanks, we’ve got it.", "Our team will reply with estimator profiles that match your trade and software.", "Prefer to talk now? +1 (718) 650-6786", "We couldn’t send your request. Please try again or contact info@vvbridge.net.", "Continue"];
+const copy = ["Get matched in 48 hours", "← Back", "Where should we send your estimator profiles?", "Name", "Email", "Phone", "(optional)", "Please add your name and a valid email.", "Please enter a 10-digit U.S. phone number, or leave it blank.", "Get matched with an estimator", "Your information is secure and will not be shared. No spam.", "Thanks, we’ve got it.", "Our team will reply with estimator profiles that match your trade.", "Prefer to talk now? +1 (718) 650-6786", "We couldn’t send your request. Please try again or contact info@vvbridge.net.", "Continue"];
 const attributionKeys = ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "gclid"];
 
 export function formatPhone(value: string) {
@@ -32,12 +31,15 @@ export default function EstimatorForm() {
   const currentStep = useRef(0);
   const advance = useCallback((index: number) => { currentStep.current = index; setStep(index); }, []);
 
+  const totalSteps = questions.length + 1;
+
   const choose = useCallback((index: number, value: string) => {
     if (timer.current !== null) return;
     setAnswers(previous => { const next = [...previous]; next[index] = value; return next; });
     if (index === questions.length - 1) return;
     timer.current = setTimeout(() => { timer.current = null; advance(index + 2); }, window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 180);
   }, [advance]);
+
   useEffect(() => {
     const pick = (event: Event) => {
       const value = (event as CustomEvent<string>).detail;
@@ -48,6 +50,7 @@ export default function EstimatorForm() {
     window.addEventListener("estimator-model-pick", pick);
     return () => { window.removeEventListener("estimator-model-pick", pick); if (timer.current !== null) clearTimeout(timer.current); };
   }, [choose]);
+
   useEffect(() => {
     if (form.current?.contains(document.activeElement)) form.current.querySelector<HTMLElement>(".step:not([hidden])")?.focus({ preventScroll: true });
   }, [step, status]);
@@ -69,12 +72,25 @@ export default function EstimatorForm() {
     if (digits.length && digits.length !== 10) { if (step !== 0) advance(0); setPhoneInvalid(true); form.current?.querySelector<HTMLInputElement>('input[name="phone"]')?.focus(); return; }
     setPhoneInvalid(false);
     if (step === 0) { advance(1); return; }
-    if (step !== 3) return;
+    if (step !== questions.length) return;
     const missing = questions.findIndex((question, index) => !question.options.includes(answers[index]));
     if (missing !== -1) { advance(missing + 1); return; }
     const query = new URLSearchParams(window.location.search);
     const attribution = attributionKeys.map(key => query.get(key) ? `${key}: ${query.get(key)}` : "").filter(Boolean);
-    const payload = { name, email, company: "", countryCode: digits ? "+1" : "", phone: digits, supportType: answers[0], processDetails: [`Estimating help: ${answers[0]}`, `Contractor type: ${answers[1]}`, `Software: ${answers[2]}`, ...attribution, `Landing page: ${window.location.href.split("#")[0]}`].join("\n") };
+    const payload = {
+      name,
+      email,
+      company: "",
+      countryCode: digits ? "+1" : "",
+      phone: digits,
+      supportType: answers[0],
+      processDetails: [
+        `Estimating help: ${answers[0]}`,
+        `Contractor type: ${answers[1]}`,
+        ...attribution,
+        `Landing page: ${window.location.href.split("#")[0]}`
+      ].join("\n")
+    };
     submitting.current = true;
     setStatus("sending");
     try {
@@ -87,13 +103,35 @@ export default function EstimatorForm() {
       sendGTMEvent({ event: "generate_lead", lead_type: "estimating_support" });
       window.history.replaceState(null, "", `${window.location.pathname}${window.location.search}#thank-you`);
       setStatus("success");
-      advance(4);
+      advance(totalSteps);
     } catch { setStatus("error"); } finally { submitting.current = false; }
   }
+
   return <form className="lead" id="lead" ref={form} noValidate aria-labelledby="lead-title" onSubmit={submit} aria-busy={status === "sending"}>
-    <div className="lead-top"><p className="lead-title" id="lead-title">{copy[0]}</p><span className="lead-step" hidden={step === 4}><b>{Math.min(step + 1, 4)}</b> of 4</span></div>
-    <div className="bar" aria-hidden="true"><i style={{ width: `${Math.min(100, (step + 1) * 25)}%` }} /></div>
-    <button type="button" className="back" hidden={step === 0 || step === 4} disabled={status === "sending"} onClick={() => { if (timer.current !== null) { clearTimeout(timer.current); timer.current = null; } advance(Math.max(0, step - 1)); }}>{copy[1]}</button>
+    <div className="lead-top">
+      <p className="lead-title" id="lead-title">{copy[0]}</p>
+      <span className="lead-step" hidden={step === totalSteps}>
+        <b>{Math.min(step + 1, totalSteps)}</b> of {totalSteps}
+      </span>
+    </div>
+    <div className="bar" aria-hidden="true">
+      <i style={{ width: `${Math.min(100, Math.round(((step + 1) / totalSteps) * 100))}%` }} />
+    </div>
+    <button
+      type="button"
+      className="back"
+      hidden={step === 0 || step === totalSteps}
+      disabled={status === "sending"}
+      onClick={() => {
+        if (timer.current !== null) {
+          clearTimeout(timer.current);
+          timer.current = null;
+        }
+        advance(Math.max(0, step - 1));
+      }}
+    >
+      {copy[1]}
+    </button>
     <fieldset className="step" data-i="0" hidden={step !== 0} tabIndex={-1} disabled={status === "sending"}>
       <legend>{copy[2]}</legend><div className="fields">
         <label><span>{copy[3]}</span><input name="name" autoComplete="name" required /></label>
@@ -109,9 +147,9 @@ export default function EstimatorForm() {
       <legend>{question.title}</legend><div className={`opts ${index ? "grid" : ""}`}>{question.options.map(option => <button className={`opt ${answers[index] === option ? "sel" : ""}`} key={option} type="button" aria-pressed={answers[index] === option} onClick={() => choose(index, option)}>{option}</button>)}</div>
       {index === questions.length - 1 && <>
         {status === "error" && <p className="err" role="alert">{copy[14]}</p>}
-        <button className="submit" type="submit" disabled={!answers[2] || status === "sending"}>{status === "sending" ? "Sending…" : copy[9]}<ArrowRight className="ar" /></button>
+        <button className="submit" type="submit" disabled={!answers[index] || status === "sending"}>{status === "sending" ? "Sending…" : copy[9]}<ArrowRight className="ar" /></button>
       </>}
     </fieldset>)}
-    <div className="step done" data-i="4" hidden={step !== 4} tabIndex={-1} role="status"><span className="done-ic"><Check /></span><h3>{copy[11]}</h3><p>{copy[12]}</p><a className="call-now" href="tel:+17186506786"><Phone />{copy[13]}</a></div>
+    <div className="step done" data-i={totalSteps} hidden={step !== totalSteps} tabIndex={-1} role="status"><span className="done-ic"><Check /></span><h3>{copy[11]}</h3><p>{copy[12]}</p><a className="call-now" href="tel:+17186506786"><Phone />{copy[13]}</a></div>
   </form>;
 }
