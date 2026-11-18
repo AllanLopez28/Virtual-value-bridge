@@ -1644,7 +1644,7 @@ export function AgentsDesign() {
 <figure className="aqb">
 
 <div className="aqb-logo">
-<Image src="/redesign/d9467c9bad9f.png" alt="Stone Edge Management logo" width={1200} height={900} sizes="(max-width: 680px) 100vw, (max-width: 1000px) 50vw, 600px" />
+<Image src="/redesign/constructiontrades.png" alt="Stone Edge Management logo" width={1200} height={900} sizes="(max-width: 680px) 100vw, (max-width: 1000px) 50vw, 600px" />
 </div>
 
 <div className="aqb-text">
@@ -2681,7 +2681,7 @@ export function ConstructionDesign() {
 </div>
 
 <div className="c-visual">
-<span className="c-shape" aria-hidden="true"></span><Image src="/redesign/0eb564557c6b.jpg" alt="Virtual Value Bridge specialists reviewing an estimate together" width={1200} height={900} sizes="(max-width: 680px) 100vw, (max-width: 1000px) 50vw, 600px" preload />
+<span className="c-shape" aria-hidden="true"></span><Image src="/redesign/constructiontrades.png" alt="Virtual Value Bridge specialists reviewing an estimate together" width={1200} height={900} sizes="(max-width: 680px) 100vw, (max-width: 1000px) 50vw, 600px" preload />
 <div className="c-float f1">
 <span><Ruler strokeWidth="1.8" aria-hidden="true" /></span>
 <div>

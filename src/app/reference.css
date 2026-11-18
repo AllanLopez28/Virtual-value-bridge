@@ -963,7 +963,7 @@ details[open] .faq-ic::after{transform:translate(-50%,-50%) rotate(0)}
 .c-float svg{width:20px;height:20px}
 .c-float b{display:block;font:800 13px var(--font-manrope)}
 .c-float small{display:block;font-size:12px;color:var(--muted);margin-top:2px}
-.c-float.f1{left:-36px;top:30%}
+.c-float.f1{left:-36px;bottom:5%}
 .c-float.f2{right:-20px;bottom:18%}
 .c-float.f2>span{background:var(--lime);color:var(--navy)}
 
