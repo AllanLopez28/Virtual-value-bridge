@@ -4514,6 +4514,984 @@ export function PropertyManagementDesign() {
 );
 }
 
+export function AccountingDesign() {
+ const copy = [
+  "ACCOUNTING & BOOKKEEPING",
+  "Bookkeeping support ",
+  "built for growing businesses.",
+  "Bilingual bookkeeping specialists who record transactions, reconcile accounts, chase invoices and close your books on a fixed monthly schedule.",
+  "Accounting & CPA firms",
+  "Small businesses",
+  "Property managers",
+  "Contractors",
+  "Professional services",
+  "Book a call ",
+  "See what we cover",
+  "Books reconciled",
+  "In QuickBooks or Xero",
+  "English + Spanish",
+  "With clients and vendors",
+  "Trained on the accounting software you already use",
+  "QuickBooks Online",
+  "Xero",
+  "Bill.com",
+  "Dext",
+  "Gusto",
+  "Melio",
+  "Excel / Google Sheets",
+  "NetSuite",
+  "FreshBooks",
+  "Expensify",
+  "WHAT WE OFFER",
+  "Accounting Support ",
+  "by Role.",
+  "Four roles that cover your books, from the first transaction to the monthly close. Hire one, or build a team with several.",
+  "01 · Record",
+  "Bookkeeper",
+  "02 · Pay",
+  "Accounts Payable Specialist",
+  "03 · Collect",
+  "Accounts Receivable Specialist",
+  "04 · Close",
+  "Month-End & Reporting Specialist",
+  "ROLE 01 · RECORD",
+  "Bookkeeper",
+  "Keeps every transaction recorded and every account reconciled.",
+  "What your Bookkeeper handles →",
+  "Hire a Bookkeeper ",
+  "Daily transaction recording",
+  "Every transaction recorded and categorized in QuickBooks or Xero.",
+  "Bank & credit card reconciliations",
+  "Accounts matched against your records.",
+  "Receipt & document capture",
+  "Receipts captured and missing statements chased.",
+  "Expense categorization",
+  "Clean, consistent categories every week.",
+  "Vendor record cleanup",
+  "Vendor details kept complete for your accountant.",
+  "ROLE 02 · PAY",
+  "Accounts Payable Specialist",
+  "Gets your bills entered, approved and paid on time.",
+  "What your Accounts Payable Specialist handles →",
+  "Hire an Accounts Payable Specialist ",
+  "Vendor bill entry",
+  "Bills entered as soon as they arrive.",
+  "Approval routing",
+  "Every bill sent to the right person for approval.",
+  "Payment scheduling",
+  "Payments scheduled so nothing is late.",
+  "1099 prep support",
+  "Vendor records ready for 1099 season.",
+  "Payroll run support",
+  "Runs supported in Gusto or ADP; final review stays with your accountant.",
+  "ROLE 03 · COLLECT",
+  "Accounts Receivable Specialist",
+  "Keeps invoices going out and payments coming in.",
+  "What your Accounts Receivable Specialist handles →",
+  "Hire an Accounts Receivable Specialist ",
+  "Invoicing",
+  "Invoices created and sent on time.",
+  "Payment application",
+  "Payments applied to the right invoices.",
+  "Collections follow-up",
+  "Friendly, consistent follow-up on open balances.",
+  "AR aging review",
+  "Overdue invoices flagged every week.",
+  "Weekly cash-flow snapshot",
+  "A quick view of what came in and what is due.",
+  "ROLE 04 · CLOSE",
+  "Month-End & Reporting Specialist",
+  "Closes your books on a fixed calendar, every month.",
+  "What your Month-End & Reporting Specialist handles →",
+  "Hire a Month-End & Reporting Specialist ",
+  "Monthly close prep",
+  "Books closed on a fixed calendar and delivered by a set date.",
+  "Financial reporting",
+  "P&L, balance sheet and the summaries you ask for.",
+  "W-2 prep support",
+  "Year-end paperwork ready for your accountant.",
+  "Accountant handoff",
+  "Clean books and supporting documents ready for review.",
+  "Close checklist",
+  "Every step tracked so nothing slips through.",
+  "See all 4 roles at once",
+  "Each role is a ",
+  "separate, dedicated specialist",
+  ". Start with the one you need most and add more as you grow.",
+  "ONE SPECIALIST",
+  "Dedicated bookkeeper",
+  "A full-time specialist who learns your books, your software and your monthly calendar.",
+  "or",
+  "A TEAM",
+  "An accounting support team",
+  "Several roles working together as your volume grows, from AP to the monthly close.",
+  "REAL RESULTS",
+  "An accountant’s view.",
+  "“It’s dependable support that truly makes my job easier.”",
+  "M",
+  "Luis M.",
+  "Owner, L&M Accounting",
+  "Transactions coded correctly",
+  "Bank reconciliations on time",
+  "Smoother month-end close",
+  "WHY VIRTUAL VALUE BRIDGE",
+  "A specialist with ",
+  "a team behind them.",
+  "English + Spanish",
+  "Bilingual with your clients, vendors and team.",
+  "Your time zone",
+  "Working CST hours, aligned with U.S. teams.",
+  "Trained on your stack",
+  "Real onboarding into your software and SOPs.",
+  "Backed by an on-site team",
+  "HR, supervisors and quality reviews in San Salvador.",
+  "Free replacement",
+  "No long-term contract if the fit isn't right.",
+  "See real work first",
+  "Review real work before you commit to anything.",
+  "ACCOUNTING FAQ",
+  "What business owners ask us.",
+  "Quick answers before your first call.",
+  "Which accounting software do they use?",
+  "QuickBooks Online, Xero, Bill.com, Dext, Gusto, Melio, NetSuite, FreshBooks and Expensify, among others. We match you with someone who knows your stack.",
+  "Do they replace my accountant or CPA?",
+  "No. Your specialist keeps the books clean and ready; final reviews, payroll sign-off and tax work stay with your accountant.",
+  "When will my books be closed each month?",
+  "Close prep follows a fixed calendar, with books delivered by a set date you agree on.",
+  "Can they follow up on unpaid invoices?",
+  "Yes. They handle invoicing, payment application and collections follow-up, with a weekly AR aging review.",
+  "Do I need all four roles?",
+  "No. Most businesses start with one bookkeeper and add roles as volume grows.",
+  "What if it isn't the right fit?",
+  "We replace your specialist at no cost. There's no long-term contract.",
+  "LET’S TALK",
+  "Tell us about ",
+  "your books.",
+  "A few details help us bring the right specialist profiles to your first call.",
+  "Free replacement, no long-term contract",
+  "See real work before you commit",
+  "Direct line to the founders",
+  "Match with a bookkeeping specialist.",
+  "Four quick questions, with accounting already selected. All we ask for is your email.",
+  "Start now ",
+  "Compare the cost",
+  " of a dedicated specialist with a local hire"
+];
+ return (
+<div className="view" id="accounting">
+
+<section className="c-hero">
+
+<div className="c-hero-copy">
+
+<p className="eyebrow">
+{copy[0]}
+</p>
+
+<h1>
+{copy[1]}<em>{copy[2]}</em>
+</h1>
+
+<p className="c-lede">
+{copy[3]}
+</p>
+
+<ul className="c-trades" aria-label="Businesses we support">
+
+<li>
+<Building2 strokeWidth="1.8" aria-hidden="true" /><span>{copy[4]}</span>
+</li>
+
+<li>
+<Store strokeWidth="1.8" aria-hidden="true" /><span>{copy[5]}</span>
+</li>
+
+<li>
+<House strokeWidth="1.8" aria-hidden="true" /><span>{copy[6]}</span>
+</li>
+
+<li>
+<Wrench strokeWidth="1.8" aria-hidden="true" /><span>{copy[7]}</span>
+</li>
+
+<li>
+<Users strokeWidth="1.8" aria-hidden="true" /><span>{copy[8]}</span>
+</li>
+
+</ul>
+
+<div className="ag-cta">
+<BookingButton className="ag-btn big">{copy[9]}<ArrowRight className="ic-arrow" aria-hidden="true" /></BookingButton><a className="ag-btn-o big" href="#acc-cover">{copy[10]}</a>
+</div>
+
+</div>
+
+<div className="c-visual">
+<span className="c-shape" aria-hidden="true"></span><Image src="/redesign/book.png" alt="Bookkeeping and accounting specialist" width={1200} height={900} sizes="(max-width: 680px) 100vw, (max-width: 1000px) 50vw, 600px" preload />
+<div className="c-float f1">
+<span><Inbox strokeWidth="1.8" aria-hidden="true" /></span>
+<div>
+<b>{copy[11]}</b><small>{copy[12]}</small>
+</div>
+
+</div>
+
+<div className="c-float f2">
+<span><Globe strokeWidth="1.8" aria-hidden="true" /></span>
+<div>
+<b>{copy[13]}</b><small>{copy[14]}</small>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section className="c-tools" aria-label="Software our specialists use">
+
+<p>
+{copy[15]}
+</p>
+
+<ul>
+
+<li>
+{copy[16]}
+</li>
+
+<li>
+{copy[17]}
+</li>
+
+<li>
+{copy[18]}
+</li>
+
+<li>
+{copy[19]}
+</li>
+
+<li>
+{copy[20]}
+</li>
+
+<li>
+{copy[21]}
+</li>
+
+<li>
+{copy[22]}
+</li>
+
+<li>
+{copy[23]}
+</li>
+
+<li>
+{copy[24]}
+</li>
+
+<li>
+{copy[25]}
+</li>
+
+</ul>
+
+</section>
+
+<section className="c-cover" id="acc-cover">
+
+<div className="c-cover-head">
+
+<p className="eyebrow">
+{copy[26]}
+</p>
+
+<h2>
+{copy[27]}<em>{copy[28]}</em>
+</h2>
+
+<p>
+{copy[29]}
+</p>
+
+</div>
+
+<div className="cl acc-cl">
+
+<div className="cl-track" role="tablist" aria-label="Roles by accounting stage">
+<span className="cl-line" aria-hidden="true"><i></i></span><button type="button" className="cl-node is-active" data-i="0" role="tab" aria-selected="true" aria-controls="acc-panel-record" id="acc-tab-record"><span className="cl-dot"><Calculator strokeWidth="2" aria-hidden="true" /></span><b>{copy[30]}</b><small>{copy[31]}</small></button><button type="button" className="cl-node" data-i="1" role="tab" aria-selected="false" aria-controls="acc-panel-pay" id="acc-tab-pay"><span className="cl-dot"><ReceiptText strokeWidth="2" aria-hidden="true" /></span><b>{copy[32]}</b><small>{copy[33]}</small></button><button type="button" className="cl-node" data-i="2" role="tab" aria-selected="false" aria-controls="acc-panel-collect" id="acc-tab-collect"><span className="cl-dot"><Banknote strokeWidth="2" aria-hidden="true" /></span><b>{copy[34]}</b><small>{copy[35]}</small></button><button type="button" className="cl-node" data-i="3" role="tab" aria-selected="false" aria-controls="acc-panel-close" id="acc-tab-close"><span className="cl-dot"><ChartNoAxesCombined strokeWidth="2" aria-hidden="true" /></span><b>{copy[36]}</b><small>{copy[37]}</small></button>
+</div>
+
+<div className="cl-panel" id="acc-panel-record" role="tabpanel" aria-labelledby="acc-tab-record">
+
+<div className="cl-panel-head">
+<span className="cl-tag">{copy[38]}</span>
+<h3>
+{copy[39]}
+</h3>
+
+<p>
+{copy[40]}
+</p>
+
+<p className="cl-what">
+{copy[41]}
+</p>
+<a className="ag-btn" href="#find-specialist" data-open-fs="" role="button" aria-haspopup="dialog" data-fs-need="Bookkeeping & billing" data-fs-industry="Accounting & finance">{copy[42]}<ArrowRight className="ic-arrow" aria-hidden="true" /></a>
+</div>
+
+<div className="cl-cards">
+
+<article style={{"--d":"0"} as CSSProperties}>
+<span className="cl-ic"><Calculator strokeWidth="1.8" aria-hidden="true" /></span>
+<div>
+<h4>{copy[43]}</h4>
+<p>
+{copy[44]}
+</p>
+
+</div>
+
+</article>
+
+<article style={{"--d":"1"} as CSSProperties}>
+<span className="cl-ic"><ClipboardCheck strokeWidth="1.8" aria-hidden="true" /></span>
+<div>
+<h4>{copy[45]}</h4>
+<p>
+{copy[46]}
+</p>
+
+</div>
+
+</article>
+
+<article style={{"--d":"2"} as CSSProperties}>
+<span className="cl-ic"><FileText strokeWidth="1.8" aria-hidden="true" /></span>
+<div>
+<h4>{copy[47]}</h4>
+<p>
+{copy[48]}
+</p>
+
+</div>
+
+</article>
+
+<article style={{"--d":"3"} as CSSProperties}>
+<span className="cl-ic"><ListChecks strokeWidth="1.8" aria-hidden="true" /></span>
+<div>
+<h4>{copy[49]}</h4>
+<p>
+{copy[50]}
+</p>
+
+</div>
+
+</article>
+
+<article style={{"--d":"4"} as CSSProperties}>
+<span className="cl-ic"><Users strokeWidth="1.8" aria-hidden="true" /></span>
+<div>
+<h4>{copy[51]}</h4>
+<p>
+{copy[52]}
+</p>
+
+</div>
+
+</article>
+
+</div>
+
+</div>
+
+<div className="cl-panel" id="acc-panel-pay" role="tabpanel" aria-labelledby="acc-tab-pay" hidden>
+
+<div className="cl-panel-head">
+<span className="cl-tag">{copy[53]}</span>
+<h3>
+{copy[54]}
+</h3>
+
+<p>
+{copy[55]}
+</p>
+
+<p className="cl-what">
+{copy[56]}
+</p>
+<a className="ag-btn" href="#find-specialist" data-open-fs="" role="button" aria-haspopup="dialog" data-fs-need="Bookkeeping & billing" data-fs-industry="Accounting & finance">{copy[57]}<ArrowRight className="ic-arrow" aria-hidden="true" /></a>
+</div>
+
+<div className="cl-cards">
+
+<article style={{"--d":"0"} as CSSProperties}>
+<span className="cl-ic"><ReceiptText strokeWidth="1.8" aria-hidden="true" /></span>
+<div>
+<h4>{copy[58]}</h4>
+<p>
+{copy[59]}
+</p>
+
+</div>
+
+</article>
+
+<article style={{"--d":"1"} as CSSProperties}>
+<span className="cl-ic"><RefreshCw strokeWidth="1.8" aria-hidden="true" /></span>
+<div>
+<h4>{copy[60]}</h4>
+<p>
+{copy[61]}
+</p>
+
+</div>
+
+</article>
+
+<article style={{"--d":"2"} as CSSProperties}>
+<span className="cl-ic"><CalendarDays strokeWidth="1.8" aria-hidden="true" /></span>
+<div>
+<h4>{copy[62]}</h4>
+<p>
+{copy[63]}
+</p>
+
+</div>
+
+</article>
+
+<article style={{"--d":"3"} as CSSProperties}>
+<span className="cl-ic"><ShieldCheck strokeWidth="1.8" aria-hidden="true" /></span>
+<div>
+<h4>{copy[64]}</h4>
+<p>
+{copy[65]}
+</p>
+
+</div>
+
+</article>
+
+<article style={{"--d":"4"} as CSSProperties}>
+<span className="cl-ic"><Banknote strokeWidth="1.8" aria-hidden="true" /></span>
+<div>
+<h4>{copy[66]}</h4>
+<p>
+{copy[67]}
+</p>
+
+</div>
+
+</article>
+
+</div>
+
+</div>
+
+<div className="cl-panel" id="acc-panel-collect" role="tabpanel" aria-labelledby="acc-tab-collect" hidden>
+
+<div className="cl-panel-head">
+<span className="cl-tag">{copy[68]}</span>
+<h3>
+{copy[69]}
+</h3>
+
+<p>
+{copy[70]}
+</p>
+
+<p className="cl-what">
+{copy[71]}
+</p>
+<a className="ag-btn" href="#find-specialist" data-open-fs="" role="button" aria-haspopup="dialog" data-fs-need="Bookkeeping & billing" data-fs-industry="Accounting & finance">{copy[72]}<ArrowRight className="ic-arrow" aria-hidden="true" /></a>
+</div>
+
+<div className="cl-cards">
+
+<article style={{"--d":"0"} as CSSProperties}>
+<span className="cl-ic"><FileText strokeWidth="1.8" aria-hidden="true" /></span>
+<div>
+<h4>{copy[73]}</h4>
+<p>
+{copy[74]}
+</p>
+
+</div>
+
+</article>
+
+<article style={{"--d":"1"} as CSSProperties}>
+<span className="cl-ic"><Calculator strokeWidth="1.8" aria-hidden="true" /></span>
+<div>
+<h4>{copy[75]}</h4>
+<p>
+{copy[76]}
+</p>
+
+</div>
+
+</article>
+
+<article style={{"--d":"2"} as CSSProperties}>
+<span className="cl-ic"><MessageSquare strokeWidth="1.8" aria-hidden="true" /></span>
+<div>
+<h4>{copy[77]}</h4>
+<p>
+{copy[78]}
+</p>
+
+</div>
+
+</article>
+
+<article style={{"--d":"3"} as CSSProperties}>
+<span className="cl-ic"><TriangleAlert strokeWidth="1.8" aria-hidden="true" /></span>
+<div>
+<h4>{copy[79]}</h4>
+<p>
+{copy[80]}
+</p>
+
+</div>
+
+</article>
+
+<article style={{"--d":"4"} as CSSProperties}>
+<span className="cl-ic"><ChartNoAxesCombined strokeWidth="1.8" aria-hidden="true" /></span>
+<div>
+<h4>{copy[81]}</h4>
+<p>
+{copy[82]}
+</p>
+
+</div>
+
+</article>
+
+</div>
+
+</div>
+
+<div className="cl-panel" id="acc-panel-close" role="tabpanel" aria-labelledby="acc-tab-close" hidden>
+
+<div className="cl-panel-head">
+<span className="cl-tag">{copy[83]}</span>
+<h3>
+{copy[84]}
+</h3>
+
+<p>
+{copy[85]}
+</p>
+
+<p className="cl-what">
+{copy[86]}
+</p>
+<a className="ag-btn" href="#find-specialist" data-open-fs="" role="button" aria-haspopup="dialog" data-fs-need="Bookkeeping & billing" data-fs-industry="Accounting & finance">{copy[87]}<ArrowRight className="ic-arrow" aria-hidden="true" /></a>
+</div>
+
+<div className="cl-cards">
+
+<article style={{"--d":"0"} as CSSProperties}>
+<span className="cl-ic"><CalendarDays strokeWidth="1.8" aria-hidden="true" /></span>
+<div>
+<h4>{copy[88]}</h4>
+<p>
+{copy[89]}
+</p>
+
+</div>
+
+</article>
+
+<article style={{"--d":"1"} as CSSProperties}>
+<span className="cl-ic"><ChartNoAxesCombined strokeWidth="1.8" aria-hidden="true" /></span>
+<div>
+<h4>{copy[90]}</h4>
+<p>
+{copy[91]}
+</p>
+
+</div>
+
+</article>
+
+<article style={{"--d":"2"} as CSSProperties}>
+<span className="cl-ic"><ShieldCheck strokeWidth="1.8" aria-hidden="true" /></span>
+<div>
+<h4>{copy[92]}</h4>
+<p>
+{copy[93]}
+</p>
+
+</div>
+
+</article>
+
+<article style={{"--d":"3"} as CSSProperties}>
+<span className="cl-ic"><Eye strokeWidth="1.8" aria-hidden="true" /></span>
+<div>
+<h4>{copy[94]}</h4>
+<p>
+{copy[95]}
+</p>
+
+</div>
+
+</article>
+
+<article style={{"--d":"4"} as CSSProperties}>
+<span className="cl-ic"><ListChecks strokeWidth="1.8" aria-hidden="true" /></span>
+<div>
+<h4>{copy[96]}</h4>
+<p>
+{copy[97]}
+</p>
+
+</div>
+
+</article>
+
+</div>
+
+</div>
+
+</div>
+<button type="button" className="cl-all acc-all" aria-expanded="false">{copy[98]}</button>
+<p className="cl-note">
+<Users strokeWidth="1.8" aria-hidden="true" /><span>{copy[99]}<b>{copy[100]}</b>{copy[101]}</span>
+</p>
+
+<div className="c-models">
+
+<article>
+<span className="c-model-tag">{copy[102]}</span>
+<h3>
+{copy[103]}
+</h3>
+
+<p>
+{copy[104]}
+</p>
+
+</article>
+<span className="c-or" aria-hidden="true">{copy[105]}</span>
+<article>
+<span className="c-model-tag lime">{copy[106]}</span>
+<h3>
+{copy[107]}
+</h3>
+
+<p>
+{copy[108]}
+</p>
+
+</article>
+
+</div>
+
+</section>
+
+<section className="c-result">
+
+<div className="c-result-head">
+
+<p className="eyebrow">
+{copy[109]}
+</p>
+
+<h2>
+{copy[110]}
+</h2>
+
+</div>
+
+<article className="case c-case acc-case">
+
+<div className="case-quote">
+
+<div className="c-case-logo">
+<Image src="/redesign/b54b2648a039.png" alt="L&M Accounting logo" width={1200} height={900} sizes="(max-width: 680px) 100vw, (max-width: 1000px) 50vw, 600px" />
+</div>
+
+<blockquote>
+{copy[111]}
+</blockquote>
+
+<div className="story-author">
+<span className="avatar av-lime">{copy[112]}</span>
+<div>
+<b>{copy[113]}</b><span>{copy[114]}</span>
+</div>
+
+</div>
+
+</div>
+
+<ul className="acc-case-list">
+
+<li>
+<Check strokeWidth="2.6" aria-hidden="true" />{copy[115]}
+</li>
+
+<li>
+<Check strokeWidth="2.6" aria-hidden="true" />{copy[116]}
+</li>
+
+<li>
+<Check strokeWidth="2.6" aria-hidden="true" />{copy[117]}
+</li>
+
+</ul>
+
+</article>
+
+</section>
+
+<section className="c-trust">
+
+<div className="c-trust-head">
+
+<p className="eyebrow">
+{copy[118]}
+</p>
+
+<h2>
+{copy[119]}<em>{copy[120]}</em>
+</h2>
+
+</div>
+
+<div className="c-trust-grid">
+
+<article>
+<span className="ct-ic"><Globe strokeWidth="1.8" aria-hidden="true" /></span>
+<h3>
+{copy[121]}
+</h3>
+
+<p>
+{copy[122]}
+</p>
+
+</article>
+
+<article>
+<span className="ct-ic"><Clock strokeWidth="1.8" aria-hidden="true" /></span>
+<h3>
+{copy[123]}
+</h3>
+
+<p>
+{copy[124]}
+</p>
+
+</article>
+
+<article>
+<span className="ct-ic"><Wrench strokeWidth="1.8" aria-hidden="true" /></span>
+<h3>
+{copy[125]}
+</h3>
+
+<p>
+{copy[126]}
+</p>
+
+</article>
+
+<article>
+<span className="ct-ic"><Users strokeWidth="1.8" aria-hidden="true" /></span>
+<h3>
+{copy[127]}
+</h3>
+
+<p>
+{copy[128]}
+</p>
+
+</article>
+
+<article>
+<span className="ct-ic"><RefreshCw strokeWidth="1.8" aria-hidden="true" /></span>
+<h3>
+{copy[129]}
+</h3>
+
+<p>
+{copy[130]}
+</p>
+
+</article>
+
+<article>
+<span className="ct-ic"><Eye strokeWidth="1.8" aria-hidden="true" /></span>
+<h3>
+{copy[131]}
+</h3>
+
+<p>
+{copy[132]}
+</p>
+
+</article>
+
+</div>
+
+</section>
+
+<section className="faq c-faq">
+
+<div className="faq-head">
+
+<p className="eyebrow">
+{copy[133]}
+</p>
+
+<h2>
+{copy[134]}
+</h2>
+
+<p>
+{copy[135]}
+</p>
+
+</div>
+
+<div className="faq-list">
+
+<details>
+
+<summary>
+{copy[136]}<span className="faq-ic" aria-hidden="true"></span>
+</summary>
+
+<p>
+{copy[137]}
+</p>
+
+</details>
+
+<details>
+
+<summary>
+{copy[138]}<span className="faq-ic" aria-hidden="true"></span>
+</summary>
+
+<p>
+{copy[139]}
+</p>
+
+</details>
+
+<details>
+
+<summary>
+{copy[140]}<span className="faq-ic" aria-hidden="true"></span>
+</summary>
+
+<p>
+{copy[141]}
+</p>
+
+</details>
+
+<details>
+
+<summary>
+{copy[142]}<span className="faq-ic" aria-hidden="true"></span>
+</summary>
+
+<p>
+{copy[143]}
+</p>
+
+</details>
+
+<details>
+
+<summary>
+{copy[144]}<span className="faq-ic" aria-hidden="true"></span>
+</summary>
+
+<p>
+{copy[145]}
+</p>
+
+</details>
+
+<details>
+
+<summary>
+{copy[146]}<span className="faq-ic" aria-hidden="true"></span>
+</summary>
+
+<p>
+{copy[147]}
+</p>
+
+</details>
+
+</div>
+
+</section>
+
+<section className="c-form-wrap">
+
+<div className="c-form-copy">
+
+<p className="eyebrow">
+{copy[148]}
+</p>
+
+<h2>
+{copy[149]}<em>{copy[150]}</em>
+</h2>
+
+<p>
+{copy[151]}
+</p>
+
+<ul className="checks">
+
+<li>
+<Check strokeWidth="2.6" aria-hidden="true" />{copy[152]}
+</li>
+
+<li>
+<Check strokeWidth="2.6" aria-hidden="true" />{copy[153]}
+</li>
+
+<li>
+<Check strokeWidth="2.6" aria-hidden="true" />{copy[154]}
+</li>
+
+</ul>
+
+</div>
+
+<div className="contact-form cta-card">
+<span className="cta-card-ic"><Building2 strokeWidth="1.8" aria-hidden="true" /></span>
+<h3>
+{copy[155]}
+</h3>
+
+<p>
+{copy[156]}
+</p>
+<a className="ag-btn big" href="#find-specialist" data-open-fs="" role="button" aria-haspopup="dialog" data-fs-need="Bookkeeping & billing" data-fs-industry="Accounting & finance">{copy[157]}<ArrowRight className="ic-arrow" aria-hidden="true" /></a><Link className="cta-cost" href="/calculator"><Calculator strokeWidth="1.8" aria-hidden="true" /><span><b>{copy[158]}</b>{copy[159]}</span></Link>
+</div>
+
+</section>
+
+</div>
+);
+}
+
 export function ReferenceFooter() {
  const copy = [
   "© 2026 Virtual Value Bridge",

@@ -36,7 +36,7 @@ export default function Navbar() {
       onMouseEnter={() => { if (window.matchMedia("(hover: hover) and (min-width: 681px)").matches) setDropdown(name); }}
       onMouseLeave={event => { if (!event.currentTarget.contains(document.activeElement)) setDropdown(null); }}
       onBlur={event => { if (!event.currentTarget.contains(event.relatedTarget)) setDropdown(null); }}>
-      <button type="button" className={`nav-dd-btn ${name === "industries" && (pathname.startsWith("/industries") || pathname === "/services/property-management") ? "current" : ""}`} aria-expanded={dropdown === name} aria-controls={`dd-${name}`} onClick={() => setDropdown(dropdown === name ? null : name)}>{label}<ChevronDown className="chev" /></button>
+      <button type="button" className={`nav-dd-btn ${name === "industries" && (pathname.startsWith("/industries") || pathname === "/services/property-management" || pathname === "/services/bookkeeping-accounting") ? "current" : ""}`} aria-expanded={dropdown === name} aria-controls={`dd-${name}`} onClick={() => setDropdown(dropdown === name ? null : name)}>{label}<ChevronDown className="chev" /></button>
       <div className="nav-dd-menu" id={`dd-${name}`} inert={dropdown !== name}>
         {entries.map(({ href, title, description, icon: Icon }) => <Link href={href} key={href} onClick={close}><span className="dd-ic"><Icon /></span><span><b>{title}</b><small>{description}</small></span></Link>)}
       </div>
@@ -54,7 +54,7 @@ export default function Navbar() {
       <button className="menu" type="button" aria-label={menuOpen ? "Close menu" : "Open menu"} aria-expanded={menuOpen} aria-controls="main-navigation" onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? <X /> : <Menu />}</button>
       <nav id="main-navigation" aria-label="Main navigation">
         <Link className={pathname === "/" ? "current" : ""} href="/" onClick={close}>Home</Link>
-        <Link className={pathname.startsWith("/services") && pathname !== "/services/property-management" ? "current" : ""} href="/services" onClick={close}>Services</Link>
+        <Link className={pathname.startsWith("/services") && pathname !== "/services/property-management" && pathname !== "/services/bookkeeping-accounting" ? "current" : ""} href="/services" onClick={close}>Services</Link>
         {dropdownMenu("industries", "Industries", industries)}
         <Link className={pathname === "/our-agents" ? "current" : ""} href="/our-agents" onClick={close}>Our Agents</Link>
         <Link className={pathname === "/how-it-works" ? "current" : ""} href="/how-it-works" onClick={close}>How It Works</Link>

@@ -6,7 +6,7 @@ import Navbar from "@/components/layout/Navbar";
 import SpecialistFinder, { type FinderPreset } from "@/components/redesign/SpecialistFinder";
 import { useCalendly } from "@/context/CalendlyContext";
 
-const referencePaths = ["/", "/our-agents", "/industries/construction", "/services/property-management", "/services", "/how-it-works"];
+const referencePaths = ["/", "/our-agents", "/industries/construction", "/services/property-management", "/services/bookkeeping-accounting", "/services", "/how-it-works"];
 
 export default function SiteExperience({ children, footer }: { children: ReactNode; footer: ReactNode }) {
   const pathname = usePathname();

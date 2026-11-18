@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
-import ServiceDetail from "@/components/redesign/ServiceDetail";
-import services from "@/components/redesign/services.json";
+import { AccountingDesign } from "@/components/redesign/ReferenceDesign";
+import ReferenceSurface from "@/components/redesign/ReferenceSurface";
 
-export const metadata: Metadata = { title: "Bookkeeping & Accounting Support Specialist | Virtual Value Bridge", description: "Clean books only happen when someone keeps up with them every week. Get a dedicated bookkeeping specialist who records your transactions, reconciles your accounts, chases your invoices, and closes your books on a fixed monthly schedule — so your numbers are always ready." };
+export const metadata: Metadata = {
+  title: "Accounting & Bookkeeping | Virtual Value Bridge",
+  description: "Bilingual bookkeeping specialists who record transactions, reconcile accounts, chase invoices and close your books on a fixed monthly schedule.",
+};
 
-export default function Page() { return <ServiceDetail service={services["bookkeeping-accounting"]} />; }
+export default function Page() {
+  return <main className=""><ReferenceSurface><AccountingDesign /></ReferenceSurface></main>;
+}
