@@ -340,6 +340,10 @@ export function HomeDesign() {
 <Image className="lg lg-img-powershine" src="/redesign/LogoPower Shine.png" alt="Power Shine Lighting + Design" width={380} height={253} sizes="190px" />
 </li>
 
+<li className="logo-item wide">
+<Image className="lg lg-img-jgroup" src="/redesign/LogoJgroup.png" alt="The Jay Group" width={390} height={211} sizes="195px" />
+</li>
+
 <li className="logo-item sq">
 <span className="lg lg-0" aria-hidden="true"></span>
 </li>
@@ -364,6 +368,10 @@ export function HomeDesign() {
 <Image className="lg lg-img-powershine" src="/redesign/LogoPower Shine.png" alt="" width={380} height={253} sizes="190px" />
 </li>
 
+<li className="logo-item wide" aria-hidden="true">
+<Image className="lg lg-img-jgroup" src="/redesign/LogoJgroup.png" alt="" width={390} height={211} sizes="195px" />
+</li>
+
 <li className="logo-item sq">
 <span className="lg lg-0" aria-hidden="true"></span>
 </li>
@@ -388,6 +396,10 @@ export function HomeDesign() {
 <Image className="lg lg-img-powershine" src="/redesign/LogoPower Shine.png" alt="" width={380} height={253} sizes="190px" />
 </li>
 
+<li className="logo-item wide" aria-hidden="true">
+<Image className="lg lg-img-jgroup" src="/redesign/LogoJgroup.png" alt="" width={390} height={211} sizes="195px" />
+</li>
+
 <li className="logo-item sq">
 <span className="lg lg-0" aria-hidden="true"></span>
 </li>
@@ -410,6 +422,10 @@ export function HomeDesign() {
 
 <li className="logo-item wide" aria-hidden="true">
 <Image className="lg lg-img-powershine" src="/redesign/LogoPower Shine.png" alt="" width={380} height={253} sizes="190px" />
+</li>
+
+<li className="logo-item wide" aria-hidden="true">
+<Image className="lg lg-img-jgroup" src="/redesign/LogoJgroup.png" alt="" width={390} height={211} sizes="195px" />
 </li>
 
 </ul>
