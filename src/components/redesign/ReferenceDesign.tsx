@@ -273,7 +273,7 @@ export function HomeDesign() {
 <p className="intro-text">
 {copy[6]}
 </p>
-<BookingButton className="primary-btn">{copy[7]}<span>{copy[8]}</span></BookingButton>
+<BookingButton className="primary-btn">{copy[7].trim()}</BookingButton>
 <ul className="hero-stats">
 
 <li>

@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ArrowUpRight, Building2, Calculator, ChevronDown, BriefcaseBusiness, House, Info, Mail, Menu, MessageSquare, Phone, ReceiptText, X } from "lucide-react";
+import { Building2, Calculator, ChevronDown, BriefcaseBusiness, House, Info, Mail, Menu, MessageSquare, Phone, ReceiptText, X } from "lucide-react";
 
 const industries = [
   { href: "/industries/construction", title: "Construction & Trades", description: "Roofing and construction contractors", icon: House },
@@ -62,7 +62,7 @@ export default function Navbar() {
         <Link href={contactHref} onClick={close}>Contact</Link>
         <a className="nav-fs-m" href="#find-specialist" data-open-fs="" role="button" aria-haspopup="dialog" onClick={close}>Find your specialist</a>
       </nav>
-      <a className="nav-cta" href="#find-specialist" data-open-fs="" role="button" aria-haspopup="dialog">Find your specialist <ArrowUpRight size={17} /></a>
+      <a className="nav-cta" href="#find-specialist" data-open-fs="" role="button" aria-haspopup="dialog">Find your specialist</a>
     </header>
   </>;
 }

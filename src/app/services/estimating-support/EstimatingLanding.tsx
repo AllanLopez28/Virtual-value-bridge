@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Phone, Mail, MessageSquare, DollarSign, Check, ShieldCheck, Users, Star, ArrowRight, Ruler, Calculator, Monitor, Scale, FileText, Clock, Globe, Wrench, RefreshCw, Eye } from 'lucide-react';
+import { Phone, Mail, MessageSquare, DollarSign, Check, Users, Star, ArrowRight, Ruler, Calculator, Monitor, Scale, FileText, Clock, Globe, Wrench, RefreshCw, Eye } from 'lucide-react';
 import EstimatorForm from '@/app/services/estimating-support/EstimatorForm';
 import LandingInteractions from '@/app/services/estimating-support/LandingInteractions';
 import styles from '@/app/services/estimating-support/estimating.module.css';
@@ -191,21 +191,9 @@ export default function EstimatingLanding(){return <LandingInteractions classNam
 </li>
 
 </ul>
-<p className="h2-control">
-<ShieldCheck aria-hidden="true" /><span>
-<b>
-{copy[8]}
-</b>
-{copy[9]}
-</span>
-
-</p>
 <div className="h2-proof">
 <span className="h2-avs">
-<Image src="/estimating/681ca71001b1.jpg" alt="" width={1200} height={900} sizes="(max-width: 760px) 100vw, 600px" /><Image src="/estimating/Colaboración en una oficina moderna.png" alt="" width={1200} height={900} sizes="(max-width: 760px) 100vw, 600px" /><span>
-<Users aria-hidden="true" />
-</span>
-
+<Image src="/redesign/moises.png" alt="Moses G." width={1200} height={900} sizes="46px" />
 </span>
 <p>
 {copy[10]}<b>
