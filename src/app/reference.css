@@ -703,11 +703,13 @@ footer .brand-logo{height:40px}
 .lg{display:block;background:center/contain no-repeat;opacity:.7;transition:opacity .25s,transform .25s}
 .logo-item.sq .lg{width:78px;height:80px}
 .logo-item.wide .lg{width:160px;height:50px}
+.logo-item.wide .lg.lg-img-silverline{width:265px;height:56px;max-width:none;object-fit:cover;margin:0 -36px}
+.logo-item.wide .lg.lg-img-powershine{width:190px;height:56px;max-width:none;object-fit:cover;margin:0 -8px}
 .logo-item:hover .lg{opacity:1;transform:scale(1.06)}
 @keyframes logoSlide{from{transform:translateX(-50%)}to{transform:translateX(0)}}
 @media(prefers-reduced-motion:reduce){
   .logo-track{animation:none;width:auto;flex-wrap:wrap;justify-content:center}
-  .logo-track li:nth-child(n+5){display:none}
+  .logo-track li:nth-child(n+7){display:none}
 }
 @media(max-width:680px){
   .trusted{padding:40px 0 36px}
@@ -716,6 +718,8 @@ footer .brand-logo{height:40px}
   .logo-item{height:66px;padding:0 30px}
   .logo-item.sq .lg{width:60px;height:62px}
   .logo-item.wide .lg{width:124px;height:39px}
+  .logo-item.wide .lg.lg-img-silverline{width:205px;height:44px;margin:0 -26px}
+  .logo-item.wide .lg.lg-img-powershine{width:148px;height:44px;margin:0 -6px}
   .logo-track{animation-duration:26s}
 }
 .lg-0{background-image:url(/redesign/a9cb36e30457.png)}.lg-1{background-image:url(/redesign/b54b2648a039.png)}.lg-2{background-image:url(/redesign/d9467c9bad9f.png)}.lg-3{background-image:url(/redesign/0cf08bebf8b1.png)}.onsite{background:var(--white);padding:64px 7vw;display:grid;grid-template-columns:.8fr 1.2fr;gap:50px;align-items:center;border-bottom:1px solid var(--ref-color-112)}

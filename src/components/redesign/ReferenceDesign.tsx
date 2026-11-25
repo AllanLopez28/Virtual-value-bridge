@@ -332,6 +332,14 @@ export function HomeDesign() {
 <span className="lg lg-3" role="img" aria-label="Artistic Tile"></span>
 </li>
 
+<li className="logo-item wide">
+<Image className="lg lg-img-silverline" src="/redesign/LogoSilverline.png" alt="Silverline Realty Group" width={530} height={177} sizes="265px" />
+</li>
+
+<li className="logo-item wide">
+<Image className="lg lg-img-powershine" src="/redesign/LogoPower Shine.png" alt="Power Shine Lighting + Design" width={380} height={253} sizes="190px" />
+</li>
+
 <li className="logo-item sq">
 <span className="lg lg-0" aria-hidden="true"></span>
 </li>
@@ -348,20 +356,12 @@ export function HomeDesign() {
 <span className="lg lg-3" aria-hidden="true"></span>
 </li>
 
-<li className="logo-item sq">
-<span className="lg lg-0" aria-hidden="true"></span>
+<li className="logo-item wide" aria-hidden="true">
+<Image className="lg lg-img-silverline" src="/redesign/LogoSilverline.png" alt="" width={530} height={177} sizes="265px" />
 </li>
 
-<li className="logo-item sq">
-<span className="lg lg-1" aria-hidden="true"></span>
-</li>
-
-<li className="logo-item wide">
-<span className="lg lg-2" aria-hidden="true"></span>
-</li>
-
-<li className="logo-item wide">
-<span className="lg lg-3" aria-hidden="true"></span>
+<li className="logo-item wide" aria-hidden="true">
+<Image className="lg lg-img-powershine" src="/redesign/LogoPower Shine.png" alt="" width={380} height={253} sizes="190px" />
 </li>
 
 <li className="logo-item sq">
@@ -378,6 +378,38 @@ export function HomeDesign() {
 
 <li className="logo-item wide">
 <span className="lg lg-3" aria-hidden="true"></span>
+</li>
+
+<li className="logo-item wide" aria-hidden="true">
+<Image className="lg lg-img-silverline" src="/redesign/LogoSilverline.png" alt="" width={530} height={177} sizes="265px" />
+</li>
+
+<li className="logo-item wide" aria-hidden="true">
+<Image className="lg lg-img-powershine" src="/redesign/LogoPower Shine.png" alt="" width={380} height={253} sizes="190px" />
+</li>
+
+<li className="logo-item sq">
+<span className="lg lg-0" aria-hidden="true"></span>
+</li>
+
+<li className="logo-item sq">
+<span className="lg lg-1" aria-hidden="true"></span>
+</li>
+
+<li className="logo-item wide">
+<span className="lg lg-2" aria-hidden="true"></span>
+</li>
+
+<li className="logo-item wide">
+<span className="lg lg-3" aria-hidden="true"></span>
+</li>
+
+<li className="logo-item wide" aria-hidden="true">
+<Image className="lg lg-img-silverline" src="/redesign/LogoSilverline.png" alt="" width={530} height={177} sizes="265px" />
+</li>
+
+<li className="logo-item wide" aria-hidden="true">
+<Image className="lg lg-img-powershine" src="/redesign/LogoPower Shine.png" alt="" width={380} height={253} sizes="190px" />
 </li>
 
 </ul>
