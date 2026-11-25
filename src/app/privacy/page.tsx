@@ -1,0 +1,22 @@
+import Link from "next/link";
+import PageStructuredData from "@/components/seo/PageStructuredData";
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata = pageMetadata("/privacy");
+const sections = [
+  { title: "Who operates this website", paragraphs: ["This notice describes information handled through the Virtual Value Bridge website. For questions about this notice or information you have shared with us, contact info@vvbridge.net."] },
+  { title: "Information you provide", paragraphs: ["Service inquiry forms collect the contact details and business information requested in the form, such as your name, company, email address, optional or required phone number, support needs and message. Estimator matching also asks about your support model, contractor type and software.", "Career applications collect the information and documents requested in the application form, including contact details, professional background and a résumé or other application materials you choose to submit. Please avoid sending information that is not needed for your inquiry or application."] },
+  { title: "How information is used", paragraphs: ["Inquiry information is used to respond to requests, discuss services and identify relevant specialist support. Application information is used to review and communicate about employment opportunities. Information supplied for a calendar booking is used to arrange and communicate about that meeting."] },
+  { title: "Website measurements and campaign information", paragraphs: ["The website uses Google Tag Manager to load configured measurement tags. Depending on the tags and your browser settings, those services may receive device, browser, network, cookie and interaction information.", "Forms can include campaign parameters, a Google Ads click identifier and the landing-page URL with your inquiry. These help identify the source of a request. Custom lead-conversion events record the inquiry category without including the name, email address, phone number or message entered in the contact form."] },
+  { title: "Service providers", paragraphs: ["The website uses hosting and delivery services and integrates with Resend for email delivery, Formspree for inquiries and backup delivery, Vercel Blob for résumé uploads where available, Calendly for appointment scheduling, and Google for configured measurement tools. Relevant information is sent to a provider when its service is used. These providers also describe their own handling of information in their privacy notices."] },
+  { title: "Retention and privacy requests", paragraphs: ["To ask about information associated with your inquiry or application, its retention, or to request access, correction or deletion, email info@vvbridge.net. Include enough context to locate your request, but do not email passwords or unnecessary identity documents. We may need to confirm that a request relates to your information before acting on it."] },
+  { title: "Browser choices and external services", paragraphs: ["You can manage cookies and storage through your browser settings. Blocking scripts or storage can affect some site features. External websites and booking services have their own notices and settings; review them when using those services."] },
+  { title: "Updates and contact", paragraphs: ["This notice may be updated when website practices change. For questions, contact Virtual Value Bridge at info@vvbridge.net."] },
+];
+const providers = [
+  { name: "Google", url: "https://policies.google.com/privacy" }, { name: "Calendly", url: "https://calendly.com/legal/privacy-notice" }, { name: "Formspree", url: "https://formspree.io/legal/privacy-policy/" }, { name: "Resend", url: "https://resend.com/legal/privacy-policy" }, { name: "Vercel", url: "https://vercel.com/legal/privacy-policy" },
+];
+
+export default function PrivacyPage() {
+  return <><PageStructuredData path="/privacy" /><main className="seo-content seo-privacy"><p className="eyebrow">VIRTUAL VALUE BRIDGE</p><h1>Privacy policy</h1><p>Last updated: November 25, 2026</p>{sections.map(section => <section key={section.title}><h2>{section.title}</h2>{section.paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}</section>)}<h2>Provider privacy information</h2><ul>{providers.map(provider => <li key={provider.name}><a href={provider.url} rel="noopener noreferrer" target="_blank">{provider.name} privacy notice</a></li>)}</ul><p><a href="mailto:info@vvbridge.net">Contact us about privacy</a> or <Link href="/">return to the homepage</Link>.</p></main></>;
+}

@@ -86,11 +86,7 @@ Validate changes with Tag Assistant: page load should fire the Google tag withou
 
 ## Structured data and SEO plumbing
 
-`src/app/layout.tsx` injects a JSON-LD `SiteNavigationElement` block listing four service URLs on the `virtualvaluebridge.com` domain. The contact section of the same site lists `info@vvbridge.net`. **Confirm which domain is canonical** — mismatched structured data works against the SEO effort rather than for it.
-
-There is no `sitemap.ts` and no `robots.ts`. Next.js generates both from files of those names in `src/app/`; adding them is a small job with real SEO payoff.
-
-Page-level `metadata` exports exist on only 4 of the 20 route files (`layout`, `how-it-works`, `services/virtual-assistant`, `services/property-management`). The other 16 pages inherit the site-wide title "Virtual Value Bridge | BPO Outsourcing" and its description, which means search engines see 16 pages with identical titles. Details in [06-technical-debt.md](06-technical-debt.md).
+The canonical domain is `https://www.vvbridge.net`. Per-page metadata, canonical URLs, social previews and the sitemap share the registry in `src/lib/seo.ts`. Root JSON-LD identifies the Organization and WebSite; page data describes WebPage, BreadcrumbList and relevant services. The estimator landing is now `index,follow`; `/services/remote-estimators` is the indexable service overview. See [08-seo.md](08-seo.md) for maintenance and verification.
 
 ---
 
@@ -106,7 +102,7 @@ These appear as static text in `ContactForm.tsx` and are the only real contact c
 
 `/services/estimating-support` now reproduces the supplied `VVB_Estimators_LP_coordinated.html`. `EstimatingLanding.tsx` holds the server-rendered content, `EstimatorForm.tsx` the four-step form, and `LandingInteractions.tsx` the CTA scrolling, allowlisted keyword matching and mobile sticky visibility. The CSS module scopes the supplied colors, typography, responsive rules and animation timings to this route. Embedded reference images were extracted to `public/estimating/`.
 
-`SiteExperience.tsx` omits the global navbar, global footer and legacy page styling only for this exact route. The landing retains the reference’s compact logo/call header and `noindex` metadata. Its CTA anchors return to the form and preselect a model where supplied. UTM values, gclid and landing URL accompany the lead in process details. The reference’s mailto submission and placeholder tracking scripts are replaced by the existing delivery and `generate_lead` conversion event. No personal contact data is added to analytics events.
+`SiteExperience.tsx` omits the global navbar, global footer and legacy page styling only for this exact route. The landing retains the reference’s compact logo/call header. Its original `noindex` setting was replaced by `index,follow` in the November 25 SEO review. Its CTA anchors return to the form and preselect a model where supplied. UTM values, gclid and landing URL accompany the lead in process details. The reference’s mailto submission and placeholder tracking scripts are replaced by the existing delivery and `generate_lead` conversion event. No personal contact data is added to analytics events.
 
 Verification: changed-file ESLint passed; a temporary isolated webpack build passed for all 27 pages; generated HTML confirmed navigation absent on the landing and present on the homepage. Formatting checks covered optional U.S. phone inputs and image paths. Full-repository lint remains blocked by 17 pre-existing errors outside this change. No server was started and no lead was submitted. Browser visual review remains pending.
 

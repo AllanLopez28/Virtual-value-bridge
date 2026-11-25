@@ -1,7 +1,8 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
+import PageStructuredData from "@/components/seo/PageStructuredData";
+export const metadata = pageMetadata("/services/project-coordination");
 import ServiceDetail from "@/components/redesign/ServiceDetail";
 import services from "@/components/redesign/services.json";
 
-export const metadata: Metadata = { title: "Project Coordination Specialist | Virtual Value Bridge", description: "Projects stall when no one is chasing the details. Get a dedicated project coordinator who keeps your boards up to date, follows up on every deliverable, coordinates your vendors, and flags blockers before they turn into missed deadlines." };
 
-export default function Page() { return <ServiceDetail service={services["project-coordination"]} />; }
+export default function Page() { return <><PageStructuredData path="/services/project-coordination" />{<ServiceDetail service={services["project-coordination"]} />}</>; }

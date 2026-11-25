@@ -916,7 +916,7 @@ export default function EstimatingLanding(){return <LandingInteractions classNam
 <span>
 {copy[136]}
 </span>
-<a href="https://www.vvbridge.net/privacy">
+<a href="/privacy">
 {copy[137]}
 </a>
 <a href="mailto:info@vvbridge.net">

@@ -3,7 +3,9 @@
 import { useEffect, useRef, useState, type ReactNode, type MouseEvent } from "react";
 import { usePathname } from "next/navigation";
 import Navbar from "@/components/layout/Navbar";
-import SpecialistFinder, { type FinderPreset } from "@/components/redesign/SpecialistFinder";
+import dynamic from "next/dynamic";
+import type { FinderPreset } from "@/components/redesign/SpecialistFinder";
+const SpecialistFinder = dynamic(() => import("@/components/redesign/SpecialistFinder"));
 import { useCalendly } from "@/context/CalendlyContext";
 
 const referencePaths = ["/", "/our-agents", "/industries/construction", "/services/property-management", "/services/bookkeeping-accounting", "/services", "/how-it-works"];

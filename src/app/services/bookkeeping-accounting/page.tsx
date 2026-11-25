@@ -1,12 +1,10 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
+import PageStructuredData from "@/components/seo/PageStructuredData";
+export const metadata = pageMetadata("/services/bookkeeping-accounting");
 import { AccountingDesign } from "@/components/redesign/ReferenceDesign";
 import ReferenceSurface from "@/components/redesign/ReferenceSurface";
 
-export const metadata: Metadata = {
-  title: "Accounting & Bookkeeping | Virtual Value Bridge",
-  description: "Bilingual bookkeeping specialists who record transactions, reconcile accounts, chase invoices and close your books on a fixed monthly schedule.",
-};
 
 export default function Page() {
-  return <main className=""><ReferenceSurface><AccountingDesign /></ReferenceSurface></main>;
+  return <><PageStructuredData path="/services/bookkeeping-accounting" />{<main className=""><ReferenceSurface><AccountingDesign /></ReferenceSurface></main>}</>;
 }

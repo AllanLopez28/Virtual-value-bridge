@@ -1,6 +1,6 @@
 # 06 — Technical Debt & Backlog
 
-Everything below was found by reading the code, not by testing the live site. Priorities reflect impact on leads and on maintenance cost.
+Historical backlog from an earlier site version. Items below must be checked against the current implementation before acting: booking, lead delivery, analytics and page metadata have since changed. The November 25, 2026 SEO work is documented in [08-seo.md](08-seo.md).
 
 ---
 

@@ -1,4 +1,5 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
+import PageStructuredData from "@/components/seo/PageStructuredData";
+export const metadata = pageMetadata("/team");
 import TeamProfiles from "@/components/sections/TeamProfiles";
-export const metadata: Metadata = { title: "Our Team | Virtual Value Bridge", description: "Meet Dora Belloso, Bryan Rivas and Ana Rodríguez — the people behind Virtual Value Bridge." };
-export default function TeamPage() { return <main><TeamProfiles /></main>; }
+export default function TeamPage() { return <><PageStructuredData path="/team" />{<main><TeamProfiles /></main>}</>; }

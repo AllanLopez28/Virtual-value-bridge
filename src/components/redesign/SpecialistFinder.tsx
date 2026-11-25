@@ -91,7 +91,7 @@ export default function SpecialistFinder({ preset, onClose }: { preset: FinderPr
           <p className="fs-count">Last step</p><h3>{lastStep[0]}</h3><p className="fs-help">{lastStep[1]}</p>
           <div className="fs-summary" aria-label="Your answers">{answers.map((answer, i) => <button type="button" key={i} aria-label={`Change: ${answer}`} onClick={() => { setBackwards(true); setStep(i); }}>{answer} ✎</button>)}</div>
           <form className="fs-email" onSubmit={submit}><label className="fs-sr" htmlFor="fs-email-in">Work email</label><input id="fs-email-in" type="email" autoComplete="email" placeholder="you@company.com" required value={email} onChange={event => setEmail(event.target.value)} disabled={status === "sending"} /><button type="submit" disabled={status === "sending"}>{status === "sending" ? "Sending…" : "Find my specialist"}<ArrowRight /></button></form>
-          {status === "error" && <p className="fs-err" role="alert">Couldn’t send your request. Please try again or email info@vvbridge.net.</p>}<p className="fs-note">{lastStep[2]}</p>
+          {status === "error" && <p className="fs-err" role="alert">Couldn’t send your request. Please try again or email info@vvbridge.net.</p>}<p className="fs-note">{lastStep[2]} <Link href="/privacy" onClick={onClose}>Privacy policy</Link></p>
         </>}
       </section></div>
     </div>

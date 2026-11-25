@@ -1,3 +1,6 @@
+import { pageMetadata } from "@/lib/seo";
+import PageStructuredData from "@/components/seo/PageStructuredData";
+export const metadata = pageMetadata("/team/dora-belloso");
 import Image from "next/image";
 import Link from "next/link";
 import { CheckCircle2, ArrowRight } from "lucide-react";
@@ -28,7 +31,7 @@ export default function DoraBellosoProfile() {
     "Slack", "Microsoft Teams", "Google Workspace"
   ];
 
-  return (
+  return <><PageStructuredData path="/team/dora-belloso" />{(
     <main className="flex flex-col min-h-screen bg-white font-sans">
       
       {/* 2. Top Bar */}
@@ -183,5 +186,5 @@ export default function DoraBellosoProfile() {
       </section>
 
     </main>
-  );
+  )}</>;
 }

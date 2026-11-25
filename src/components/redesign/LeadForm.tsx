@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type FormEvent, type ReactNode } from "react";
+import Link from "next/link";
 import { CheckCircle2 } from "lucide-react";
 import { sendGTMEvent } from "@next/third-parties/google";
 
@@ -28,6 +29,7 @@ export default function LeadForm({ children, className, id }: { children: ReactN
   return <form id={id} className={className} onSubmit={submit} aria-busy={status === "sending"}>
     {status === "error" && <p role="alert" className="lead-feedback error">{feedback[3]}</p>}
     <fieldset disabled={status === "sending"} className="contents">{children}</fieldset>
+    <p className="consent"><Link href="/privacy">Privacy policy</Link></p>
     {status === "sending" && <p className="consent" role="status">Sending your message…</p>}
   </form>;
 }

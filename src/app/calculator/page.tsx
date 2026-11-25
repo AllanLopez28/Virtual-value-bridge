@@ -1,4 +1,5 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
+import PageStructuredData from "@/components/seo/PageStructuredData";
+export const metadata = pageMetadata("/calculator");
 import SavingsCalculator from "@/components/sections/SavingsCalculator";
-export const metadata: Metadata = { title: "Savings Calculator | Virtual Value Bridge", description: "Estimate monthly and annual savings with a dedicated bilingual Virtual Value Bridge specialist." };
-export default function CalculatorPage() { return <main><SavingsCalculator /></main>; }
+export default function CalculatorPage() { return <><PageStructuredData path="/calculator" />{<main><SavingsCalculator /></main>}</>; }

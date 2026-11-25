@@ -8,7 +8,7 @@ import { Star, ArrowRight, Pause, Play, MessageSquare, Heart, BriefcaseBusiness,
 
 export function HomeDesign() {
  const copy = [
-  "",
+  "BILINGUAL NEARSHORE STAFFING FOR U.S. BUSINESSES",
   "Great talent.",
   "Real impact.",
   "Real results.",
@@ -265,11 +265,8 @@ export function HomeDesign() {
 
 <div className="intro-copy">
 
-<p className="eyebrow">
-{copy[0]}
-</p>
-
-<h1 aria-label="Great talent. Real impact.">
+<h1 aria-label="Bilingual nearshore staffing for U.S. businesses. Great talent. Real impact.">
+<span className="seo-hero-subtitle">{copy[0]}</span>
 <span className="ln" aria-hidden="true"><span>{copy[1]}</span></span><span className="ln" aria-hidden="true"><em className="rot"><span className="rot-track"><span>{copy[2]}</span><span>{copy[3]}</span><span>{copy[4]}</span><span>{copy[5]}</span></span></em></span>
 </h1>
 
@@ -296,7 +293,7 @@ export function HomeDesign() {
 </div>
 
 <div className="intro-visual">
-<Image src="/image(20261111-140007).png" alt="Sample portrait of a bilingual virtual specialist" width={1200} height={900} sizes="(max-width: 680px) 100vw, (max-width: 1000px) 50vw, 600px" preload />
+<Image src="/image(20261111-140007).png" alt="Illustrative portrait of a bilingual nearshore specialist" width={1199} height={1312} sizes="(max-width: 680px) 100vw, (max-width: 1000px) 50vw, 600px" preload />
 <div className="visual-caption">
 <b>{copy[15]}</b><span>{copy[16]}</span>
 </div>
@@ -416,7 +413,7 @@ export function HomeDesign() {
 <article className="spec-card">
 
 <div className="agent-photo spec-photo">
-<Image src="/redesign/681ca71001b1.jpg" alt="Sample estimating and bid support specialist" width={1200} height={900} sizes="(max-width: 680px) 100vw, (max-width: 1000px) 50vw, 600px" /><span className="spec-tag">{copy[23]}</span><span className="spec-exp"><Star aria-hidden="true" /><b>{copy[24]}</b>{copy[25]}</span>
+<Image src="/redesign/681ca71001b1.jpg" alt="Sample estimating and bid support specialist" width={760} height={832} sizes="(max-width: 680px) 100vw, (max-width: 1000px) 50vw, 400px" /><span className="spec-tag">{copy[23]}</span><span className="spec-exp"><Star aria-hidden="true" /><b>{copy[24]}</b>{copy[25]}</span>
 </div>
 
 <div className="spec-head">
@@ -464,7 +461,7 @@ export function HomeDesign() {
 </div>
 
 <div className="spec-row spec-actions">
-<Link className="spec-btn spec-card-link" href="/services/estimating-support" aria-label="Explore Estimating & Bid Support">{copy[43]}</Link><BookingButton className="spec-btn-o">{copy[44]}</BookingButton>
+<Link className="spec-btn spec-card-link" href="/services/remote-estimators" aria-label="Explore Estimating & Bid Support">{copy[43]}</Link><BookingButton className="spec-btn-o">{copy[44]}</BookingButton>
 </div>
 
 </article>
@@ -472,7 +469,7 @@ export function HomeDesign() {
 <article className="spec-card">
 
 <div className="agent-photo spec-photo">
-<Image src="/redesign/7e024a8f36ca.jpg" alt="Sample virtual assistant" width={1200} height={900} sizes="(max-width: 680px) 100vw, (max-width: 1000px) 50vw, 600px" /><span className="spec-tag">{copy[45]}</span><span className="spec-exp"><Star aria-hidden="true" /><b>{copy[46]}</b>{copy[47]}</span>
+<Image src="/redesign/7e024a8f36ca.jpg" alt="Sample virtual assistant" width={760} height={832} sizes="(max-width: 680px) 100vw, (max-width: 1000px) 50vw, 400px" /><span className="spec-tag">{copy[45]}</span><span className="spec-exp"><Star aria-hidden="true" /><b>{copy[46]}</b>{copy[47]}</span>
 </div>
 
 <div className="spec-head">
@@ -528,7 +525,7 @@ export function HomeDesign() {
 <article className="spec-card">
 
 <div className="agent-photo spec-photo">
-<Image src="/redesign/d0c8d4068aaa.jpg" alt="Sample property manager" width={1200} height={900} sizes="(max-width: 680px) 100vw, (max-width: 1000px) 50vw, 600px" /><span className="spec-tag">{copy[66]}</span><span className="spec-exp"><Star aria-hidden="true" /><b>{copy[67]}</b>{copy[68]}</span>
+<Image src="/redesign/d0c8d4068aaa.jpg" alt="Sample property manager" width={760} height={832} sizes="(max-width: 680px) 100vw, (max-width: 1000px) 50vw, 400px" /><span className="spec-tag">{copy[66]}</span><span className="spec-exp"><Star aria-hidden="true" /><b>{copy[67]}</b>{copy[68]}</span>
 </div>
 
 <div className="spec-head">
@@ -644,9 +641,9 @@ export function HomeDesign() {
 <div className="fit-person hiw-person" aria-hidden="true">
 <Star className="doodle d-star" aria-hidden="true" /><MessageSquare className="doodle d-bubble" aria-hidden="true" /><Heart className="doodle d-heart" aria-hidden="true" />
 <div className="fit-avatar hiw-avatar">
-<span className="hiw-ph"><BriefcaseBusiness aria-hidden="true" /></span><Image className="hiw-main" alt="" src="/redesign/1b11547f4755.jpg" width={1200} height={900} sizes="(max-width: 680px) 100vw, (max-width: 1000px) 50vw, 600px" />
+<span className="hiw-ph"><BriefcaseBusiness aria-hidden="true" /></span><Image className="hiw-main" alt="" src="/redesign/1b11547f4755.jpg" width={380} height={380} sizes="(max-width: 680px) 100vw, (max-width: 1000px) 50vw, 600px" />
 </div>
-<span className="hiw-icons"><span className="hiw-ico s0 p0"><ClipboardCheck strokeWidth="2" aria-hidden="true" /></span><span className="hiw-ico s0 p1"><ClipboardCheck strokeWidth="2" aria-hidden="true" /></span><span className="hiw-ico s0 p2"><MessageSquare strokeWidth="2" aria-hidden="true" /></span><span className="hiw-ico s1 p0"><Search strokeWidth="2" aria-hidden="true" /></span><span className="hiw-ico s1 p1"><ShieldCheck strokeWidth="2" aria-hidden="true" /></span><span className="hiw-ico s1 p2"><Star strokeWidth="2" aria-hidden="true" /></span><span className="hiw-ico s2 p0"><ClipboardCheck strokeWidth="2" aria-hidden="true" /></span><span className="hiw-ico s2 p1"><ClipboardCheck strokeWidth="2" aria-hidden="true" /></span><span className="hiw-ico s2 p2"><Headphones strokeWidth="2" aria-hidden="true" /></span></span><span className="hiw-team"><Image alt="" data-src-from="0" src="/redesign/681ca71001b1.jpg" width={1200} height={900} sizes="(max-width: 680px) 100vw, (max-width: 1000px) 50vw, 600px" /><Image alt="" data-src-from="1" src="/redesign/7e024a8f36ca.jpg" width={1200} height={900} sizes="(max-width: 680px) 100vw, (max-width: 1000px) 50vw, 600px" /><Image alt="" data-src-from="2" src="/redesign/d0c8d4068aaa.jpg" width={1200} height={900} sizes="(max-width: 680px) 100vw, (max-width: 1000px) 50vw, 600px" /></span>
+<span className="hiw-icons"><span className="hiw-ico s0 p0"><ClipboardCheck strokeWidth="2" aria-hidden="true" /></span><span className="hiw-ico s0 p1"><ClipboardCheck strokeWidth="2" aria-hidden="true" /></span><span className="hiw-ico s0 p2"><MessageSquare strokeWidth="2" aria-hidden="true" /></span><span className="hiw-ico s1 p0"><Search strokeWidth="2" aria-hidden="true" /></span><span className="hiw-ico s1 p1"><ShieldCheck strokeWidth="2" aria-hidden="true" /></span><span className="hiw-ico s1 p2"><Star strokeWidth="2" aria-hidden="true" /></span><span className="hiw-ico s2 p0"><ClipboardCheck strokeWidth="2" aria-hidden="true" /></span><span className="hiw-ico s2 p1"><ClipboardCheck strokeWidth="2" aria-hidden="true" /></span><span className="hiw-ico s2 p2"><Headphones strokeWidth="2" aria-hidden="true" /></span></span><span className="hiw-team"><Image alt="" data-src-from="0" src="/redesign/681ca71001b1.jpg" width={760} height={832} sizes="46px" /><Image alt="" data-src-from="1" src="/redesign/7e024a8f36ca.jpg" width={760} height={832} sizes="46px" /><Image alt="" data-src-from="2" src="/redesign/d0c8d4068aaa.jpg" width={760} height={832} sizes="46px" /></span>
 </div>
 
 <div className="hiw-panel">
@@ -788,7 +785,7 @@ export function HomeDesign() {
 <p>
 {copy[142]}
 </p>
-<Link className="learn" href="/services/estimating-support">{copy[143]}<ArrowRight className="ic-arrow" aria-hidden="true" /></Link>
+<Link className="learn" href="/services/remote-estimators">{copy[143]}<ArrowRight className="ic-arrow" aria-hidden="true" /></Link>
 </article>
 
 <article data-type="property">
@@ -882,7 +879,7 @@ export function HomeDesign() {
 <div className="about-media">
 
 <div className="about-photo">
-<Image src="/meeting.png" alt="Virtual value bridge team meeting in San Salvador" width={1200} height={900} sizes="(max-width: 680px) 100vw, (max-width: 1000px) 50vw, 600px" /><span className="about-place"><ClipboardCheck aria-hidden="true" />{copy[164]}</span>
+<Image src="/meeting.png" alt="Virtual value bridge team meeting in San Salvador" width={1448} height={1086} sizes="(max-width: 680px) 100vw, (max-width: 1000px) 50vw, 600px" /><span className="about-place"><ClipboardCheck aria-hidden="true" />{copy[164]}</span>
 </div>
 
 <div className="about-stats">
@@ -1494,7 +1491,7 @@ export function AgentsDesign() {
 <div className="flip-front">
 <span className="fc-code l">{copy[12]}</span>
 <div className="fc-photo">
-<Image className="fc-img" alt="Roxana Alvarado" data-from="agent-roxana" style={{"objectPosition":"center 22%"} as CSSProperties} src="/redesign/c8402e7517e2.jpg" width={1200} height={900} sizes="(max-width: 680px) 100vw, (max-width: 1000px) 50vw, 600px" unoptimized preload />
+<Image className="fc-img" alt="Roxana Alvarado" data-from="agent-roxana" style={{"objectPosition":"center 22%"} as CSSProperties} src="/redesign/c8402e7517e2.jpg" width={700} height={784} sizes="(max-width: 680px) 100vw, 400px" preload />
 </div>
 
 <div className="fc-plate">
@@ -1536,7 +1533,7 @@ export function AgentsDesign() {
 </div>
 
 <div className="deck-thumbs" role="group" aria-label="Choose an agent">
-<button type="button" className="deck-thumb is-active" data-i="0" aria-label="Show Roxana Alvarado, Bookkeeping & Accounting Specialist"><span className="deck-av"><Image alt="" data-from="agent-roxana" src="/redesign/c8402e7517e2.jpg" width={1200} height={900} sizes="(max-width: 680px) 100vw, (max-width: 1000px) 50vw, 600px" unoptimized /></span><span className="deck-code">{copy[30]}</span></button><button type="button" className="deck-thumb" data-i="1" aria-label="Show Daniel Portillo, Customer Support Specialist"><span className="deck-av"><Image alt="" data-from="agent-daniel" src="/redesign/392022bff156.jpg" width={1200} height={900} sizes="(max-width: 680px) 100vw, (max-width: 1000px) 50vw, 600px" unoptimized /></span><span className="deck-code">{copy[31]}</span></button><button type="button" className="deck-thumb" data-i="2" aria-label="Show Patricia Guevara, Project Coordinator"><span className="deck-av"><Image alt="" data-from="agent-patricia" src="/redesign/3da44cd88228.jpg" width={1200} height={900} sizes="(max-width: 680px) 100vw, (max-width: 1000px) 50vw, 600px" unoptimized /></span><span className="deck-code">{copy[32]}</span></button><button type="button" className="deck-thumb" data-i="3" aria-label="Show Andrea Molina, Marketing Support Specialist"><span className="deck-av"><Image alt="" data-from="agent-andrea" src="/redesign/3ba4d46d11b2.jpg" width={1200} height={900} sizes="(max-width: 680px) 100vw, (max-width: 1000px) 50vw, 600px" unoptimized /></span><span className="deck-code">{copy[33]}</span></button><button type="button" className="deck-thumb" data-i="4" aria-label="Show Gabriela Rivas, Sales & Lead Generation Specialist"><span className="deck-av"><Image alt="" data-from="agent-gabriela" src="/redesign/414643e8b396.jpg" width={1200} height={900} sizes="(max-width: 680px) 100vw, (max-width: 1000px) 50vw, 600px" unoptimized /></span><span className="deck-code">{copy[34]}</span></button><button type="button" className="deck-thumb" data-i="5" aria-label="Show Carlos Menjívar, Estimating & Bid Support"><span className="deck-av"><Image alt="" data-from="agent-carlos" src="/redesign/681ca71001b1.jpg" width={1200} height={900} sizes="(max-width: 680px) 100vw, (max-width: 1000px) 50vw, 600px" unoptimized /></span><span className="deck-code">{copy[35]}</span></button><button type="button" className="deck-thumb" data-i="6" aria-label="Show Kevin Orellana, Virtual Assistant"><span className="deck-av"><Image alt="" data-from="agent-kevin" src="/redesign/7e024a8f36ca.jpg" width={1200} height={900} sizes="(max-width: 680px) 100vw, (max-width: 1000px) 50vw, 600px" unoptimized /></span><span className="deck-code">{copy[36]}</span></button><button type="button" className="deck-thumb" data-i="7" aria-label="Show Sofía Martínez, Property Manager"><span className="deck-av"><Image alt="" data-from="agent-sofia" src="/redesign/d0c8d4068aaa.jpg" width={1200} height={900} sizes="(max-width: 680px) 100vw, (max-width: 1000px) 50vw, 600px" unoptimized /></span><span className="deck-code">{copy[37]}</span></button>
+<button type="button" className="deck-thumb is-active" data-i="0" aria-label="Show Roxana Alvarado, Bookkeeping & Accounting Specialist"><span className="deck-av"><Image alt="" data-from="agent-roxana" src="/redesign/c8402e7517e2.jpg" width={700} height={784} sizes="48px" /></span><span className="deck-code">{copy[30]}</span></button><button type="button" className="deck-thumb" data-i="1" aria-label="Show Daniel Portillo, Customer Support Specialist"><span className="deck-av"><Image alt="" data-from="agent-daniel" src="/redesign/392022bff156.jpg" width={700} height={783} sizes="48px" /></span><span className="deck-code">{copy[31]}</span></button><button type="button" className="deck-thumb" data-i="2" aria-label="Show Patricia Guevara, Project Coordinator"><span className="deck-av"><Image alt="" data-from="agent-patricia" src="/redesign/3da44cd88228.jpg" width={700} height={783} sizes="48px" /></span><span className="deck-code">{copy[32]}</span></button><button type="button" className="deck-thumb" data-i="3" aria-label="Show Andrea Molina, Marketing Support Specialist"><span className="deck-av"><Image alt="" data-from="agent-andrea" src="/redesign/3ba4d46d11b2.jpg" width={700} height={783} sizes="48px" /></span><span className="deck-code">{copy[33]}</span></button><button type="button" className="deck-thumb" data-i="4" aria-label="Show Gabriela Rivas, Sales & Lead Generation Specialist"><span className="deck-av"><Image alt="" data-from="agent-gabriela" src="/redesign/414643e8b396.jpg" width={700} height={525} sizes="48px" /></span><span className="deck-code">{copy[34]}</span></button><button type="button" className="deck-thumb" data-i="5" aria-label="Show Carlos Menjívar, Estimating & Bid Support"><span className="deck-av"><Image alt="" data-from="agent-carlos" src="/redesign/681ca71001b1.jpg" width={760} height={832} sizes="48px" /></span><span className="deck-code">{copy[35]}</span></button><button type="button" className="deck-thumb" data-i="6" aria-label="Show Kevin Orellana, Virtual Assistant"><span className="deck-av"><Image alt="" data-from="agent-kevin" src="/redesign/7e024a8f36ca.jpg" width={760} height={832} sizes="48px" /></span><span className="deck-code">{copy[36]}</span></button><button type="button" className="deck-thumb" data-i="7" aria-label="Show Sofía Martínez, Property Manager"><span className="deck-av"><Image alt="" data-from="agent-sofia" src="/redesign/d0c8d4068aaa.jpg" width={760} height={832} sizes="48px" /></span><span className="deck-code">{copy[37]}</span></button>
 </div>
 
 </div>
@@ -1644,7 +1641,7 @@ export function AgentsDesign() {
 <figure className="aqb">
 
 <div className="aqb-logo">
-<Image src="/redesign/constructiontrades.png" alt="Stone Edge Management logo" width={1200} height={900} sizes="(max-width: 680px) 100vw, (max-width: 1000px) 50vw, 600px" />
+<Image src="/redesign/constructiontrades.png" alt="Stone Edge Management logo" width={1087} height={1447} sizes="180px" />
 </div>
 
 <div className="aqb-text">
@@ -1694,7 +1691,7 @@ export function AgentsDesign() {
 <article className="ag-card" id="agent-roxana" data-cat="finance">
 
 <div className="ag-photo">
-<Image src="/redesign/c8402e7517e2.jpg" alt="Roxana Alvarado, Bookkeeping & Accounting Specialist" style={{"objectPosition":"center 22%"} as CSSProperties} loading="lazy" width={1200} height={900} sizes="(max-width: 680px) 100vw, (max-width: 1000px) 50vw, 600px" />
+<Image src="/redesign/c8402e7517e2.jpg" alt="Roxana Alvarado, Bookkeeping & Accounting Specialist" style={{"objectPosition":"center 22%"} as CSSProperties} loading="lazy" width={700} height={784} sizes="(max-width: 680px) 100vw, (max-width: 1000px) 50vw, 400px" />
 </div>
 
 <div className="ag-body">
@@ -1770,7 +1767,7 @@ export function AgentsDesign() {
 <article className="ag-card" id="agent-daniel" data-cat="cx">
 
 <div className="ag-photo">
-<Image src="/redesign/392022bff156.jpg" alt="Daniel Portillo, Customer Support Specialist" style={{"objectPosition":"center 18%"} as CSSProperties} loading="lazy" width={1200} height={900} sizes="(max-width: 680px) 100vw, (max-width: 1000px) 50vw, 600px" />
+<Image src="/redesign/392022bff156.jpg" alt="Daniel Portillo, Customer Support Specialist" style={{"objectPosition":"center 18%"} as CSSProperties} loading="lazy" width={700} height={783} sizes="(max-width: 680px) 100vw, (max-width: 1000px) 50vw, 400px" />
 </div>
 
 <div className="ag-body">
@@ -1846,7 +1843,7 @@ export function AgentsDesign() {
 <article className="ag-card" id="agent-patricia" data-cat="operations">
 
 <div className="ag-photo">
-<Image src="/redesign/3da44cd88228.jpg" alt="Patricia Guevara, Project Coordinator" style={{"objectPosition":"center 18%"} as CSSProperties} loading="lazy" width={1200} height={900} sizes="(max-width: 680px) 100vw, (max-width: 1000px) 50vw, 600px" />
+<Image src="/redesign/3da44cd88228.jpg" alt="Patricia Guevara, Project Coordinator" style={{"objectPosition":"center 18%"} as CSSProperties} loading="lazy" width={700} height={783} sizes="(max-width: 680px) 100vw, (max-width: 1000px) 50vw, 400px" />
 </div>
 
 <div className="ag-body">
@@ -1922,7 +1919,7 @@ export function AgentsDesign() {
 <article className="ag-card" id="agent-andrea" data-cat="growth">
 
 <div className="ag-photo">
-<Image src="/redesign/3ba4d46d11b2.jpg" alt="Andrea Molina, Marketing Support Specialist" style={{"objectPosition":"center 14%"} as CSSProperties} loading="lazy" width={1200} height={900} sizes="(max-width: 680px) 100vw, (max-width: 1000px) 50vw, 600px" />
+<Image src="/redesign/3ba4d46d11b2.jpg" alt="Andrea Molina, Marketing Support Specialist" style={{"objectPosition":"center 14%"} as CSSProperties} loading="lazy" width={700} height={783} sizes="(max-width: 680px) 100vw, (max-width: 1000px) 50vw, 400px" />
 </div>
 
 <div className="ag-body">
@@ -1998,7 +1995,7 @@ export function AgentsDesign() {
 <article className="ag-card" id="agent-gabriela" data-cat="growth">
 
 <div className="ag-photo">
-<Image src="/redesign/414643e8b396.jpg" alt="Gabriela Rivas, Sales & Lead Generation Specialist" style={{"objectPosition":"center 20%"} as CSSProperties} loading="lazy" width={1200} height={900} sizes="(max-width: 680px) 100vw, (max-width: 1000px) 50vw, 600px" />
+<Image src="/redesign/414643e8b396.jpg" alt="Gabriela Rivas, Sales & Lead Generation Specialist" style={{"objectPosition":"center 20%"} as CSSProperties} loading="lazy" width={700} height={525} sizes="(max-width: 680px) 100vw, (max-width: 1000px) 50vw, 400px" />
 </div>
 
 <div className="ag-body">
@@ -2074,7 +2071,7 @@ export function AgentsDesign() {
 <article className="ag-card" id="agent-carlos" data-cat="construction">
 
 <div className="ag-photo">
-<Image src="/redesign/681ca71001b1.jpg" alt="Carlos Menjívar, Estimating & Bid Support" style={{"objectPosition":"center 18%"} as CSSProperties} loading="lazy" width={1200} height={900} sizes="(max-width: 680px) 100vw, (max-width: 1000px) 50vw, 600px" />
+<Image src="/redesign/681ca71001b1.jpg" alt="Carlos Menjívar, Estimating & Bid Support" style={{"objectPosition":"center 18%"} as CSSProperties} loading="lazy" width={760} height={832} sizes="(max-width: 680px) 100vw, (max-width: 1000px) 50vw, 400px" />
 </div>
 
 <div className="ag-body">
@@ -2150,7 +2147,7 @@ export function AgentsDesign() {
 <article className="ag-card" id="agent-kevin" data-cat="operations">
 
 <div className="ag-photo">
-<Image src="/redesign/7e024a8f36ca.jpg" alt="Kevin Orellana, Virtual Assistant" style={{"objectPosition":"center 18%"} as CSSProperties} loading="lazy" width={1200} height={900} sizes="(max-width: 680px) 100vw, (max-width: 1000px) 50vw, 600px" />
+<Image src="/redesign/7e024a8f36ca.jpg" alt="Kevin Orellana, Virtual Assistant" style={{"objectPosition":"center 18%"} as CSSProperties} loading="lazy" width={760} height={832} sizes="(max-width: 680px) 100vw, (max-width: 1000px) 50vw, 400px" />
 </div>
 
 <div className="ag-body">
@@ -2226,7 +2223,7 @@ export function AgentsDesign() {
 <article className="ag-card" id="agent-sofia" data-cat="property">
 
 <div className="ag-photo">
-<Image src="/redesign/d0c8d4068aaa.jpg" alt="Sofía Martínez, Property Manager" style={{"objectPosition":"center 18%"} as CSSProperties} loading="lazy" width={1200} height={900} sizes="(max-width: 680px) 100vw, (max-width: 1000px) 50vw, 600px" />
+<Image src="/redesign/d0c8d4068aaa.jpg" alt="Sofía Martínez, Property Manager" style={{"objectPosition":"center 18%"} as CSSProperties} loading="lazy" width={760} height={832} sizes="(max-width: 680px) 100vw, (max-width: 1000px) 50vw, 400px" />
 </div>
 
 <div className="ag-body">
@@ -2681,7 +2678,7 @@ export function ConstructionDesign() {
 </div>
 
 <div className="c-visual">
-<span className="c-shape" aria-hidden="true"></span><Image src="/redesign/constructiontrades.png" alt="Virtual Value Bridge specialists reviewing an estimate together" width={1200} height={900} sizes="(max-width: 680px) 100vw, (max-width: 1000px) 50vw, 600px" preload />
+<span className="c-shape" aria-hidden="true"></span><Image src="/redesign/constructiontrades.png" alt="Virtual Value Bridge specialists reviewing an estimate together" width={1087} height={1447} sizes="(max-width: 680px) 100vw, (max-width: 1000px) 50vw, 600px" preload />
 <div className="c-float f1">
 <span><Ruler strokeWidth="1.8" aria-hidden="true" /></span>
 <div>
@@ -3209,7 +3206,7 @@ export function ConstructionDesign() {
 <div className="case-quote">
 
 <div className="c-case-logo">
-<Image src="/redesign/0cf08bebf8b1.png" alt="Artistic Tile logo" width={1200} height={900} sizes="(max-width: 680px) 100vw, (max-width: 1000px) 50vw, 600px" />
+<Image src="/redesign/0cf08bebf8b1.png" alt="Artistic Tile logo" width={328} height={100} sizes="180px" />
 </div>
 
 <blockquote>
@@ -3709,7 +3706,7 @@ export function PropertyManagementDesign() {
 </div>
 
 <div className="c-visual">
-<span className="c-shape" aria-hidden="true"></span><Image src="/redesign/property.png" alt="Property management specialist" width={1200} height={900} sizes="(max-width: 680px) 100vw, (max-width: 1000px) 50vw, 600px" preload />
+<span className="c-shape" aria-hidden="true"></span><Image src="/redesign/property.png" alt="Property management specialist" width={1199} height={1312} sizes="(max-width: 680px) 100vw, (max-width: 1000px) 50vw, 600px" preload />
 <div className="c-float f1">
 <span><Inbox strokeWidth="1.8" aria-hidden="true" /></span>
 <div>
@@ -4237,7 +4234,7 @@ export function PropertyManagementDesign() {
 <div className="case-quote">
 
 <div className="c-case-logo">
-<Image src="/redesign/d9467c9bad9f.png" alt="Stone Edge Management logo" width={1200} height={900} sizes="(max-width: 680px) 100vw, (max-width: 1000px) 50vw, 600px" />
+<Image src="/redesign/d9467c9bad9f.png" alt="Stone Edge Management logo" width={304} height={96} sizes="180px" />
 </div>
 
 <blockquote>
@@ -4727,7 +4724,7 @@ export function AccountingDesign() {
 </div>
 
 <div className="c-visual">
-<span className="c-shape" aria-hidden="true"></span><Image src="/redesign/book.png" alt="Bookkeeping and accounting specialist" width={1200} height={900} sizes="(max-width: 680px) 100vw, (max-width: 1000px) 50vw, 600px" preload />
+<span className="c-shape" aria-hidden="true"></span><Image src="/redesign/book.png" alt="Bookkeeping and accounting specialist" width={1087} height={1446} sizes="(max-width: 680px) 100vw, (max-width: 1000px) 50vw, 600px" preload />
 <div className="c-float f1">
 <span><Inbox strokeWidth="1.8" aria-hidden="true" /></span>
 <div>
@@ -5215,7 +5212,7 @@ export function AccountingDesign() {
 <div className="case-quote">
 
 <div className="c-case-logo">
-<Image src="/redesign/b54b2648a039.png" alt="L&M Accounting logo" width={1200} height={900} sizes="(max-width: 680px) 100vw, (max-width: 1000px) 50vw, 600px" />
+<Image src="/redesign/b54b2648a039.png" alt="L&M Accounting logo" width={172} height={150} sizes="180px" />
 </div>
 
 <blockquote>
@@ -5595,9 +5592,9 @@ export function ProcessDesign() {
 <div className="fit-person hiw-person" aria-hidden="true">
 <Star className="doodle d-star" aria-hidden="true" /><MessageSquare className="doodle d-bubble" aria-hidden="true" /><Heart className="doodle d-heart" aria-hidden="true" />
 <div className="fit-avatar hiw-avatar">
-<span className="hiw-ph"><BriefcaseBusiness aria-hidden="true" /></span><Image className="hiw-main" alt="" src="/redesign/1b11547f4755.jpg" width={1200} height={900} sizes="(max-width: 680px) 100vw, (max-width: 1000px) 50vw, 600px" />
+<span className="hiw-ph"><BriefcaseBusiness aria-hidden="true" /></span><Image className="hiw-main" alt="" src="/redesign/1b11547f4755.jpg" width={380} height={380} sizes="(max-width: 680px) 100vw, (max-width: 1000px) 50vw, 600px" />
 </div>
-<span className="hiw-icons"><span className="hiw-ico s0 p0"><ClipboardCheck strokeWidth="2" aria-hidden="true" /></span><span className="hiw-ico s0 p1"><ClipboardCheck strokeWidth="2" aria-hidden="true" /></span><span className="hiw-ico s0 p2"><MessageSquare strokeWidth="2" aria-hidden="true" /></span><span className="hiw-ico s1 p0"><Search strokeWidth="2" aria-hidden="true" /></span><span className="hiw-ico s1 p1"><ShieldCheck strokeWidth="2" aria-hidden="true" /></span><span className="hiw-ico s1 p2"><Star strokeWidth="2" aria-hidden="true" /></span><span className="hiw-ico s2 p0"><ClipboardCheck strokeWidth="2" aria-hidden="true" /></span><span className="hiw-ico s2 p1"><ClipboardCheck strokeWidth="2" aria-hidden="true" /></span><span className="hiw-ico s2 p2"><Headphones strokeWidth="2" aria-hidden="true" /></span></span><span className="hiw-team"><Image alt="" data-src-from="0" src="/redesign/681ca71001b1.jpg" width={1200} height={900} sizes="(max-width: 680px) 100vw, (max-width: 1000px) 50vw, 600px" /><Image alt="" data-src-from="1" src="/redesign/7e024a8f36ca.jpg" width={1200} height={900} sizes="(max-width: 680px) 100vw, (max-width: 1000px) 50vw, 600px" /><Image alt="" data-src-from="2" src="/redesign/d0c8d4068aaa.jpg" width={1200} height={900} sizes="(max-width: 680px) 100vw, (max-width: 1000px) 50vw, 600px" /></span>
+<span className="hiw-icons"><span className="hiw-ico s0 p0"><ClipboardCheck strokeWidth="2" aria-hidden="true" /></span><span className="hiw-ico s0 p1"><ClipboardCheck strokeWidth="2" aria-hidden="true" /></span><span className="hiw-ico s0 p2"><MessageSquare strokeWidth="2" aria-hidden="true" /></span><span className="hiw-ico s1 p0"><Search strokeWidth="2" aria-hidden="true" /></span><span className="hiw-ico s1 p1"><ShieldCheck strokeWidth="2" aria-hidden="true" /></span><span className="hiw-ico s1 p2"><Star strokeWidth="2" aria-hidden="true" /></span><span className="hiw-ico s2 p0"><ClipboardCheck strokeWidth="2" aria-hidden="true" /></span><span className="hiw-ico s2 p1"><ClipboardCheck strokeWidth="2" aria-hidden="true" /></span><span className="hiw-ico s2 p2"><Headphones strokeWidth="2" aria-hidden="true" /></span></span><span className="hiw-team"><Image alt="" data-src-from="0" src="/redesign/681ca71001b1.jpg" width={760} height={832} sizes="46px" /><Image alt="" data-src-from="1" src="/redesign/7e024a8f36ca.jpg" width={760} height={832} sizes="46px" /><Image alt="" data-src-from="2" src="/redesign/d0c8d4068aaa.jpg" width={760} height={832} sizes="46px" /></span>
 </div>
 
 <div className="hiw-panel">
@@ -5707,7 +5704,7 @@ export function ServicesDesign() {
 <p>
 {copy[12]}
 </p>
-<Link className="learn" href="/services/estimating-support">{copy[13]}<ArrowRight className="ic-arrow" aria-hidden="true" /></Link>
+<Link className="learn" href="/services/remote-estimators">{copy[13]}<ArrowRight className="ic-arrow" aria-hidden="true" /></Link>
 </article>
 
 <article data-type="property">

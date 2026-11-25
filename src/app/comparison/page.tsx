@@ -1,4 +1,5 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
+import PageStructuredData from "@/components/seo/PageStructuredData";
+export const metadata = pageMetadata("/comparison");
 import Comparison from "@/components/sections/Comparison";
-export const metadata: Metadata = { title: "Nearshore vs Offshore | Virtual Value Bridge", description: "Compare time zones, English fluency, founder oversight, replacement guarantees and software training." };
-export default function ComparisonPage() { return <main><Comparison /></main>; }
+export default function ComparisonPage() { return <><PageStructuredData path="/comparison" />{<main><Comparison /></main>}</>; }
